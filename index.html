@@ -72,105 +72,102 @@
             text-decoration: underline;
         }
         
-        .investigation {
-            background: #1e1e1e;
-            border: 1px solid #333;
-            border-radius: 8px;
-            padding: 25px;
-            margin-bottom: 20px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.3);
-            transition: transform 0.2s ease;
+        .hero-case {
+            position: relative;
+            background-image: url('case-image.jpg');
+            background-size: cover;
+            background-position: center;
+            border-radius: 12px;
+            overflow: hidden;
+            margin-bottom: 30px;
+            min-height: 300px;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.4);
+        }
+        
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, rgba(0,0,0,0.8) 0%, rgba(220,53,69,0.3) 100%);
+            padding: 30px;
             display: flex;
-            gap: 20px;
-            align-items: flex-start;
+            flex-direction: column;
+            justify-content: space-between;
         }
         
-        .investigation:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 4px 8px rgba(0,0,0,0.4);
-        }
-        
-        .case-image {
-            flex-shrink: 0;
-            width: 256px;
-        }
-        
-        .case-image img {
-            width: 256px;
-            height: 256px;
-            object-fit: cover;
-            border-radius: 8px;
-            border: 2px solid #333;
-        }
-        
-        .case-content {
-            flex: 1;
-        }
-        
-        .investigation h3 {
-            color: #dc3545;
-            margin-top: 0;
+        .hero-title {
+            color: #ffffff;
+            font-size: 1.8em;
+            font-weight: bold;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
             margin-bottom: 15px;
-            font-size: 1.4em;
+            line-height: 1.2;
         }
         
-        .meta {
-            color: #adb5bd;
-            font-size: 0.9em;
-            margin-bottom: 15px;
+        .hero-meta {
             display: flex;
-            gap: 20px;
+            gap: 15px;
             flex-wrap: wrap;
+            margin-bottom: 20px;
         }
         
-        .meta span {
-            background: #2d3436;
-            padding: 4px 8px;
-            border-radius: 4px;
+        .hero-meta span {
+            background: rgba(0,0,0,0.7);
+            color: #ffffff;
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 0.9em;
+            font-weight: 500;
+            backdrop-filter: blur(10px);
         }
         
-        .meta a {
-            color: #dc3545;
+        .hero-meta a {
+            color: #ff6b6b;
             text-decoration: none;
         }
         
-        .meta a:hover {
+        .hero-meta a:hover {
             text-decoration: underline;
         }
         
-        .investigation p {
-            margin-bottom: 20px;
-            color: #ced4da;
+        .hero-description {
+            color: #ffffff;
+            font-size: 1.05em;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.8);
+            margin-bottom: 25px;
+            line-height: 1.5;
         }
         
-        .links {
+        .hero-links {
             display: flex;
             gap: 15px;
             flex-wrap: wrap;
         }
         
-        .links a {
-            background-color: #dc3545;
+        .hero-links a {
+            background: rgba(220, 53, 69, 0.9);
             color: white;
             text-decoration: none;
-            padding: 10px 18px;
+            padding: 12px 20px;
             border-radius: 6px;
             font-size: 0.95em;
-            font-weight: 500;
-            transition: background-color 0.2s ease;
-            display: inline-flex;
-            align-items: center;
-            gap: 5px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,255,255,0.2);
         }
         
-        .links a:hover {
-            background-color: #c82333;
-            transform: translateY(-1px);
+        .hero-links a:hover {
+            background: rgba(220, 53, 69, 1);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(220, 53, 69, 0.4);
         }
         
-        .links a::after {
+        .hero-links a::after {
             content: "→";
-            margin-left: 5px;
+            margin-left: 8px;
         }
         
         .footer {
@@ -184,15 +181,6 @@
         
         .footer p {
             margin-bottom: 10px;
-        }
-        
-        .footer a {
-            color: #dc3545;
-            text-decoration: none;
-        }
-        
-        .footer a:hover {
-            text-decoration: underline;
         }
         
         .update-time {
@@ -209,28 +197,45 @@
                 font-size: 1.8em;
             }
             
-            .investigation {
-                padding: 20px;
-                flex-direction: column;
-                gap: 15px;
+            .hero-case {
+                min-height: 280px;
             }
             
-            .case-image {
-                width: 100%;
+            .hero-overlay {
+                padding: 20px;
+            }
+            
+            .hero-title {
+                font-size: 1.5em;
+            }
+            
+            .hero-meta {
+                justify-content: center;
+            }
+            
+            .hero-links {
+                justify-content: center;
+            }
+            
+            .hero-links a {
+                flex: 1;
+                text-align: center;
+                min-width: 140px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .hero-meta {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .hero-meta span {
                 text-align: center;
             }
             
-            .case-image img {
-                width: 100px;
-                height: 100px;
-            }
-            
-            .links {
-                justify-content: center;
-            }
-            
-            .meta {
-                justify-content: center;
+            .hero-links {
+                flex-direction: column;
             }
         }
     </style>
@@ -243,19 +248,18 @@
         <p>Official documentation website for <a href="https://instagram.com/brokeninstitutions" target="_blank">@brokeninstitutions</a> investigations</p>
     </div>
 
-    <div class="investigation">
-        <div class="case-image">
-            <img src="case-image.jpg" alt="Broken Institutions Investigation - What Enabled Him?">
-        </div>
-        <div class="case-content">
-            <h3>Charlotte Transit Case: "What Enabled Him?"</h3>
-            <div class="meta">
-                <span>Investigation: August 2025</span>
-                <span>Sources: 10+ verified references</span>
-                <span>Follow: <a href="https://instagram.com/brokeninstitutions" target="_blank">@brokeninstitutions</a></span>
+    <div class="hero-case">
+        <div class="hero-overlay">
+            <div>
+                <h3 class="hero-title">Charlotte Transit Case: "What Enabled Him?"</h3>
+                <div class="hero-meta">
+                    <span>Investigation: August 2025</span>
+                    <span>Sources: 10+ verified references</span>
+                    <span>Follow: <a href="https://instagram.com/brokeninstitutions" target="_blank">@brokeninstitutions</a></span>
+                </div>
+                <p class="hero-description">Complete source documentation for our investigation into institutional failures that enabled the Charlotte transit tragedy. This case examines 14 arrests, judicial decisions, and systemic breakdowns that led to preventable violence.</p>
             </div>
-            <p>Complete source documentation for our investigation into institutional failures that enabled the Charlotte transit tragedy. This case examines 14 arrests, judicial decisions, and systemic breakdowns that led to preventable violence. All sources verified and documented for transparency.</p>
-            <div class="links">
+            <div class="hero-links">
                 <a href="article.html">Full Investigation</a>
                 <a href="sources.html">Complete Sources</a>
                 <a href="timeline.html">Case Timeline</a>
@@ -264,8 +268,8 @@
     </div>
 
     <div class="footer">
-        <p>Official source documentation for <a href="https://instagram.com/brokeninstitutions" target="_blank">@brokeninstitutions</a> investigations.</p>
-        <p class="update-time">All sources verified and documented for transparency • Last updated: September 2025</p>
+        <p>All sources verified and documented for transparency and public accountability.</p>
+        <p class="update-time">Last updated: September 2025</p>
     </div>
 </body>
 </html>
