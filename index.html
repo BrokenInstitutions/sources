@@ -80,6 +80,9 @@
             margin-bottom: 20px;
             box-shadow: 0 2px 4px rgba(0,0,0,0.3);
             transition: transform 0.2s ease;
+            display: flex;
+            gap: 20px;
+            align-items: flex-start;
         }
         
         .investigation:hover {
@@ -88,15 +91,20 @@
         }
         
         .case-image {
-            margin-bottom: 20px;
+            flex-shrink: 0;
+            width: 120px;
         }
         
         .case-image img {
-            width: 100%;
-            height: 200px;
+            width: 120px;
+            height: 120px;
             object-fit: cover;
             border-radius: 8px;
             border: 2px solid #333;
+        }
+        
+        .case-content {
+            flex: 1;
         }
         
         .investigation h3 {
@@ -203,6 +211,18 @@
             
             .investigation {
                 padding: 20px;
+                flex-direction: column;
+                gap: 15px;
+            }
+            
+            .case-image {
+                width: 100%;
+                text-align: center;
+            }
+            
+            .case-image img {
+                width: 100px;
+                height: 100px;
             }
             
             .links {
@@ -225,19 +245,21 @@
 
     <div class="investigation">
         <div class="case-image">
-            <img src="case-image.jpg" alt="Broken Institutions Investigation - What Enabled Him?" style="width: 100%; height: 200px; object-fit: cover; border-radius: 8px;">
+            <img src="case-image.jpg" alt="Broken Institutions Investigation - What Enabled Him?">
         </div>
-        <h3>Charlotte Transit Case: "What Enabled Him?"</h3>
-        <div class="meta">
-            <span>Investigation: August 2025</span>
-            <span>Sources: 10+ verified references</span>
-            <span>Follow: <a href="https://instagram.com/brokeninstitutions" target="_blank">@brokeninstitutions</a></span>
-        </div>
-        <p>Complete source documentation for our investigation into institutional failures that enabled the Charlotte transit tragedy. This case examines 14 arrests, judicial decisions, and systemic breakdowns that led to preventable violence. All sources verified and documented for transparency.</p>
-        <div class="links">
-            <a href="article.html">Full Investigation</a>
-            <a href="sources.html">Complete Sources</a>
-            <a href="timeline.html">Case Timeline</a>
+        <div class="case-content">
+            <h3>Charlotte Transit Case: "What Enabled Him?"</h3>
+            <div class="meta">
+                <span>Investigation: August 2025</span>
+                <span>Sources: 10+ verified references</span>
+                <span>Follow: <a href="https://instagram.com/brokeninstitutions" target="_blank">@brokeninstitutions</a></span>
+            </div>
+            <p>Complete source documentation for our investigation into institutional failures that enabled the Charlotte transit tragedy. This case examines 14 arrests, judicial decisions, and systemic breakdowns that led to preventable violence. All sources verified and documented for transparency.</p>
+            <div class="links">
+                <a href="article.html">Full Investigation</a>
+                <a href="sources.html">Complete Sources</a>
+                <a href="timeline.html">Case Timeline</a>
+            </div>
         </div>
     </div>
 
