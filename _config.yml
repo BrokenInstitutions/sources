@@ -1,0 +1,35 @@
+title: "Source Documentation Archive"
+description: "Comprehensive source verification for institutional accountability investigations"
+baseurl: ""
+url: "https://github.com/BrokenInstitutions/sources"  # Sostituisci con i tuoi dati
+
+# SEO e Social Media
+lang: en
+author: "Institutional Accountability Project"
+
+# GitHub Pages Settings
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
+
+# Exclude files from processing
+exclude:
+  - README.md
+  - .gitignore
+
+# Default settings
+defaults:
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "default"
+
+# Social media (opzionale)
+twitter:
+  username: your_twitter_handle
+  card: summary
+
+# Google Analytics (opzionale)
+# google_analytics: UA-XXXXXXXXX-X

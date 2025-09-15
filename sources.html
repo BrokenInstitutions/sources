@@ -3,8 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Complete Sources - Iryna Zarutska Case</title>
+    <meta name="description" content="Complete source documentation for institutional accountability case study">
+    <title>Complete Sources - Institutional Case Study</title>
     <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
             line-height: 1.6;
@@ -14,13 +21,30 @@
             padding: 20px;
             background-color: #121212;
         }
+        
         .header {
             background: #1e1e1e;
-            padding: 20px;
+            padding: 25px;
             border-radius: 8px;
             margin-bottom: 30px;
             box-shadow: 0 2px 4px rgba(0,0,0,0.3);
         }
+        
+        .header h1 {
+            color: #dc3545;
+            margin-bottom: 10px;
+        }
+        
+        .header h2 {
+            color: #f8f9fa;
+            margin-bottom: 15px;
+            font-weight: 400;
+        }
+        
+        .header p {
+            color: #adb5bd;
+        }
+        
         .source-category {
             background: #1e1e1e;
             border-radius: 8px;
@@ -28,43 +52,63 @@
             overflow: hidden;
             box-shadow: 0 2px 4px rgba(0,0,0,0.3);
         }
+        
         .category-header {
             background-color: #dc3545;
             color: white;
             padding: 15px 20px;
             margin: 0;
             font-size: 1.2em;
+            font-weight: 600;
         }
+        
         .source-list {
             padding: 20px;
         }
+        
         .source-item {
-            margin-bottom: 15px;
-            padding-bottom: 15px;
+            margin-bottom: 20px;
+            padding-bottom: 20px;
             border-bottom: 1px solid #333;
         }
+        
         .source-item:last-child {
             border-bottom: none;
             margin-bottom: 0;
             padding-bottom: 0;
         }
+        
         .source-title {
             font-weight: bold;
             color: #dc3545;
-            margin-bottom: 5px;
+            margin-bottom: 8px;
+            font-size: 1.05em;
         }
+        
+        .source-description {
+            color: #ced4da;
+            margin-bottom: 8px;
+            font-size: 0.95em;
+        }
+        
         .source-url {
             word-break: break-all;
             color: #4dabf7;
             font-size: 0.9em;
+            font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
         }
+        
         .source-url a {
             color: #4dabf7;
             text-decoration: none;
+            transition: color 0.2s ease;
         }
+        
         .source-url a:hover {
+            color: #74c0fc;
             text-decoration: underline;
         }
+        
         .back-link {
             background-color: #6c757d;
             color: white;
@@ -73,81 +117,104 @@
             border-radius: 4px;
             display: inline-block;
             margin-bottom: 20px;
+            transition: background-color 0.2s ease;
         }
+        
         .back-link:hover {
             background-color: #5a6268;
+        }
+        
+        .back-link::before {
+            content: "← ";
+        }
+        
+        .source-type {
+            display: inline-block;
+            background: #2d3436;
+            color: #adb5bd;
+            padding: 2px 8px;
+            border-radius: 12px;
+            font-size: 0.8em;
+            margin-bottom: 8px;
+        }
+        
+        .footer-note {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #333;
+            color: #adb5bd;
+            font-size: 0.9em;
+        }
+        
+        @media (max-width: 768px) {
+            body {
+                padding: 15px;
+            }
+            
+            .header {
+                padding: 20px;
+            }
+            
+            .source-list {
+                padding: 15px;
+            }
         }
     </style>
 </head>
 <body>
-    <a href="index.html" class="back-link">← Back to Archive</a>
+    <a href="index.html" class="back-link">Back to Archive</a>
     
     <div class="header">
         <h1>Complete Source Documentation</h1>
-        <h2>Iryna Zarutska Case Investigation</h2>
-        <p>Verified sources used in the investigation "Fourteen Arrests: How Judicial Negligence Armed Iryna's Killer"</p>
+        <h2>Institutional Decision-Making Case Study</h2>
+        <p>Verified sources used in the analysis of judicial procedures and public safety outcomes</p>
     </div>
 
     <div class="source-category">
         <h3 class="category-header">Official Government Sources</h3>
         <div class="source-list">
             <div class="source-item">
+                <div class="source-type">Federal</div>
                 <div class="source-title">US Department of Justice Press Release</div>
+                <div class="source-description">Official federal announcement regarding charges in the Charlotte transit case</div>
                 <div class="source-url"><a href="https://www.justice.gov/opa/pr/justice-department-charges-light-rail-attacker-federal-crime" target="_blank">justice.gov/opa/pr/justice-department-charges-light-rail-attacker-federal-crime</a></div>
             </div>
             <div class="source-item">
+                <div class="source-type">Local Law Enforcement</div>
                 <div class="source-title">Charlotte-Mecklenburg Police Department Reports</div>
-                <div class="source-url">Official incident reports and statements (Internal Records)</div>
+                <div class="source-description">Official incident reports and investigative statements</div>
+                <div class="source-url">Internal Records - Available through public records requests</div>
             </div>
             <div class="source-item">
+                <div class="source-type">State Records</div>
                 <div class="source-title">North Carolina Department of Adult Correction</div>
-                <div class="source-url">Brown's criminal history records (State Archives)</div>
+                <div class="source-description">Criminal history and incarceration records</div>
+                <div class="source-url">State Archives - Accessible through official channels</div>
             </div>
         </div>
     </div>
 
     <div class="source-category">
-        <h3 class="category-header">Major News Organizations - CNN</h3>
+        <h3 class="category-header">Major News Organizations</h3>
         <div class="source-list">
             <div class="source-item">
-                <div class="source-title">Charlotte Train Stabbing Investigation</div>
+                <div class="source-type">CNN</div>
+                <div class="source-title">Charlotte Train Incident Investigation</div>
+                <div class="source-description">Comprehensive coverage of the incident and investigation</div>
                 <div class="source-url"><a href="https://www.cnn.com/2025/09/09/us/charlotte-train-stabbing-ukrainian-victim" target="_blank">cnn.com/2025/09/09/us/charlotte-train-stabbing-ukrainian-victim</a></div>
             </div>
             <div class="source-item">
-                <div class="source-title">Federal Charges Coverage</div>
-                <div class="source-url"><a href="https://edition.cnn.com/2025/09/09/us/decarlos-brown-charged-charlotte-train-stabbing" target="_blank">cnn.com/2025/09/09/us/decarlos-brown-charged-charlotte-train-stabbing</a></div>
-            </div>
-        </div>
-    </div>
-
-    <div class="source-category">
-        <h3 class="category-header">Major News Organizations - Newsweek</h3>
-        <div class="source-list">
-            <div class="source-item">
-                <div class="source-title">Teresa Stokes Investigation</div>
+                <div class="source-type">Newsweek</div>
+                <div class="source-title">Judicial Decision Analysis</div>
+                <div class="source-description">Investigation into pre-trial release procedures</div>
                 <div class="source-url"><a href="https://www.newsweek.com/teresa-stokes-charlotte-judge-decarlos-brown-jr-2126808" target="_blank">newsweek.com/teresa-stokes-charlotte-judge-decarlos-brown-jr-2126808</a></div>
             </div>
             <div class="source-item">
-                <div class="source-title">Brown's Criminal Record Analysis</div>
-                <div class="source-url"><a href="https://www.newsweek.com/decarlos-brown-jr-criminal-record-what-we-know-about-suspect-charlotte-stabbing-2126423" target="_blank">newsweek.com/decarlos-brown-jr-criminal-record-2126423</a></div>
-            </div>
-            <div class="source-item">
-                <div class="source-title">Judicial Scrutiny Report</div>
-                <div class="source-url"><a href="https://www.newsweek.com/judges-scrutiny-decarlos-brown-2126259" target="_blank">newsweek.com/judges-scrutiny-decarlos-brown-2126259</a></div>
-            </div>
-        </div>
-    </div>
-
-    <div class="source-category">
-        <h3 class="category-header">Major News Organizations - ABC News</h3>
-        <div class="source-list">
-            <div class="source-item">
-                <div class="source-title">Federal Charges Announcement</div>
-                <div class="source-url"><a href="https://abcnews.go.com/US/charlotte-increases-security-train-ukrainian-woman-killed/story?id=125397170" target="_blank">abcnews.go.com/US/charlotte-increases-security-train-ukrainian-woman-killed/story?id=125397170</a></div>
-            </div>
-            <div class="source-item">
-                <div class="source-title">Case Timeline Coverage</div>
-                <div class="source-url"><a href="https://abc11.com/post/iryna-zarutska-gruesome-train-stabbing-charlotte-adds-fuel-national-crime-debate/17786108/" target="_blank">abc11.com/post/iryna-zarutska-gruesome-train-stabbing-charlotte</a></div>
+                <div class="source-type">ABC News</div>
+                <div class="source-title">Federal Charges Coverage</div>
+                <div class="source-description">Reporting on federal law enforcement response</div>
+                <div class="source-url"><a href="https://abcnews.go.com/US/charlotte-increases-security-train-ukrainian-woman-killed/story?id=125397170" target="_blank">abcnews.go.com/US/charlotte-increases-security-train-ukrainian-woman-killed</a></div>
             </div>
         </div>
     </div>
@@ -156,65 +223,65 @@
         <h3 class="category-header">Local Charlotte Media</h3>
         <div class="source-list">
             <div class="source-item">
-                <div class="source-title">WBTV - Criminal Timeline Investigation</div>
+                <div class="source-type">WBTV</div>
+                <div class="source-title">Criminal History Timeline</div>
+                <div class="source-description">Local investigation into the perpetrator's arrest history</div>
                 <div class="source-url"><a href="https://www.wbtv.com/2025/09/09/timeline-charlotte-light-rail-stabbing-suspect-has-history-arrests-prison-time/" target="_blank">wbtv.com/2025/09/09/timeline-charlotte-light-rail-stabbing-suspect</a></div>
             </div>
             <div class="source-item">
-                <div class="source-title">WBTV - Competency Evaluation Process</div>
+                <div class="source-type">WBTV</div>
+                <div class="source-title">Competency Evaluation Process</div>
+                <div class="source-description">Analysis of mental health evaluation procedures in North Carolina</div>
                 <div class="source-url"><a href="https://www.wbtv.com/2025/09/10/what-happens-north-carolina-during-capacity-proceed-evaluation/" target="_blank">wbtv.com/2025/09/10/what-happens-north-carolina-during-capacity-proceed-evaluation</a></div>
             </div>
             <div class="source-item">
-                <div class="source-title">WCNC - Judicial Removal Calls</div>
+                <div class="source-type">WCNC</div>
+                <div class="source-title">Institutional Response Analysis</div>
+                <div class="source-description">Coverage of calls for judicial review procedures</div>
                 <div class="source-url"><a href="https://www.wcnc.com/article/news/crime/lawmakers-magistrate-judge-teresa-stokes-removal-charlotte-light-rail-stabbing/275-9a123606-6bed-4a11-ba5d-9c31b56b65f7" target="_blank">wcnc.com/article/news/crime/lawmakers-magistrate-judge-teresa-stokes-removal</a></div>
             </div>
         </div>
     </div>
 
     <div class="source-category">
-        <h3 class="category-header">Fox News</h3>
+        <h3 class="category-header">Statistical and Academic References</h3>
         <div class="source-list">
             <div class="source-item">
-                <div class="source-title">Video Analysis and Republican Response</div>
-                <div class="source-url"><a href="https://www.foxnews.com/us/chilling-video-shows-moments-before-ukrainian-refugee-stabbed-death-charlotte-light-rail" target="_blank">foxnews.com/us/chilling-video-shows-moments-before-ukrainian-refugee-stabbed-death-charlotte-light-rail</a></div>
+                <div class="source-type">UN Statistics</div>
+                <div class="source-title">International Crime Statistics</div>
+                <div class="source-description">Comparative homicide rates across different countries</div>
+                <div class="source-url">United Nations Office on Drugs and Crime (UNODC) - Global Crime Database</div>
             </div>
             <div class="source-item">
-                <div class="source-title">Political Response Coverage</div>
-                <div class="source-url"><a href="https://www.foxnews.com/politics/north-carolina-republicans-demand-firing-judge-who-freed-ukrainian-refugees-murder-suspect" target="_blank">foxnews.com/politics/north-carolina-republicans-demand-firing-judge</a></div>
+                <div class="source-type">Federal Statistics</div>
+                <div class="source-title">US Crime Statistics</div>
+                <div class="source-description">National homicide and violent crime statistics</div>
+                <div class="source-url">FBI Uniform Crime Reporting Program - Annual Data</div>
             </div>
         </div>
     </div>
 
     <div class="source-category">
-        <h3 class="category-header">Statistical References</h3>
+        <h3 class="category-header">Legal and Administrative Documents</h3>
         <div class="source-list">
             <div class="source-item">
-                <div class="source-title">Poland Homicide Statistics (0.68 per 100,000)</div>
-                <div class="source-url">United Nations Office on Drugs and Crime (UNODC) - Global Crime Database 2022</div>
-            </div>
-            <div class="source-item">
-                <div class="source-title">United States Homicide Statistics (6.3 per 100,000)</div>
-                <div class="source-url">FBI Uniform Crime Reporting Program - 2024 Data</div>
-            </div>
-        </div>
-    </div>
-
-    <div class="source-category">
-        <h3 class="category-header">Additional Verification Sources</h3>
-        <div class="source-list">
-            <div class="source-item">
-                <div class="source-title">Wikipedia - Case Documentation</div>
+                <div class="source-type">Wikipedia</div>
+                <div class="source-title">Case Documentation</div>
+                <div class="source-description">Comprehensive case information and timeline</div>
                 <div class="source-url"><a href="https://en.wikipedia.org/wiki/Killing_of_Iryna_Zarutska" target="_blank">en.wikipedia.org/wiki/Killing_of_Iryna_Zarutska</a></div>
             </div>
             <div class="source-item">
-                <div class="source-title">Court Form AOC-CR-208A</div>
+                <div class="source-type">Court Forms</div>
+                <div class="source-title">North Carolina Court Administrative Forms</div>
+                <div class="source-description">Official pre-trial release documentation forms</div>
                 <div class="source-url"><a href="https://www.nccourts.gov/assets/documents/forms/cr208a.pdf" target="_blank">nccourts.gov/assets/documents/forms/cr208a.pdf</a></div>
             </div>
         </div>
     </div>
 
-    <p style="text-align: center; margin-top: 40px; color: #adb5bd; font-size: 0.9em;">
-        All sources verified and documented for public accountability.<br>
-        Last updated: September 15, 2025
-    </p>
+    <div class="footer-note">
+        <p>All sources verified and documented for transparency and accountability.</p>
+        <p><strong>Last updated:</strong> September 15, 2025</p>
+    </div>
 </body>
 </html>

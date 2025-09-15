@@ -3,8 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Timeline - Iryna Zarutska Case</title>
+    <meta name="description" content="Chronological timeline of events in the institutional decision-making case study">
+    <title>Case Timeline - Institutional Analysis</title>
     <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
             line-height: 1.6;
@@ -14,6 +21,7 @@
             padding: 20px;
             background-color: #121212;
         }
+        
         .back-link {
             background-color: #6c757d;
             color: white;
@@ -22,114 +30,271 @@
             border-radius: 4px;
             display: inline-block;
             margin-bottom: 30px;
+            transition: background-color 0.2s ease;
         }
+        
+        .back-link:hover {
+            background-color: #5a6268;
+        }
+        
+        .back-link::before {
+            content: "← ";
+        }
+        
         .header {
             background: #1e1e1e;
-            padding: 20px;
+            padding: 25px;
             border-radius: 8px;
             margin-bottom: 30px;
             box-shadow: 0 2px 4px rgba(0,0,0,0.3);
         }
+        
+        .header h1 {
+            color: #dc3545;
+            margin-bottom: 10px;
+        }
+        
+        .header p {
+            color: #adb5bd;
+            font-size: 1.1em;
+        }
+        
+        .timeline-container {
+            position: relative;
+        }
+        
+        .timeline-container::before {
+            content: '';
+            position: absolute;
+            left: 30px;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: #dc3545;
+        }
+        
         .timeline-item {
             background: #1e1e1e;
             border-left: 4px solid #dc3545;
             padding: 20px;
             margin-bottom: 20px;
+            margin-left: 60px;
             border-radius: 0 8px 8px 0;
             box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+            position: relative;
+            transition: transform 0.2s ease;
         }
+        
+        .timeline-item:hover {
+            transform: translateX(5px);
+        }
+        
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -34px;
+            top: 25px;
+            width: 12px;
+            height: 12px;
+            background: #dc3545;
+            border-radius: 50%;
+            border: 3px solid #121212;
+        }
+        
         .timeline-date {
             color: #dc3545;
             font-weight: bold;
             font-size: 1.1em;
             margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
         }
+        
         .timeline-event {
             color: #f8f9fa;
             margin-bottom: 10px;
+            font-size: 1.05em;
         }
+        
         .timeline-significance {
             color: #adb5bd;
             font-style: italic;
-            font-size: 0.9em;
+            font-size: 0.95em;
+            background: #2d3436;
+            padding: 10px;
+            border-radius: 4px;
+            margin-top: 10px;
         }
+        
         .critical-timeline {
             background: #2d1b1e;
             border-left-color: #dc3545;
+            box-shadow: 0 4px 8px rgba(220, 53, 69, 0.2);
+        }
+        
+        .critical-timeline::before {
+            background: #dc3545;
+            box-shadow: 0 0 10px rgba(220, 53, 69, 0.5);
+        }
+        
+        .critical-timeline .timeline-date {
+            color: #ff6b6b;
+        }
+        
+        .period-header {
+            background: #2d3436;
+            color: #f8f9fa;
+            padding: 15px 20px;
+            margin: 30px 0 20px 60px;
+            border-radius: 6px;
+            font-weight: bold;
+            font-size: 1.1em;
+            border-left: 4px solid #28a745;
+        }
+        
+        .period-header.critical-period {
+            border-left-color: #dc3545;
+            background: #3d2d2d;
+        }
+        
+        .timeline-summary {
+            background: #1e1e1e;
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 30px;
+            border: 1px solid #333;
+        }
+        
+        .timeline-summary h3 {
+            color: #dc3545;
+            margin-bottom: 15px;
+        }
+        
+        .timeline-summary p {
+            color: #ced4da;
+        }
+        
+        .footer-note {
+            text-align: center;
+            margin-top: 40px;
+            color: #adb5bd;
+            font-size: 0.9em;
+            padding-top: 20px;
+            border-top: 1px solid #333;
+        }
+        
+        @media (max-width: 768px) {
+            body {
+                padding: 15px;
+            }
+            
+            .timeline-container::before {
+                left: 20px;
+            }
+            
+            .timeline-item {
+                margin-left: 40px;
+                padding: 15px;
+            }
+            
+            .timeline-item::before {
+                left: -24px;
+            }
+            
+            .period-header {
+                margin-left: 40px;
+                padding: 12px 15px;
+            }
         }
     </style>
 </head>
 <body>
-    <a href="index.html" class="back-link">← Back to Archive</a>
+    <a href="index.html" class="back-link">Back to Archive</a>
     
     <div class="header">
-        <h1>Case Timeline: Iryna Zarutska</h1>
-        <p>Chronological sequence of institutional failures that enabled preventable tragedy</p>
+        <h1>Case Timeline: Institutional Decision-Making Analysis</h1>
+        <p>Chronological sequence of institutional decisions and their outcomes in a public safety case study</p>
     </div>
 
-    <div class="timeline-item">
-        <div class="timeline-date">2011-2024: The Pattern Emerges</div>
-        <div class="timeline-event">Decarlos Brown Jr. accumulates 14 arrests for violent crimes including armed robbery, domestic violence, breaking and entering</div>
-        <div class="timeline-significance">Multiple judges and magistrates repeatedly release violent repeat offender</div>
+    <div class="timeline-container">
+        <div class="period-header">Historical Background</div>
+        
+        <div class="timeline-item">
+            <div class="timeline-date">2011-2024: Pattern Development</div>
+            <div class="timeline-event">Decarlos Brown Jr. accumulates multiple arrests for various offenses including property crimes, domestic incidents, and violent offenses</div>
+            <div class="timeline-significance">Establishes pattern of repeated involvement with criminal justice system across multiple jurisdictions</div>
+        </div>
+
+        <div class="timeline-item">
+            <div class="timeline-date">2015: Major Conviction</div>
+            <div class="timeline-event">Brown sentenced to significant prison term for armed robbery conviction</div>
+            <div class="timeline-significance">Court records document escalation to violent felony offenses</div>
+        </div>
+
+        <div class="timeline-item">
+            <div class="timeline-date">September 2020: Release from Incarceration</div>
+            <div class="timeline-event">Brown completes prison sentence and returns to community</div>
+            <div class="timeline-significance">Reentry into community following completion of sentence</div>
+        </div>
+
+        <div class="timeline-item">
+            <div class="timeline-date">September 2022: Family Incident</div>
+            <div class="timeline-event">Brown arrested for domestic incident involving family member; charges later dropped</div>
+            <div class="timeline-significance">Family intervention attempt; charges not pursued by complainant</div>
+        </div>
+
+        <div class="period-header critical-period">Critical Decision Period</div>
+
+        <div class="timeline-item critical-timeline">
+            <div class="timeline-date">January 19, 2025: Pre-Trial Release Decision</div>
+            <div class="timeline-event">Magistrate Teresa Stokes approves pre-trial release following arrest for emergency services misuse</div>
+            <div class="timeline-significance">JUDICIAL DECISION: Standard pre-trial release protocols applied despite extensive criminal history</div>
+        </div>
+
+        <div class="timeline-item critical-timeline">
+            <div class="timeline-date">July 28, 2025: Competency Evaluation Order</div>
+            <div class="timeline-event">Chief District Judge Roy Wiggins orders mental health competency evaluation</div>
+            <div class="timeline-significance">ADMINISTRATIVE DELAY: Evaluation process experiences significant delays extending multiple months</div>
+        </div>
+
+        <div class="period-header critical-period">Tragic Outcome</div>
+
+        <div class="timeline-item critical-timeline">
+            <div class="timeline-date">August 22, 2025: 9:55 PM - Fatal Incident</div>
+            <div class="timeline-event">Brown fatally attacks Iryna Zarutska on Charlotte light rail system</div>
+            <div class="timeline-significance">TRAGIC OUTCOME: 23-year-old Ukrainian refugee killed in random attack on public transit</div>
+        </div>
+
+        <div class="period-header">Institutional Response</div>
+
+        <div class="timeline-item">
+            <div class="timeline-date">August 22, 2025: Immediate Arrest</div>
+            <div class="timeline-event">Brown apprehended at scene and transported for medical evaluation</div>
+            <div class="timeline-significance">Law enforcement response and immediate detention</div>
+        </div>
+
+        <div class="timeline-item">
+            <div class="timeline-date">September 9, 2025: Federal Charges</div>
+            <div class="timeline-event">US Department of Justice files federal charges eligible for capital punishment</div>
+            <div class="timeline-significance">Federal law enforcement intervention in response to interstate transit incident</div>
+        </div>
+
+        <div class="timeline-item">
+            <div class="timeline-date">September 2025: Expedited Evaluation</div>
+            <div class="timeline-event">Brown transferred to Central Regional Hospital-Butner; competency evaluation completed rapidly</div>
+            <div class="timeline-significance">INSTITUTIONAL EFFICIENCY: Same evaluation process that took months completed within days post-incident</div>
+        </div>
     </div>
 
-    <div class="timeline-item">
-        <div class="timeline-date">2015: Armed Robbery Conviction</div>
-        <div class="timeline-event">Brown sentenced to 5+ years for robbery with dangerous weapon</div>
-        <div class="timeline-significance">Clear pattern of violent escalation documented</div>
+    <div class="timeline-summary">
+        <h3>Timeline Analysis Summary</h3>
+        <p>This timeline illustrates the intersection of multiple institutional decision points and their outcomes. Key observations include the contrast between pre-incident procedural delays and post-incident institutional efficiency, raising questions about resource allocation and process prioritization within the criminal justice and mental health systems.</p>
     </div>
 
-    <div class="timeline-item">
-        <div class="timeline-date">September 2020: Release from Prison</div>
-        <div class="timeline-event">Brown released after serving sentence for armed robbery</div>
-        <div class="timeline-significance">System prepares for cycle to repeat</div>
+    <div class="footer-note">
+        <p>Timeline based on verified court records, law enforcement reports, and official government sources</p>
+        <p><strong>Last updated:</strong> September 15, 2025</p>
     </div>
-
-    <div class="timeline-item">
-        <div class="timeline-date">September 2022: Sister Assault</div>
-        <div class="timeline-event">Brown arrested for assaulting his sister but she drops charges</div>
-        <div class="timeline-significance">Family attempts intervention, system provides no support</div>
-    </div>
-
-    <div class="timeline-item critical-timeline">
-        <div class="timeline-date">January 19, 2025: Critical Release Decision</div>
-        <div class="timeline-event">Magistrate Teresa Stokes releases Brown on "written promise to appear" after 911 misuse arrest</div>
-        <div class="timeline-significance">CRITICAL FAILURE: Judge ignores violent history and mental health diagnosis</div>
-    </div>
-
-    <div class="timeline-item critical-timeline">
-        <div class="timeline-date">July 28, 2025: Evaluation Ordered, Never Completed</div>
-        <div class="timeline-event">Chief District Judge Roy Wiggins orders competency evaluation</div>
-        <div class="timeline-significance">CRITICAL FAILURE: Eight-month delay enables murder</div>
-    </div>
-
-    <div class="timeline-item critical-timeline">
-        <div class="timeline-date">August 22, 2025: 9:55 PM - Murder</div>
-        <div class="timeline-event">Brown stabs Iryna Zarutska to death on Charlotte light rail</div>
-        <div class="timeline-significance">PREVENTABLE TRAGEDY: 14 institutional failures culminate in murder</div>
-    </div>
-
-    <div class="timeline-item">
-        <div class="timeline-date">August 22, 2025: Immediate Arrest</div>
-        <div class="timeline-event">Brown arrested on platform, taken to hospital for hand laceration</div>
-        <div class="timeline-significance">System suddenly finds efficiency after tragedy</div>
-    </div>
-
-    <div class="timeline-item">
-        <div class="timeline-date">September 9, 2025: Federal Charges</div>
-        <div class="timeline-event">DOJ charges Brown with federal crime eligible for death penalty</div>
-        <div class="timeline-significance">Political response to institutional failure</div>
-    </div>
-
-    <div class="timeline-item">
-        <div class="timeline-date">September 2025: Competency Evaluation Completed</div>
-        <div class="timeline-event">Brown transferred to Central Regional Hospital-Butner, evaluation expedited</div>
-        <div class="timeline-significance">Same system that delayed 8 months now acts within days</div>
-    </div>
-
-    <p style="text-align: center; margin-top: 40px; color: #adb5bd; font-size: 0.9em;">
-        Timeline demonstrates systematic institutional failure to protect public safety<br>
-        Last updated: September 15, 2025
-    </p>
 </body>
 </html>
