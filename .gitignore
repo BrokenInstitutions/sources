@@ -1,0 +1,22 @@
+# Project-specific files (local only)
+PROJECT_INSTRUCTIONS.md
+
+# Temporary files
+*.tmp
+*.bak
+*~
+
+# IDE/Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Local development
+node_modules/
+.env
+.env.local
