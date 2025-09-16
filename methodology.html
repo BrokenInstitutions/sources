@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Research methodology and investigative standards for Broken Institutions accountability journalism">
+    <title>Methodology - Broken Institutions</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.7;
+            color: #e9ecef;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #121212;
+        }
+
+        .back-link {
+            background-color: #6c757d;
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            display: inline-block;
+            margin-bottom: 30px;
+            transition: background-color 0.2s ease;
+        }
+
+        .back-link:hover {
+            background-color: #5a6268;
+        }
+
+        .back-link::before {
+            content: "← ";
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding-bottom: 20px;
+            border-bottom: 3px solid #dc3545;
+        }
+
+        .logo {
+            background-color: #dc3545;
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 15px;
+            box-shadow: 0 4px 8px rgba(220, 53, 69, 0.3);
+        }
+
+        h1 {
+            color: #dc3545;
+            font-size: 2.4em;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        .subtitle {
+            color: #adb5bd;
+            font-size: 1.2em;
+            font-weight: 400;
+        }
+
+        .content {
+            background: #1e1e1e;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .content h2 {
+            color: #dc3545;
+            border-bottom: 2px solid #333;
+            padding-bottom: 10px;
+            margin-top: 30px;
+            margin-bottom: 20px;
+            font-size: 1.6em;
+        }
+
+        .content h2:first-child {
+            margin-top: 0;
+        }
+
+        .content h3 {
+            color: #ff6b6b;
+            margin-top: 25px;
+            margin-bottom: 15px;
+            font-size: 1.2em;
+        }
+
+        .content p {
+            margin-bottom: 20px;
+            color: #ced4da;
+            font-size: 1.05em;
+        }
+
+        .content ul, .content ol {
+            margin-left: 25px;
+            margin-bottom: 20px;
+            color: #ced4da;
+        }
+
+        .content li {
+            margin-bottom: 8px;
+        }
+
+        .methodology-step {
+            background: #2d3436;
+            border-left: 4px solid #28a745;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .methodology-step h4 {
+            color: #28a745;
+            margin-bottom: 10px;
+            font-size: 1.1em;
+        }
+
+        .methodology-step p {
+            color: #ced4da;
+            margin-bottom: 0;
+        }
+
+        .source-hierarchy {
+            background: #2d1b1e;
+            border-left: 4px solid #dc3545;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .source-hierarchy h4 {
+            color: #dc3545;
+            margin-bottom: 15px;
+            font-size: 1.1em;
+        }
+
+        .source-tier {
+            background: #1a1a1a;
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 6px;
+            border-left: 3px solid #666;
+        }
+
+        .source-tier.tier-1 {
+            border-left-color: #28a745;
+        }
+
+        .source-tier.tier-2 {
+            border-left-color: #ffc107;
+        }
+
+        .source-tier.tier-3 {
+            border-left-color: #dc3545;
+        }
+
+        .source-tier h5 {
+            margin-bottom: 8px;
+            font-size: 1em;
+        }
+
+        .tier-1 h5 {
+            color: #28a745;
+        }
+
+        .tier-2 h5 {
+            color: #ffc107;
+        }
+
+        .tier-3 h5 {
+            color: #dc3545;
+        }
+
+        .verification-process {
+            background: #1a1a2e;
+            border-left: 4px solid #4dabf7;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .verification-process h4 {
+            color: #4dabf7;
+            margin-bottom: 15px;
+            font-size: 1.1em;
+        }
+
+        .process-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+            margin-top: 15px;
+        }
+
+        .process-card {
+            background: #2d3436;
+            padding: 15px;
+            border-radius: 6px;
+            text-align: center;
+        }
+
+        .process-number {
+            background: #dc3545;
+            color: white;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .process-title {
+            color: #f8f9fa;
+            font-weight: 600;
+            margin-bottom: 8px;
+            font-size: 0.9em;
+        }
+
+        .process-description {
+            color: #adb5bd;
+            font-size: 0.8em;
+            line-height: 1.4;
+        }
+
+        .standards-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin: 25px 0;
+        }
+
+        .standard-card {
+            background: #2d3436;
+            padding: 20px;
+            border-radius: 8px;
+            border-top: 4px solid #dc3545;
+        }
+
+        .standard-card h4 {
+            color: #dc3545;
+            margin-bottom: 10px;
+            font-size: 1.1em;
+        }
+
+        .standard-card ul {
+            margin-left: 15px;
+            color: #ced4da;
+        }
+
+        .ethics-box {
+            background: linear-gradient(135deg, #1a4d3a 0%, #2d5a3d 100%);
+            border-left: 4px solid #28a745;
+            padding: 25px;
+            margin: 25px 0;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .ethics-box h3 {
+            color: #28a745;
+            margin-top: 0;
+            margin-bottom: 15px;
+            font-size: 1.3em;
+        }
+
+        .ethics-box p {
+            color: #d4edda;
+            font-size: 1.05em;
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding: 15px;
+            }
+
+            h1 {
+                font-size: 2em;
+            }
+
+            .content {
+                padding: 20px;
+            }
+
+            .process-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .standards-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <a href="index.html" class="back-link">Back to Archive</a>
+
+    <div class="header">
+        <div class="logo">BI</div>
+        <h1>Research Methodology</h1>
+        <p class="subtitle">Standards and Processes for Institutional Accountability Investigations</p>
+    </div>
+
+    <div class="content">
+        <h2>Our Investigative Process</h2>
+
+        <p>Our methodology combines traditional investigative journalism techniques with systematic documentation processes to ensure accuracy, transparency, and accountability in our reporting.</p>
+
+        <div class="process-grid">
+            <div class="process-card">
+                <div class="process-number">1</div>
+                <div class="process-title">Case Identification</div>
+                <div class="process-description">Focus on recent institutional failures with clear documentation and public safety implications</div>
+            </div>
+            <div class="process-card">
+                <div class="process-number">2</div>
+                <div class="process-title">Source Collection</div>
+                <div class="process-description">Gather official documents, court records, and verified media reports</div>
+            </div>
+            <div class="process-card">
+                <div class="process-number">3</div>
+                <div class="process-title">Verification</div>
+                <div class="process-description">Cross-reference all claims with multiple independent sources</div>
+            </div>
+            <div class="process-card">
+                <div class="process-number">4</div>
+                <div class="process-title">Analysis</div>
+                <div class="process-description">Examine patterns, timelines, and systemic failures</div>
+            </div>
+            <div class="process-card">
+                <div class="process-number">5</div>
+                <div class="process-title">Documentation</div>
+                <div class="process-description">Create comprehensive source archives for transparency</div>
+            </div>
+            <div class="process-card">
+                <div class="process-number">6</div>
+                <div class="process-title">Publication</div>
+                <div class="process-description">Release findings with full source documentation</div>
+            </div>
+        </div>
+
+        <h2>Source Verification Standards</h2>
+
+        <div class="source-hierarchy">
+            <h4>Source Reliability Hierarchy</h4>
+
+            <div class="source-tier tier-1">
+                <h5>Tier 1: Primary Official Sources</h5>
+                <ul>
+                    <li>Government press releases and official statements</li>
+                    <li>Court documents and legal filings</li>
+                    <li>Law enforcement reports and records</li>
+                    <li>Official institutional documents (FOIA responses)</li>
+                </ul>
+            </div>
+
+            <div class="source-tier tier-2">
+                <h5>Tier 2: Verified Secondary Sources</h5>
+                <ul>
+                    <li>Major news organizations with editorial standards</li>
+                    <li>Local media with direct source access</li>
+                    <li>Academic research and statistical databases</li>
+                    <li>Professional journalism investigations</li>
+                </ul>
+            </div>
+
+            <div class="source-tier tier-3">
+                <h5>Tier 3: Supporting Context Sources</h5>
+                <ul>
+                    <li>Social media posts (when directly relevant)</li>
+                    <li>Public statements and interviews</li>
+                    <li>Opinion pieces with factual content</li>
+                    <li>Background and contextual information</li>
+                </ul>
+            </div>
+        </div>
+
+        <h2>Case Documentation Protocol</h2>
+
+        <div class="methodology-step">
+            <h4>1. Source Collection Phase</h4>
+            <p>Comprehensive gathering of all available primary sources, including government documents, court records, and official statements. We prioritize Freedom of Information Act (FOIA) requests and public records access.</p>
+        </div>
+
+        <div class="methodology-step">
+            <h4>2. Timeline Development</h4>
+            <p>Creation of detailed chronological sequences based on verified dates and events. All timeline entries include source attribution and verification status.</p>
+        </div>
+
+        <div class="methodology-step">
+            <h4>3. Pattern Analysis</h4>
+            <p>Systematic examination of institutional decisions, policy applications, and procedural outcomes to identify recurring themes and systemic issues.</p>
+        </div>
+
+        <div class="methodology-step">
+            <h4>4. Comparative Research</h4>
+            <p>International and jurisdictional comparisons to provide context and identify alternative approaches that have proven more effective.</p>
+        </div>
+
+        <div class="methodology-step">
+            <h4>5. Reform Recommendations</h4>
+            <p>Development of evidence-based policy suggestions grounded in successful implementations from other jurisdictions and academic research.</p>
+        </div>
+
+        <h2>Quality Control Standards</h2>
+
+        <div class="standards-grid">
+            <div class="standard-card">
+                <h4>Fact Verification</h4>
+                <ul>
+                    <li>Minimum two independent source confirmation</li>
+                    <li>Cross-reference dates, names, and events</li>
+                    <li>Direct citation of primary sources when possible</li>
+                    <li>Clear notation when claims cannot be independently verified</li>
+                </ul>
+            </div>
+
+            <div class="standard-card">
+                <h4>Legal Compliance</h4>
+                <ul>
+                    <li>Adherence to defamation and privacy laws</li>
+                    <li>Focus on public officials and public actions</li>
+                    <li>Distinction between factual reporting and opinion</li>
+                    <li>Respect for ongoing legal proceedings</li>
+                </ul>
+            </div>
+
+            <div class="standard-card">
+                <h4>Ethical Standards</h4>
+                <ul>
+                    <li>Victim sensitivity and family respect</li>
+                    <li>Avoidance of sensationalism</li>
+                    <li>Focus on institutional rather than personal failures</li>
+                    <li>Commitment to accuracy over speed</li>
+                </ul>
+            </div>
+
+            <div class="standard-card">
+                <h4>Transparency Requirements</h4>
+                <ul>
+                    <li>Complete source documentation</li>
+                    <li>Clear methodology explanation</li>
+                    <li>Acknowledgment of limitations</li>
+                    <li>Regular updates when new information emerges</li>
+                </ul>
+            </div>
+        </div>
+
+        <h2>International Comparison Framework</h2>
+
+        <p>Our international comparisons follow established academic and policy research methodologies:</p>
+
+        <ul>
+            <li><strong>Statistical Sources:</strong> UN Office on Drugs and Crime (UNODC), World Health Organization (WHO), and national statistical agencies</li>
+            <li><strong>Policy Analysis:</strong> Examination of legal frameworks, judicial procedures, and enforcement mechanisms</li>
+            <li><strong>Outcome Measurement:</strong> Focus on public safety outcomes, recidivism rates, and institutional effectiveness</li>
+            <li><strong>Contextual Factors:</strong> Consideration of cultural, economic, and social differences when making comparisons</li>
+        </ul>
+
+        <div class="verification-process">
+            <h4>Source Verification Process</h4>
+            <p>Every piece of information undergoes our systematic verification protocol:</p>
+            <ol>
+                <li><strong>Primary Source Identification:</strong> Locate original documents or official statements</li>
+                <li><strong>Cross-Reference Verification:</strong> Confirm information through multiple independent sources</li>
+                <li><strong>Date and Timeline Confirmation:</strong> Verify chronological accuracy through official records</li>
+                <li><strong>Context Validation:</strong> Ensure information is presented with appropriate context and background</li>
+                <li><strong>Update Monitoring:</strong> Track developments and update information as new sources become available</li>
+            </ol>
+        </div>
+
+        <h2>Limitations and Transparency</h2>
+
+        <p>We acknowledge the limitations of our methodology and maintain transparency about constraints:</p>
+
+        <ul>
+            <li><strong>Source Availability:</strong> Some official documents may be sealed or unavailable</li>
+            <li><strong>Jurisdiction Differences:</strong> Legal and procedural variations across jurisdictions</li>
+            <li><strong>Timeline Constraints:</strong> Ongoing cases may limit available information</li>
+            <li><strong>Resource Limitations:</strong> Independent research constraints on investigation scope</li>
+        </ul>
+
+        <div class="ethics-box">
+            <h3>Commitment to Accuracy</h3>
+            <p>We prioritize accuracy over speed and are committed to correcting any errors that come to light. Our methodology emphasizes thorough verification and transparent documentation to maintain the highest standards of investigative journalism.</p>
+        </div>
+
+        <h2>Continuous Improvement</h2>
+
+        <p>Our methodology evolves based on:</p>
+
+        <ul>
+            <li>Feedback from legal and journalism professionals</li>
+            <li>New developments in investigative techniques</li>
+            <li>Lessons learned from completed investigations</li>
+            <li>Changes in public records access and legal frameworks</li>
+        </ul>
+
+        <p>We remain committed to maintaining and improving our standards to serve the public interest through accurate, transparent, and accountable institutional reporting.</p>
+    </div>
+</body>
+</html>

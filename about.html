@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="About Broken Institutions - Our mission, values, and approach to institutional accountability journalism">
+    <title>About - Broken Institutions</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.7;
+            color: #e9ecef;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #121212;
+        }
+
+        .back-link {
+            background-color: #6c757d;
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            display: inline-block;
+            margin-bottom: 30px;
+            transition: background-color 0.2s ease;
+        }
+
+        .back-link:hover {
+            background-color: #5a6268;
+        }
+
+        .back-link::before {
+            content: "← ";
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding-bottom: 20px;
+            border-bottom: 3px solid #dc3545;
+        }
+
+        .logo {
+            background-color: #dc3545;
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 15px;
+            box-shadow: 0 4px 8px rgba(220, 53, 69, 0.3);
+        }
+
+        h1 {
+            color: #dc3545;
+            font-size: 2.4em;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        .subtitle {
+            color: #adb5bd;
+            font-size: 1.2em;
+            font-weight: 400;
+        }
+
+        .content {
+            background: #1e1e1e;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .content h2 {
+            color: #dc3545;
+            border-bottom: 2px solid #333;
+            padding-bottom: 10px;
+            margin-top: 30px;
+            margin-bottom: 20px;
+            font-size: 1.6em;
+        }
+
+        .content h2:first-child {
+            margin-top: 0;
+        }
+
+        .content h3 {
+            color: #ff6b6b;
+            margin-top: 25px;
+            margin-bottom: 15px;
+            font-size: 1.2em;
+        }
+
+        .content p {
+            margin-bottom: 20px;
+            color: #ced4da;
+            font-size: 1.05em;
+        }
+
+        .content ul {
+            margin-left: 25px;
+            margin-bottom: 20px;
+            color: #ced4da;
+        }
+
+        .content li {
+            margin-bottom: 8px;
+        }
+
+        .mission-box {
+            background: linear-gradient(135deg, #2d1b1e 0%, #3d2d2d 100%);
+            border-left: 4px solid #dc3545;
+            padding: 25px;
+            margin: 25px 0;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .mission-box h3 {
+            color: #dc3545;
+            margin-top: 0;
+            margin-bottom: 15px;
+            font-size: 1.3em;
+        }
+
+        .mission-box p {
+            color: #f8f9fa;
+            margin-bottom: 0;
+            font-size: 1.1em;
+            font-weight: 500;
+        }
+
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin: 25px 0;
+        }
+
+        .value-card {
+            background: #2d3436;
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 4px solid #28a745;
+        }
+
+        .value-card h4 {
+            color: #28a745;
+            margin-bottom: 10px;
+            font-size: 1.1em;
+        }
+
+        .value-card p {
+            color: #ced4da;
+            margin-bottom: 0;
+            font-size: 0.95em;
+        }
+
+        .quote-box {
+            background: #1a1a2e;
+            border-left: 4px solid #4dabf7;
+            padding: 20px;
+            margin: 25px 0;
+            border-radius: 0 8px 8px 0;
+            font-style: italic;
+        }
+
+        .quote-box p {
+            margin-bottom: 0;
+            color: #d1ecf1;
+            font-size: 1.1em;
+        }
+
+        .contact-info {
+            background: #2d3436;
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 30px;
+            text-align: center;
+        }
+
+        .contact-info h3 {
+            color: #dc3545;
+            margin-bottom: 15px;
+        }
+
+        .contact-info a {
+            color: #4dabf7;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding: 15px;
+            }
+
+            h1 {
+                font-size: 2em;
+            }
+
+            .content {
+                padding: 20px;
+            }
+
+            .values-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <a href="index.html" class="back-link">Back to Archive</a>
+
+    <div class="header">
+        <div class="logo">BI</div>
+        <h1>About Our Work</h1>
+        <p class="subtitle">Institutional Accountability Through Investigative Journalism</p>
+    </div>
+
+    <div class="content">
+        <div class="mission-box">
+            <h3>Our Mission</h3>
+            <p>To expose institutional failures, promote transparency, and demand accountability from public officials whose decisions impact citizen safety and welfare.</p>
+        </div>
+
+        <h2>What We Do</h2>
+        <p>Broken Institutions is dedicated to researching and documenting institutional failures that compromise public safety and democratic accountability. We focus on cases where systemic breakdowns enable preventable tragedies, examining the decision-making processes, policies, and officials responsible.</p>
+
+        <p>Our investigations combine traditional investigative journalism with comprehensive source documentation, providing transparent, evidence-based analysis of institutional decision-making and its consequences.</p>
+
+        <h2>Our Approach</h2>
+
+        <h3>Evidence-Based Investigation</h3>
+        <p>Every claim we make is backed by verifiable sources. We prioritize official government documents, court records, and verified news sources, ensuring our investigations meet the highest standards of accuracy and reliability.</p>
+
+        <h3>Transparency and Accountability</h3>
+        <p>We believe transparency drives accountability. All our sources are documented and made publicly available, allowing readers to verify our findings and draw their own conclusions from the evidence.</p>
+
+        <h3>Focus on Systemic Issues</h3>
+        <p>While individual cases provide the human element of our stories, our primary focus is on identifying and exposing systemic patterns that enable institutional failures across jurisdictions and time periods.</p>
+
+        <h2>Core Values</h2>
+
+        <div class="values-grid">
+            <div class="value-card">
+                <h4>Accuracy</h4>
+                <p>Every fact is verified through multiple sources and cross-referenced for accuracy.</p>
+            </div>
+            <div class="value-card">
+                <h4>Transparency</h4>
+                <p>All sources and methodologies are documented and made publicly available.</p>
+            </div>
+            <div class="value-card">
+                <h4>Integrity</h4>
+                <p>We maintain strict ethical standards and avoid sensationalism in favor of factual reporting.</p>
+            </div>
+            <div class="value-card">
+                <h4>Independence</h4>
+                <p>Our investigations are driven by evidence and public interest, not political or financial considerations.</p>
+            </div>
+        </div>
+
+        <h2>Focus Areas</h2>
+
+        <h3>Judicial System Accountability</h3>
+        <ul>
+            <li>Pre-trial release decisions and their consequences</li>
+            <li>Competency evaluations and procedural delays</li>
+            <li>Judicial immunity and accountability mechanisms</li>
+            <li>Sentencing disparities and systemic patterns</li>
+        </ul>
+
+        <h3>Public Policy Analysis</h3>
+        <ul>
+            <li>Immigration enforcement and safety protocols</li>
+            <li>Mental health systems and institutional oversight</li>
+            <li>Public safety decision-making and resource allocation</li>
+            <li>Government transparency and FOIA processes</li>
+        </ul>
+
+        <h3>International Comparisons</h3>
+        <ul>
+            <li>Comparative analysis of institutional systems</li>
+            <li>Best practices from international jurisdictions</li>
+            <li>Evidence-based policy recommendations</li>
+            <li>Reform success stories and implementation strategies</li>
+        </ul>
+
+        <div class="quote-box">
+            <p>"When institutions fail, innocent people suffer. Our role is to document these failures, identify their causes, and demand the reforms necessary to prevent future tragedies."</p>
+        </div>
+
+        <h2>Standards and Ethics</h2>
+
+        <p>We adhere to the highest standards of investigative journalism:</p>
+
+        <ul>
+            <li><strong>Fact Verification:</strong> All claims are cross-referenced with multiple sources</li>
+            <li><strong>Legal Compliance:</strong> We ensure compliance with defamation and privacy laws</li>
+            <li><strong>Victim Sensitivity:</strong> We maintain respect for victims and their families while pursuing accountability</li>
+            <li><strong>Professional Standards:</strong> We follow established journalistic ethics and principles</li>
+        </ul>
+
+        <h2>Impact and Reform</h2>
+
+        <p>Our ultimate goal is meaningful institutional reform. By documenting failures and proposing evidence-based solutions, we aim to:</p>
+
+        <ul>
+            <li>Increase public awareness of institutional accountability issues</li>
+            <li>Provide lawmakers and policymakers with comprehensive case studies</li>
+            <li>Support advocacy efforts for systemic reform</li>
+            <li>Contribute to the broader conversation about institutional responsibility</li>
+        </ul>
+
+        <p>We believe that sunlight remains the best disinfectant, and that thorough documentation of institutional failures is essential for preventing future tragedies and rebuilding public trust.</p>
+
+        <div class="contact-info">
+            <h3>Connect With Us</h3>
+            <p>Follow our investigations: <a href="https://instagram.com/brokeninstitutions" target="_blank">@brokeninstitutions</a></p>
+            <p>For tips, sources, or information: Contact through our social media channels</p>
+        </div>
+    </div>
+</body>
+</html>
