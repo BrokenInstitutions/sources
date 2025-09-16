@@ -112,39 +112,56 @@
         .theme-toggle {
             background: #2d3436;
             border: 1px solid #333;
-            border-radius: 25px;
-            padding: 4px;
+            border-radius: 20px;
+            padding: 3px;
             cursor: pointer;
             display: flex;
             align-items: center;
-            gap: 2px;
+            gap: 0;
             transition: all 0.3s ease;
             position: relative;
-            width: 60px;
-            height: 32px;
+            width: 54px;
+            height: 28px;
+            overflow: hidden;
         }
 
         .theme-toggle:hover {
-            background: #636e72;
+            border-color: #dc3545;
+            box-shadow: 0 0 0 1px rgba(220, 53, 69, 0.3);
+        }
+
+        .theme-toggle::before {
+            content: '';
+            position: absolute;
+            width: 22px;
+            height: 22px;
+            background: #dc3545;
+            border-radius: 50%;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            left: 3px;
+            z-index: 1;
+        }
+
+        .theme-toggle.light::before {
+            transform: translateX(26px);
         }
 
         .theme-icon {
-            width: 24px;
-            height: 24px;
+            width: 22px;
+            height: 22px;
             display: flex;
             align-items: center;
             justify-content: center;
             border-radius: 50%;
             transition: all 0.3s ease;
-            font-size: 12px;
+            font-size: 11px;
             position: relative;
             z-index: 2;
+            flex-shrink: 0;
         }
 
         .theme-icon.active {
-            background: #dc3545;
             color: white;
-            transform: scale(1.1);
         }
 
         .theme-icon.inactive {
@@ -192,7 +209,7 @@
         }
 
         .filter-select {
-            padding: 10px 12px;
+            padding: 10px 16px 10px 12px;
             border: 1px solid #333;
             border-radius: 6px;
             background: #2d3436;
@@ -200,6 +217,12 @@
             font-size: 0.9em;
             cursor: pointer;
             transition: all 0.3s ease;
+            appearance: none;
+            background-image: url('data:image/svg+xml;charset=US-ASCII,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 4 5"><path fill="%23adb5bd" d="M2 0L0 2h4zm0 5L0 3h4z"/></svg>');
+            background-repeat: no-repeat;
+            background-position: right 8px center;
+            background-size: 12px;
+            padding-right: 28px;
         }
 
         .filter-select:focus {
@@ -234,7 +257,8 @@
         .case-card.featured {
             position: relative;
             background-size: cover;
-            background-position: center;
+            background-position: center center;
+            background-attachment: local;
             min-height: 350px;
         }
 
@@ -458,7 +482,8 @@
         }
 
         .light-theme .theme-toggle:hover {
-            background: #e9ecef;
+            border-color: #dc3545;
+            box-shadow: 0 0 0 1px rgba(220, 53, 69, 0.3);
         }
 
         .light-theme .search-filters {
@@ -481,6 +506,7 @@
             background: #ffffff;
             color: #212529;
             border: 1px solid #ced4da;
+            background-image: url('data:image/svg+xml;charset=US-ASCII,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 4 5"><path fill="%23495057" d="M2 0L0 2h4zm0 5L0 3h4z"/></svg>');
         }
 
         .light-theme .filter-select:focus {
