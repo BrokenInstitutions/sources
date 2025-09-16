@@ -109,19 +109,19 @@
             box-shadow: 0 4px 8px rgba(0,0,0,0.3);
         }
 
+        /* Theme Toggle - Clean Slider Design */
         .theme-toggle {
             background: #2d3436;
             border: 1px solid #333;
-            border-radius: 20px;
-            padding: 3px;
+            border-radius: 25px;
+            padding: 4px;
             cursor: pointer;
             display: flex;
             align-items: center;
-            gap: 0;
             transition: all 0.3s ease;
             position: relative;
-            width: 54px;
-            height: 28px;
+            width: 60px;
+            height: 30px;
             overflow: hidden;
         }
 
@@ -138,34 +138,27 @@
             background: #dc3545;
             border-radius: 50%;
             transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-            left: 3px;
+            left: 4px;
             z-index: 1;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.2);
         }
 
         .theme-toggle.light::before {
-            transform: translateX(26px);
+            transform: translateX(30px);
         }
 
-        .theme-icon {
-            width: 22px;
-            height: 22px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border-radius: 50%;
-            transition: all 0.3s ease;
-            font-size: 11px;
-            position: relative;
+        .theme-toggle::after {
+            content: '🌙';
+            position: absolute;
+            left: 6px;
+            font-size: 12px;
             z-index: 2;
-            flex-shrink: 0;
+            transition: opacity 0.3s ease;
         }
 
-        .theme-icon.active {
-            color: white;
-        }
-
-        .theme-icon.inactive {
-            color: #6c757d;
+        .theme-toggle.light::after {
+            content: '☀️';
+            left: 36px;
         }
 
         .search-filters {
@@ -258,6 +251,7 @@
             position: relative;
             background-size: cover;
             background-position: center center;
+            background-repeat: no-repeat;
             background-attachment: local;
             min-height: 350px;
         }
@@ -298,159 +292,76 @@
             border-radius: 20px;
             font-size: 0.9em;
             font-weight: 500;
-            backdrop-filter: blur(10px);
         }
 
-        .case-card.featured .case-description {
-            color: #ffffff;
-            font-size: 1.05em;
+        .case-card.featured .case-summary {
+            color: #e9ecef;
+            font-size: 1.1em;
+            line-height: 1.5;
             text-shadow: 1px 1px 2px rgba(0,0,0,0.8);
             margin-bottom: 25px;
-            line-height: 1.5;
         }
 
-        .case-links {
+        .case-card.featured .case-links {
             display: flex;
             gap: 15px;
             flex-wrap: wrap;
         }
 
-        .case-card.featured .case-links a {
-            background: rgba(220, 53, 69, 0.9);
-            color: white;
-            text-decoration: none;
+        .case-link {
+            background: rgba(220,53,69,0.9);
+            color: #ffffff;
             padding: 12px 20px;
             border-radius: 6px;
-            font-size: 0.95em;
+            text-decoration: none;
             font-weight: 600;
             transition: all 0.3s ease;
-            backdrop-filter: blur(10px);
             border: 1px solid rgba(255,255,255,0.2);
         }
 
-        .case-card.featured .case-links a:hover {
-            background: rgba(220, 53, 69, 1);
-            transform: translateY(-2px);
-            box-shadow: 0 4px 8px rgba(220, 53, 69, 0.4);
-        }
-
-        .case-card.featured .case-links a::after {
-            content: "→";
-            margin-left: 8px;
-        }
-
-        .case-card.standard .case-header {
-            background: linear-gradient(135deg, #dc3545 0%, #c82333 100%);
-            color: white;
-            padding: 25px;
-        }
-
-        .case-card.standard .case-title {
-            font-size: 1.4em;
-            font-weight: bold;
-            margin-bottom: 10px;
-            line-height: 1.3;
-        }
-
-        .case-card.standard .case-subtitle {
-            opacity: 0.9;
-            font-size: 0.95em;
-        }
-
-        .case-card.standard .case-content {
-            padding: 25px;
-            transition: all 0.3s ease;
-        }
-
-        .case-card.standard .case-meta {
-            display: flex;
-            gap: 15px;
-            margin-bottom: 20px;
-            flex-wrap: wrap;
-        }
-
-        .case-card.standard .case-meta span {
-            background: #2d3436;
-            color: #adb5bd;
-            padding: 6px 12px;
-            border-radius: 20px;
-            font-size: 0.85em;
-            font-weight: 500;
-            transition: all 0.3s ease;
-        }
-
-        .case-card.standard .case-description {
-            color: #ced4da;
-            margin-bottom: 25px;
-            line-height: 1.7;
-            transition: all 0.3s ease;
-        }
-
-        .case-card.standard .case-links {
-            display: flex;
-            gap: 12px;
-            flex-wrap: wrap;
-        }
-
-        .case-card.standard .case-links a {
+        .case-link:hover {
             background: #dc3545;
-            color: white;
-            text-decoration: none;
-            padding: 10px 18px;
-            border-radius: 6px;
-            font-size: 0.9em;
-            font-weight: 600;
-            transition: all 0.3s ease;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.3);
         }
 
-        .case-card.standard .case-links a:hover {
-            background: #c82333;
-            transform: translateY(-1px);
+        .case-link.secondary {
+            background: rgba(0,0,0,0.6);
+            border: 1px solid rgba(255,255,255,0.3);
         }
 
-        .case-card.standard .case-links a::after {
-            content: "→";
-            margin-left: 6px;
-        }
-
-        .no-results {
-            text-align: center;
-            padding: 40px;
-            color: #adb5bd;
-        }
-
-        .no-results h3 {
-            color: #dc3545;
-            margin-bottom: 10px;
+        .case-link.secondary:hover {
+            background: rgba(0,0,0,0.8);
         }
 
         .footer {
             text-align: center;
             margin-top: 60px;
-            padding-top: 30px;
+            padding-top: 40px;
             border-top: 1px solid #333;
-            color: #adb5bd;
-            transition: all 0.3s ease;
-        }
-
-        .footer p {
-            margin-bottom: 15px;
-        }
-
-        .update-time {
             color: #6c757d;
-            font-style: italic;
-            font-size: 0.9em;
         }
 
-        /* Light theme styles */
-        body.light-theme {
-            background-color: #f8f9fa;
+        .footer a {
+            color: #dc3545;
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+
+        .no-cases {
+            text-align: center;
+            padding: 60px 20px;
+            color: #6c757d;
+            font-size: 1.1em;
+        }
+
+        /* Light Theme Styles */
+        .light-theme {
+            background-color: #ffffff;
             color: #212529;
-        }
-
-        .light-theme .header {
-            border-bottom: 3px solid #dc3545;
         }
 
         .light-theme h1 {
@@ -466,7 +377,7 @@
         }
 
         .light-theme .nav-link {
-            background: #ffffff;
+            background: #f8f9fa;
             color: #212529;
             border: 1px solid #dee2e6;
         }
@@ -507,6 +418,9 @@
             color: #212529;
             border: 1px solid #ced4da;
             background-image: url('data:image/svg+xml;charset=US-ASCII,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 4 5"><path fill="%23495057" d="M2 0L0 2h4zm0 5L0 3h4z"/></svg>');
+            background-repeat: no-repeat;
+            background-position: right 8px center;
+            background-size: 12px;
         }
 
         .light-theme .filter-select:focus {
@@ -522,36 +436,16 @@
             box-shadow: 0 8px 16px rgba(0,0,0,0.1);
         }
 
-        .light-theme .case-card.standard .case-content {
-            background: #ffffff;
-        }
-
-        .light-theme .case-card.standard .case-meta span {
-            background: #f8f9fa;
-            color: #495057;
-        }
-
-        .light-theme .case-card.standard .case-description {
-            color: #495057;
-        }
-
-        .light-theme .no-results {
-            color: #6c757d;
-        }
-
-        .light-theme .no-results h3 {
-            color: #dc3545;
-        }
-
         .light-theme .footer {
             border-top: 1px solid #dee2e6;
             color: #6c757d;
         }
 
-        .light-theme .update-time {
+        .light-theme .no-cases {
             color: #6c757d;
         }
 
+        /* Mobile Styles */
         @media (max-width: 768px) {
             body {
                 padding: 15px;
@@ -561,10 +455,18 @@
                 font-size: 2.2em;
             }
 
+            .tagline {
+                font-size: 1.1em;
+            }
+
             .top-bar {
                 flex-direction: column;
-                align-items: center;
-                text-align: center;
+                align-items: stretch;
+                gap: 15px;
+            }
+
+            .navigation {
+                justify-content: center;
             }
 
             .search-bar {
@@ -572,11 +474,15 @@
             }
 
             .search-input {
-                min-width: auto;
+                min-width: 100%;
+            }
+
+            .filter-controls {
+                justify-content: center;
             }
 
             .case-card.featured {
-                min-height: 280px;
+                min-height: 300px;
             }
 
             .case-overlay {
@@ -587,42 +493,8 @@
                 font-size: 1.5em;
             }
 
-            .case-card.featured .case-meta {
+            .case-card.featured .case-links {
                 justify-content: center;
-            }
-
-            .case-links {
-                justify-content: center;
-            }
-
-            .navigation {
-                justify-content: center;
-            }
-
-            .nav-link {
-                width: 160px;
-                text-align: center;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .case-card.featured .case-meta {
-                flex-direction: column;
-                align-items: center;
-            }
-
-            .case-card.featured .case-meta span {
-                text-align: center;
-            }
-
-            .case-links {
-                flex-direction: column;
-            }
-
-            .case-links a {
-                flex: 1;
-                text-align: center;
-                min-width: 140px;
             }
         }
     </style>
@@ -631,9 +503,9 @@
     <div class="header">
         <div class="logo">BI</div>
         <h1>Broken Institutions</h1>
-        <p class="tagline">Investigation Archive</p>
+        <div class="tagline">Documenting Institutional Failures</div>
         <div class="description">
-            <p>Official documentation website for <a href="https://instagram.com/brokeninstitutions" target="_blank">@brokeninstitutions</a> investigations into institutional failures and public accountability</p>
+            Official archive for <a href="https://twitter.com/brokeninstitutions" target="_blank">@brokeninstitutions</a> investigations into institutional failures and accountability gaps.
         </div>
     </div>
 
@@ -643,8 +515,6 @@
             <a href="methodology.html" class="nav-link">Methodology</a>
         </div>
         <div class="theme-toggle" onclick="toggleTheme()">
-            <div class="theme-icon" id="darkIcon">🌙</div>
-            <div class="theme-icon" id="lightIcon">☀️</div>
         </div>
     </div>
 
@@ -657,164 +527,149 @@
                 <option value="">All Categories</option>
                 <option value="Judicial System">Judicial System</option>
                 <option value="Public Policy">Public Policy</option>
-                <option value="Government Transparency">Government Transparency</option>
-                <option value="Healthcare Systems">Healthcare Systems</option>
-                <option value="Political Accountability">Political Accountability</option>
+                <option value="Corporate Accountability">Corporate Accountability</option>
+                <option value="Government Oversight">Government Oversight</option>
             </select>
-            <select id="statusFilter" class="filter-select">
-                <option value="">All Status</option>
-                <option value="Active Investigation">Active Investigation</option>
-                <option value="Completed">Completed</option>
-                <option value="Under Review">Under Review</option>
+            <select id="tagFilter" class="filter-select">
+                <option value="">All Tags</option>
+                <option value="judicial immunity">Judicial Immunity</option>
+                <option value="pre-trial release">Pre-trial Release</option>
+                <option value="systemic failure">Systemic Failure</option>
+                <option value="accountability gap">Accountability Gap</option>
             </select>
-            <select id="yearFilter" class="filter-select">
-                <option value="">All Years</option>
-                <option value="2025">2025</option>
-                <option value="2024">2024</option>
+            <select id="sortFilter" class="filter-select">
+                <option value="newest">Newest First</option>
+                <option value="oldest">Oldest First</option>
+                <option value="title">Alphabetical</option>
             </select>
         </div>
-        <div class="results-count" id="resultsCount">Loading investigations...</div>
+        <div id="resultsCount" class="results-count"></div>
     </div>
 
-    <div class="cases-container" id="casesContainer">
-        <!-- Cases will be loaded here dynamically -->
-    </div>
-
-    <div class="no-results" id="noResults" style="display: none;">
-        <h3>No investigations found</h3>
-        <p>Try adjusting your search terms or filters</p>
+    <div id="casesContainer" class="cases-container">
+        <!-- Cases will be loaded here -->
     </div>
 
     <div class="footer">
-        <p>All investigations based on verified sources and documented for transparency and public accountability.</p>
-        <p>Committed to investigative journalism standards and ethical reporting practices.</p>
-        <p class="update-time">Last updated: September 2025</p>
+        <p>&copy; 2024 Broken Institutions. All investigations are factual and evidence-based.</p>
+        <p>For tips or corrections: <a href="mailto:contact@brokeninstitutions.org">contact@brokeninstitutions.org</a></p>
     </div>
 
-    <script src="theme-toggle.js"></script>
     <script>
-        let casesData = [];
+        // Comprehensive case data management
+        let allCases = [];
         let filteredCases = [];
 
-        // Load cases data
+        // Load cases from JSON
         async function loadCases() {
             try {
                 const response = await fetch('cases-index.json');
-                casesData = await response.json();
-                filteredCases = [...casesData];
-                renderCases();
+                allCases = await response.json();
+                filteredCases = [...allCases];
+                displayCases();
                 updateResultsCount();
+                console.log(`Loaded ${allCases.length} cases successfully`);
             } catch (error) {
                 console.error('Error loading cases:', error);
-                document.getElementById('resultsCount').textContent = 'Error loading investigations';
+                displayNoCases();
             }
         }
 
-        // Render cases
-        function renderCases() {
+        // Display cases in the container
+        function displayCases() {
             const container = document.getElementById('casesContainer');
-            const noResults = document.getElementById('noResults');
 
             if (filteredCases.length === 0) {
-                container.innerHTML = '';
-                noResults.style.display = 'block';
+                displayNoCases();
                 return;
             }
 
-            noResults.style.display = 'none';
-
-            container.innerHTML = filteredCases.map((caseItem, index) => {
-                const isFeatured = index === 0; // First case is featured
-
-                if (isFeatured) {
-                    return `
-                        <div class="case-card featured" style="background-image: url('${caseItem.paths.image}')">
-                            <div class="case-overlay">
-                                <div>
-                                    <h3 class="case-title">${caseItem.title}</h3>
-                                    <div class="case-meta">
-                                        <span>Investigation: ${caseItem.investigation_date}</span>
-                                        <span>Sources: ${caseItem.sources_count}</span>
-                                        <span>Status: ${caseItem.status}</span>
-                                    </div>
-                                    <p class="case-description">${caseItem.description}</p>
-                                </div>
-                                <div class="case-links">
-                                    <a href="${caseItem.paths.article}">Full Investigation</a>
-                                    <a href="${caseItem.paths.sources}">Complete Sources</a>
-                                    <a href="${caseItem.paths.timeline}">Case Timeline</a>
-                                </div>
+            container.innerHTML = filteredCases.map(caseItem => `
+                <div class="case-card featured" style="background-image: url('${caseItem.paths.image}')">
+                    <div class="case-overlay">
+                        <div>
+                            <h2 class="case-title">${caseItem.title}</h2>
+                            <div class="case-meta">
+                                <span>${caseItem.category}</span>
+                                ${caseItem.tags.map(tag => `<span>${tag}</span>`).join('')}
                             </div>
+                            <div class="case-summary">${caseItem.summary}</div>
                         </div>
-                    `;
-                } else {
-                    return `
-                        <div class="case-card standard">
-                            <div class="case-header">
-                                <h2 class="case-title">${caseItem.title}</h2>
-                                <p class="case-subtitle">${caseItem.subtitle}</p>
-                            </div>
-                            <div class="case-content">
-                                <div class="case-meta">
-                                    <span>Investigation: ${caseItem.investigation_date}</span>
-                                    <span>Sources: ${caseItem.sources_count}</span>
-                                    <span>Status: ${caseItem.status}</span>
-                                </div>
-                                <p class="case-description">${caseItem.description}</p>
-                                <div class="case-links">
-                                    <a href="${caseItem.paths.article}">Full Investigation</a>
-                                    <a href="${caseItem.paths.sources}">Sources</a>
-                                    <a href="${caseItem.paths.timeline}">Timeline</a>
-                                </div>
-                            </div>
+                        <div class="case-links">
+                            <a href="${caseItem.paths.article}" class="case-link">Read Full Investigation</a>
+                            <a href="${caseItem.paths.timeline}" class="case-link secondary">Timeline</a>
+                            <a href="${caseItem.paths.sources}" class="case-link secondary">Sources</a>
                         </div>
-                    `;
-                }
-            }).join('');
+                    </div>
+                </div>
+            `).join('');
         }
 
-        // Update results count
+        // Display message when no cases match filters
+        function displayNoCases() {
+            const container = document.getElementById('casesContainer');
+            container.innerHTML = '<div class="no-cases">No investigations match your current filters.</div>';
+        }
+
+        // Update results count display
         function updateResultsCount() {
-            const count = filteredCases.length;
-            const total = casesData.length;
-            const resultsText = count === total
-                ? `Showing all ${total} investigation${total !== 1 ? 's' : ''}`
-                : `Showing ${count} of ${total} investigation${total !== 1 ? 's' : ''}`;
-            document.getElementById('resultsCount').textContent = resultsText;
+            const countElement = document.getElementById('resultsCount');
+            countElement.textContent = `Showing ${filteredCases.length} of ${allCases.length} investigations`;
         }
 
-        // Filter cases
-        function filterCases() {
+        // Filter and search functionality
+        function applyFilters() {
             const searchTerm = document.getElementById('searchInput').value.toLowerCase();
             const categoryFilter = document.getElementById('categoryFilter').value;
-            const statusFilter = document.getElementById('statusFilter').value;
-            const yearFilter = document.getElementById('yearFilter').value;
+            const tagFilter = document.getElementById('tagFilter').value;
+            const sortFilter = document.getElementById('sortFilter').value;
 
-            filteredCases = casesData.filter(caseItem => {
-                const matchesSearch = !searchTerm ||
+            filteredCases = allCases.filter(caseItem => {
+                const matchesSearch = searchTerm === '' ||
                     caseItem.title.toLowerCase().includes(searchTerm) ||
-                    caseItem.description.toLowerCase().includes(searchTerm) ||
+                    caseItem.summary.toLowerCase().includes(searchTerm) ||
                     caseItem.tags.some(tag => tag.toLowerCase().includes(searchTerm));
 
-                const matchesCategory = !categoryFilter || caseItem.category === categoryFilter;
-                const matchesStatus = !statusFilter || caseItem.status === statusFilter;
-                const matchesYear = !yearFilter || caseItem.date.startsWith(yearFilter);
+                const matchesCategory = categoryFilter === '' || caseItem.category === categoryFilter;
+                const matchesTag = tagFilter === '' || caseItem.tags.includes(tagFilter);
 
-                return matchesSearch && matchesCategory && matchesStatus && matchesYear;
+                return matchesSearch && matchesCategory && matchesTag;
             });
 
-            renderCases();
+            // Apply sorting
+            switch (sortFilter) {
+                case 'oldest':
+                    filteredCases.sort((a, b) => new Date(a.date) - new Date(b.date));
+                    break;
+                case 'title':
+                    filteredCases.sort((a, b) => a.title.localeCompare(b.title));
+                    break;
+                case 'newest':
+                default:
+                    filteredCases.sort((a, b) => new Date(b.date) - new Date(a.date));
+                    break;
+            }
+
+            displayCases();
             updateResultsCount();
         }
 
-        // Event listeners
-        document.getElementById('searchInput').addEventListener('input', filterCases);
-        document.getElementById('categoryFilter').addEventListener('change', filterCases);
-        document.getElementById('statusFilter').addEventListener('change', filterCases);
-        document.getElementById('yearFilter').addEventListener('change', filterCases);
+        // Set up event listeners for search and filters
+        document.addEventListener('DOMContentLoaded', function() {
+            const searchInput = document.getElementById('searchInput');
+            const categoryFilter = document.getElementById('categoryFilter');
+            const tagFilter = document.getElementById('tagFilter');
+            const sortFilter = document.getElementById('sortFilter');
 
-        // Load cases on page load
-        loadCases();
+            searchInput.addEventListener('input', applyFilters);
+            categoryFilter.addEventListener('change', applyFilters);
+            tagFilter.addEventListener('change', applyFilters);
+            sortFilter.addEventListener('change', applyFilters);
+
+            loadCases();
+        });
     </script>
+
+    <script src="theme-toggle.js"></script>
 </body>
 </html>
