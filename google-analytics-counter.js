@@ -25,29 +25,52 @@ function loadGoogleAnalytics() {
     console.log('✅ Google Analytics 4 loaded with ID:', GA_MEASUREMENT_ID);
 }
 
-// Show REAL visitor numbers - NO FAKE BASE!
-function showRealVisitorCount() {
+// Show REAL visitor numbers - GLOBAL COUNTER
+async function showRealVisitorCount() {
     const countElement = document.getElementById('visit-count');
 
-    // ONLY REAL VISITORS - No fake historical numbers!
-    // Track unique daily visitors with localStorage (privacy-friendly)
-    const today = new Date().toDateString();
-    const lastVisitDate = localStorage.getItem('ga-last-visit-date');
+    try {
+        // Check if this browser has visited today
+        const today = new Date().toDateString();
+        const lastVisitDate = localStorage.getItem('ga-last-visit-date');
+        const hasVisitedToday = lastVisitDate === today;
 
-    let totalRealVisitors = parseInt(localStorage.getItem('ga-total-visitors') || '0');
+        // Get current global count
+        const response = await fetch('https://api.countapi.xyz/get/brokeninstitutions/visitors');
+        const data = await response.json();
+        let currentCount = data.value || 0;
 
-    if (lastVisitDate !== today) {
-        // New daily visitor - increment REAL count
-        totalRealVisitors++;
-        localStorage.setItem('ga-total-visitors', totalRealVisitors.toString());
-        localStorage.setItem('ga-last-visit-date', today);
+        // If this browser hasn't visited today, increment the global counter
+        if (!hasVisitedToday) {
+            const incrementResponse = await fetch('https://api.countapi.xyz/hit/brokeninstitutions/visitors');
+            const incrementData = await incrementResponse.json();
+            currentCount = incrementData.value;
+
+            // Mark this browser as having visited today
+            localStorage.setItem('ga-last-visit-date', today);
+            console.log(`📊 New visitor counted! Global count: ${currentCount}`);
+        }
+
+        // Display the REAL global number
+        countElement.textContent = currentCount.toLocaleString();
+        console.log(`📊 100% REAL global visitor count: ${currentCount}`);
+
+    } catch (error) {
+        console.error('Error fetching visitor count:', error);
+        // Fallback to local count if API fails
+        const today = new Date().toDateString();
+        const lastVisitDate = localStorage.getItem('ga-last-visit-date-backup');
+        let localCount = parseInt(localStorage.getItem('ga-local-visitors') || '1');
+
+        if (lastVisitDate !== today) {
+            localCount++;
+            localStorage.setItem('ga-local-visitors', localCount.toString());
+            localStorage.setItem('ga-last-visit-date-backup', today);
+        }
+
+        countElement.textContent = localCount.toLocaleString();
+        console.log(`📊 Fallback visitor count: ${localCount} (API temporarily unavailable)`);
     }
-
-    // Display THE REAL NUMBER (starts from 0, grows with actual visitors)
-    countElement.textContent = totalRealVisitors.toLocaleString();
-    // Same color as other text - it's just a stat, not a live indicator
-
-    console.log(`📊 100% REAL visitor count: ${totalRealVisitors} (No fake base numbers!)`);
 }
 
 // Initialize everything
