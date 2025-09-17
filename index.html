@@ -519,16 +519,29 @@
 
             .top-bar {
                 flex-direction: column;
-                align-items: stretch;
+                align-items: center;
                 gap: 15px;
-            }
-
-            .navigation {
                 justify-content: center;
             }
 
+            .navigation {
+                display: flex;
+                flex-direction: column;
+                gap: 12px;
+                width: 100%;
+                max-width: 300px;
+                align-items: center;
+            }
+
+            .nav-link {
+                width: 100%;
+                text-align: center;
+                padding: 12px 20px;
+                box-sizing: border-box;
+            }
+
             .theme-toggle {
-                margin-top: 10px;
+                margin-top: 5px;
                 align-self: center;
             }
 
@@ -592,7 +605,7 @@
                 font-size: 0.9em;
                 line-height: 1.4;
                 flex-grow: 1;
-                margin-bottom: 20px;
+                margin-bottom: 5px;
             }
 
             /* Dynamic button positioning - always below content */
@@ -600,7 +613,7 @@
                 display: flex;
                 flex-direction: column;
                 gap: 8px;
-                margin-top: auto;
+                margin-top: 10px;
                 flex-shrink: 0;
             }
 
