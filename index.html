@@ -517,38 +517,18 @@
                 box-sizing: border-box;
             }
 
-            /* Better theme toggle positioning on mobile */
             .top-bar {
                 flex-direction: column;
-                align-items: center;
+                align-items: stretch;
                 gap: 15px;
-            }
-
-            .nav-and-toggle {
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                gap: 15px;
-                width: 100%;
             }
 
             .navigation {
-                display: flex;
-                gap: 10px;
                 justify-content: center;
-                flex-wrap: wrap;
-            }
-
-            .nav-link {
-                padding: 10px 16px;
-                font-size: 0.9em;
-                flex: 1;
-                min-width: 120px;
-                max-width: 140px;
-                text-align: center;
             }
 
             .theme-toggle {
+                margin-top: 10px;
                 align-self: center;
             }
 
@@ -580,9 +560,9 @@
                 font-size: 16px; /* Prevents zoom on iOS */
             }
 
-            /* Fix article cards for mobile - FORCE VISIBLE BUTTONS */
+            /* Fix article cards for mobile - DYNAMIC HEIGHT */
             .case-card.featured {
-                min-height: 500px; /* Much taller for mobile */
+                min-height: 600px; /* Taller to contain dynamic buttons */
                 margin-bottom: 20px;
                 position: relative;
             }
@@ -653,15 +633,13 @@
     </div>
 
     <div class="top-bar">
-        <div class="nav-and-toggle">
-            <div class="navigation">
-                <a href="about.html" class="nav-link">About Our Work</a>
-                <a href="methodology.html" class="nav-link">Methodology</a>
-            </div>
-            <div class="theme-toggle" onclick="toggleTheme()">
-                <span class="toggle-icon moon">🌙</span>
-                <span class="toggle-icon sun">☀️</span>
-            </div>
+        <div class="navigation">
+            <a href="about.html" class="nav-link">About Our Work</a>
+            <a href="methodology.html" class="nav-link">Methodology</a>
+        </div>
+        <div class="theme-toggle" onclick="toggleTheme()">
+            <span class="toggle-icon moon">🌙</span>
+            <span class="toggle-icon sun">☀️</span>
         </div>
     </div>
 
