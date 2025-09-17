@@ -160,6 +160,31 @@
                 padding: 15px;
             }
         }
+        .sources-link {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #333;
+        }
+        
+        .sources-link a {
+            background-color: #dc3545;
+            color: white;
+            text-decoration: none;
+            padding: 12px 24px;
+            border-radius: 4px;
+            font-weight: bold;
+            transition: background-color 0.2s ease;
+        }
+        
+        .sources-link a:hover {
+            background-color: #c82333;
+        }
+        
+        .sources-link a::after {
+            content: " →";
+        }
+
     </style>
 </head>
 <body>
@@ -277,6 +302,12 @@
                 <div class="source-url"><a href="https://www.nccourts.gov/assets/documents/forms/cr208a.pdf" target="_blank">nccourts.gov/assets/documents/forms/cr208a.pdf</a></div>
             </div>
         </div>
+    </div>
+
+    <div class="sources-link">
+        <a href="article.html">Read Full Investigation</a>
+        <a href="timeline.html" style="margin-left: 15px;">Case Timeline</a>
+        <a href="#" onclick="window.scrollTo(0,0); return false;" style="margin-left: 15px; background-color: #6c757d;">Back to Top</a>
     </div>
 
     <div class="footer-note">

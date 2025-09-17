@@ -36,22 +36,12 @@ class ThemeManager {
     }
 
     updateToggleIcons() {
-        const darkIcon = document.getElementById('darkIcon');
-        const lightIcon = document.getElementById('lightIcon');
         const toggle = document.querySelector('.theme-toggle');
 
-        if (darkIcon && lightIcon && toggle) {
+        if (toggle) {
             if (this.currentTheme === 'dark') {
-                darkIcon.classList.add('active');
-                darkIcon.classList.remove('inactive');
-                lightIcon.classList.add('inactive');
-                lightIcon.classList.remove('active');
                 toggle.classList.remove('light');
             } else {
-                lightIcon.classList.add('active');
-                lightIcon.classList.remove('inactive');
-                darkIcon.classList.add('inactive');
-                darkIcon.classList.remove('active');
                 toggle.classList.add('light');
             }
         }

@@ -207,6 +207,31 @@
                 padding: 12px 15px;
             }
         }
+        .sources-link {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #333;
+        }
+        
+        .sources-link a {
+            background-color: #dc3545;
+            color: white;
+            text-decoration: none;
+            padding: 12px 24px;
+            border-radius: 4px;
+            font-weight: bold;
+            transition: background-color 0.2s ease;
+        }
+        
+        .sources-link a:hover {
+            background-color: #c82333;
+        }
+        
+        .sources-link a::after {
+            content: " →";
+        }
+
     </style>
 </head>
 <body>
@@ -285,6 +310,12 @@
             <div class="timeline-event">Brown transferred to Central Regional Hospital-Butner; competency evaluation completed rapidly</div>
             <div class="timeline-significance">INSTITUTIONAL EFFICIENCY: Same evaluation process that took months completed within days post-incident</div>
         </div>
+    </div>
+
+    <div class="sources-link">
+        <a href="article.html">Read Full Investigation</a>
+        <a href="sources.html" style="margin-left: 15px;">View Sources & Documentation</a>
+        <a href="#" onclick="window.scrollTo(0,0); return false;" style="margin-left: 15px; background-color: #6c757d;">Back to Top</a>
     </div>
 
     <div class="timeline-summary">
