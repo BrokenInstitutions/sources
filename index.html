@@ -109,56 +109,90 @@
             box-shadow: 0 4px 8px rgba(0,0,0,0.3);
         }
 
-        /* Theme Toggle - Clean Slider Design */
+        /* Modern Theme Toggle - Inspired by popular design systems */
         .theme-toggle {
-            background: #2d3436;
-            border: 1px solid #333;
-            border-radius: 25px;
-            padding: 4px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border: none;
+            border-radius: 50px;
             cursor: pointer;
             display: flex;
             align-items: center;
-            transition: all 0.3s ease;
+            justify-content: space-between;
+            padding: 4px;
             position: relative;
             width: 60px;
             height: 30px;
+            transition: all 0.4s cubic-bezier(0.23, 1, 0.320, 1);
+            outline: none;
             overflow: hidden;
         }
 
         .theme-toggle:hover {
-            border-color: #dc3545;
-            box-shadow: 0 0 0 1px rgba(220, 53, 69, 0.3);
+            transform: scale(1.05);
+            box-shadow: 0 8px 25px rgba(102, 126, 234, 0.4);
         }
 
+        .theme-toggle:focus {
+            box-shadow: 0 0 0 3px rgba(220, 53, 69, 0.3);
+        }
+
+        .theme-toggle.light {
+            background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+        }
+
+        .theme-toggle.light:hover {
+            box-shadow: 0 8px 25px rgba(252, 182, 159, 0.4);
+        }
+
+        /* Toggle Ball */
         .theme-toggle::before {
             content: '';
             position: absolute;
-            width: 22px;
-            height: 22px;
-            background: #dc3545;
+            top: 2px;
+            left: 2px;
+            width: 26px;
+            height: 26px;
+            background: white;
             border-radius: 50%;
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-            left: 4px;
-            z-index: 1;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+            transition: all 0.4s cubic-bezier(0.23, 1, 0.320, 1);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+            z-index: 2;
         }
 
         .theme-toggle.light::before {
             transform: translateX(30px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
         }
 
-        .theme-toggle::after {
-            content: '🌙';
+        /* Icons */
+        .toggle-icon {
             position: absolute;
-            left: 6px;
             font-size: 12px;
-            z-index: 2;
-            transition: opacity 0.3s ease;
+            transition: all 0.4s ease;
+            z-index: 1;
+            opacity: 0.7;
         }
 
-        .theme-toggle.light::after {
-            content: '☀️';
-            left: 36px;
+        .toggle-icon.moon {
+            left: 6px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        .toggle-icon.sun {
+            right: 6px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        .theme-toggle:not(.light) .toggle-icon.moon {
+            opacity: 1;
+            color: white;
+        }
+
+        .theme-toggle.light .toggle-icon.sun {
+            opacity: 1;
+            color: #f56565;
         }
 
         .search-filters {
@@ -256,6 +290,11 @@
             min-height: 350px;
         }
 
+        /* Fix for image positioning consistency */
+        .light-theme .case-card.featured {
+            background-position: center center;
+        }
+
         .case-overlay {
             position: absolute;
             top: 0;
@@ -351,6 +390,12 @@
             text-decoration: underline;
         }
 
+        .visit-counter {
+            margin-top: 15px;
+            font-size: 0.9em;
+            color: #6c757d;
+        }
+
         .no-cases {
             text-align: center;
             padding: 60px 20px;
@@ -385,16 +430,6 @@
         .light-theme .nav-link:hover {
             background: #e9ecef;
             box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-        }
-
-        .light-theme .theme-toggle {
-            background: #ffffff;
-            border: 1px solid #dee2e6;
-        }
-
-        .light-theme .theme-toggle:hover {
-            border-color: #dc3545;
-            box-shadow: 0 0 0 1px rgba(220, 53, 69, 0.3);
         }
 
         .light-theme .search-filters {
@@ -515,6 +550,8 @@
             <a href="methodology.html" class="nav-link">Methodology</a>
         </div>
         <div class="theme-toggle" onclick="toggleTheme()">
+            <span class="toggle-icon moon">🌙</span>
+            <span class="toggle-icon sun">☀️</span>
         </div>
     </div>
 
@@ -553,6 +590,9 @@
     <div class="footer">
         <p>&copy; 2024 Broken Institutions. All investigations are factual and evidence-based.</p>
         <p>For tips or corrections: <a href="mailto:contact@brokeninstitutions.org">contact@brokeninstitutions.org</a></p>
+        <div class="visit-counter">
+            Visitors: <span id="visit-count">Loading...</span>
+        </div>
     </div>
 
     <script>
@@ -593,7 +633,7 @@
                                 <span>${caseItem.category}</span>
                                 ${caseItem.tags.map(tag => `<span>${tag}</span>`).join('')}
                             </div>
-                            <div class="case-summary">${caseItem.summary}</div>
+                            <div class="case-summary">${caseItem.summary || caseItem.description || 'No summary available'}</div>
                         </div>
                         <div class="case-links">
                             <a href="${caseItem.paths.article}" class="case-link">Read Full Investigation</a>
@@ -625,11 +665,8 @@
             const sortFilter = document.getElementById('sortFilter').value;
 
             filteredCases = allCases.filter(caseItem => {
-                const matchesSearch = searchTerm === '' ||
-                    caseItem.title.toLowerCase().includes(searchTerm) ||
-                    caseItem.summary.toLowerCase().includes(searchTerm) ||
-                    caseItem.tags.some(tag => tag.toLowerCase().includes(searchTerm));
-
+                const searchText = `${caseItem.title} ${caseItem.summary || caseItem.description || ''} ${caseItem.tags.join(' ')}`.toLowerCase();
+                const matchesSearch = searchTerm === '' || searchText.includes(searchTerm);
                 const matchesCategory = categoryFilter === '' || caseItem.category === categoryFilter;
                 const matchesTag = tagFilter === '' || caseItem.tags.includes(tagFilter);
 
@@ -654,6 +691,19 @@
             updateResultsCount();
         }
 
+        // Visit counter using CountAPI
+        function loadVisitCounter() {
+            fetch('https://api.countapi.xyz/hit/brokeninstitutions.github.io/homepage')
+                .then(response => response.json())
+                .then(data => {
+                    document.getElementById('visit-count').textContent = data.value.toLocaleString();
+                })
+                .catch(error => {
+                    console.error('Error loading visit count:', error);
+                    document.getElementById('visit-count').textContent = 'N/A';
+                });
+        }
+
         // Set up event listeners for search and filters
         document.addEventListener('DOMContentLoaded', function() {
             const searchInput = document.getElementById('searchInput');
@@ -667,6 +717,7 @@
             sortFilter.addEventListener('change', applyFilters);
 
             loadCases();
+            loadVisitCounter();
         });
     </script>
 
