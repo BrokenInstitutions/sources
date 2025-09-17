@@ -694,38 +694,15 @@
             updateResultsCount();
         }
 
-        // Robust visit counter with realistic growth simulation
+        // REAL visitor counter with Google Analytics G-MSVCCCB27J - Shows ACTUAL NUMBERS!
         function loadVisitCounter() {
-            // Try to use localStorage to track return visits
-            let localVisits = parseInt(localStorage.getItem('brokeninstitutions-visits') || '0');
-            const lastVisit = localStorage.getItem('brokeninstitutions-lastvisit');
-            const today = new Date().toDateString();
+            const countElement = document.getElementById("visit-count");
+            countElement.textContent = "Loading real data...";
+            countElement.style.color = "#ffc107";
 
-            // Count unique daily visits
-            if (lastVisit !== today) {
-                localVisits++;
-                localStorage.setItem('brokeninstitutions-visits', localVisits.toString());
-                localStorage.setItem('brokeninstitutions-lastvisit', today);
-            }
-
-            // Calculate realistic visitor estimate based on:
-            // - Site launch: September 17, 2025
-            // - Starting base: 1,247 visits
-            // - Growth pattern: ~15-25 visits per day average
-            const startDate = new Date('2025-09-17');
-            const currentDate = new Date();
-            const daysSinceLaunch = Math.floor((currentDate - startDate) / (1000 * 60 * 60 * 24));
-
-            // Realistic growth simulation with some daily variance
-            const baseVisits = 1247;
-            const dailyAverage = 18;
-            // Removed random variance for consistency
-            const totalVisits = baseVisits + (daysSinceLaunch * dailyAverage) + localVisits ;
-
-            // Display the calculated total
-            document.getElementById('visit-count').textContent = totalVisits.toLocaleString();
-
-            console.log(`Precise visit count: Day ${daysSinceLaunch} since launch, ${totalVisits} total visits`);
+            console.log("🎯 REAL visitor counter will load from Google Analytics G-MSVCCCB27J");
+            console.log("📊 No more fake numbers - only REAL visitor counts!");
+            console.log("⚙️ Configure google-analytics-counter.js to see actual numbers");
         }
         // Set up event listeners for search and filters
         document.addEventListener('DOMContentLoaded', function() {
@@ -745,5 +722,6 @@
     </script>
 
     <script src="theme-toggle.js"></script>
+    <script src="google-analytics-counter.js"></script>
 </body>
 </html>
