@@ -11,7 +11,7 @@
             padding: 0;
             box-sizing: border-box;
         }
-        
+
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
             line-height: 1.6;
@@ -21,7 +21,7 @@
             padding: 20px;
             background-color: #121212;
         }
-        
+
         .back-link {
             background-color: #6c757d;
             color: white;
@@ -32,15 +32,15 @@
             margin-bottom: 30px;
             transition: background-color 0.2s ease;
         }
-        
+
         .back-link:hover {
             background-color: #5a6268;
         }
-        
+
         .back-link::before {
             content: "← ";
         }
-        
+
         .header {
             background: #1e1e1e;
             padding: 25px;
@@ -48,21 +48,21 @@
             margin-bottom: 30px;
             box-shadow: 0 2px 4px rgba(0,0,0,0.3);
         }
-        
+
         .header h1 {
             color: #dc3545;
             margin-bottom: 10px;
         }
-        
+
         .header p {
             color: #adb5bd;
             font-size: 1.1em;
         }
-        
+
         .timeline-container {
             position: relative;
         }
-        
+
         .timeline-container::before {
             content: '';
             position: absolute;
@@ -72,7 +72,7 @@
             width: 2px;
             background: #dc3545;
         }
-        
+
         .timeline-item {
             background: #1e1e1e;
             border-left: 4px solid #dc3545;
@@ -84,11 +84,11 @@
             position: relative;
             transition: transform 0.2s ease;
         }
-        
+
         .timeline-item:hover {
             transform: translateX(5px);
         }
-        
+
         .timeline-item::before {
             content: '';
             position: absolute;
@@ -100,7 +100,7 @@
             border-radius: 50%;
             border: 3px solid #121212;
         }
-        
+
         .timeline-date {
             color: #dc3545;
             font-weight: bold;
@@ -110,13 +110,13 @@
             align-items: center;
             gap: 10px;
         }
-        
+
         .timeline-event {
             color: #f8f9fa;
             margin-bottom: 10px;
             font-size: 1.05em;
         }
-        
+
         .timeline-significance {
             color: #adb5bd;
             font-style: italic;
@@ -126,22 +126,22 @@
             border-radius: 4px;
             margin-top: 10px;
         }
-        
+
         .critical-timeline {
             background: #2d1b1e;
             border-left-color: #dc3545;
             box-shadow: 0 4px 8px rgba(220, 53, 69, 0.2);
         }
-        
+
         .critical-timeline::before {
             background: #dc3545;
             box-shadow: 0 0 10px rgba(220, 53, 69, 0.5);
         }
-        
+
         .critical-timeline .timeline-date {
             color: #ff6b6b;
         }
-        
+
         .period-header {
             background: #2d3436;
             color: #f8f9fa;
@@ -152,68 +152,36 @@
             font-size: 1.1em;
             border-left: 4px solid #28a745;
         }
-        
+
         .period-header.critical-period {
             border-left-color: #dc3545;
             background: #3d2d2d;
         }
-        
+
         .timeline-summary {
             background: #1e1e1e;
-            padding: 20px;
+            padding: 25px;
             border-radius: 8px;
             margin-top: 30px;
             border: 1px solid #333;
         }
-        
+
         .timeline-summary h3 {
             color: #dc3545;
             margin-bottom: 15px;
         }
-        
+
         .timeline-summary p {
             color: #ced4da;
         }
-        
-        .footer-note {
-            text-align: center;
-            margin-top: 40px;
-            color: #adb5bd;
-            font-size: 0.9em;
-            padding-top: 20px;
-            border-top: 1px solid #333;
-        }
-        
-        @media (max-width: 768px) {
-            body {
-                padding: 15px;
-            }
-            
-            .timeline-container::before {
-                left: 20px;
-            }
-            
-            .timeline-item {
-                margin-left: 40px;
-                padding: 15px;
-            }
-            
-            .timeline-item::before {
-                left: -24px;
-            }
-            
-            .period-header {
-                margin-left: 40px;
-                padding: 12px 15px;
-            }
-        }
+
         .sources-link {
             text-align: center;
-            margin-top: 40px;
+            margin-top: 30px;
             padding-top: 20px;
             border-top: 1px solid #333;
         }
-        
+
         .sources-link a {
             background-color: #dc3545;
             color: white;
@@ -223,20 +191,52 @@
             font-weight: bold;
             transition: background-color 0.2s ease;
         }
-        
+
         .sources-link a:hover {
             background-color: #c82333;
         }
-        
+
         .sources-link a::after {
             content: " →";
         }
 
+        .footer-note {
+            text-align: center;
+            margin-top: 30px;
+            color: #adb5bd;
+            font-size: 0.9em;
+            padding-top: 20px;
+            border-top: 1px solid #333;
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding: 15px;
+            }
+
+            .timeline-container::before {
+                left: 20px;
+            }
+
+            .timeline-item {
+                margin-left: 40px;
+                padding: 15px;
+            }
+
+            .timeline-item::before {
+                left: -24px;
+            }
+
+            .period-header {
+                margin-left: 40px;
+                padding: 12px 15px;
+            }
+        }
     </style>
 </head>
 <body>
     <a href="../../index.html" class="back-link">Back to Archive</a>
-    
+
     <div class="header">
         <h1>Case Timeline: Institutional Decision-Making Analysis</h1>
         <p>Chronological sequence of institutional decisions and their outcomes in a public safety case study</p>
@@ -244,7 +244,7 @@
 
     <div class="timeline-container">
         <div class="period-header">Historical Background</div>
-        
+
         <div class="timeline-item">
             <div class="timeline-date">2011-2024: Pattern Development</div>
             <div class="timeline-event">Decarlos Brown Jr. accumulates multiple arrests for various offenses including property crimes, domestic incidents, and violent offenses</div>
@@ -312,15 +312,15 @@
         </div>
     </div>
 
+    <div class="timeline-summary">
+        <h3>Timeline Analysis Summary</h3>
+        <p>This timeline illustrates the intersection of multiple institutional decision points and their outcomes. Key observations include the contrast between pre-incident procedural delays and post-incident institutional efficiency, raising questions about resource allocation and process prioritization within the criminal justice and mental health systems.</p>
+    </div>
+
     <div class="sources-link">
         <a href="article.html">Read Full Investigation</a>
         <a href="sources.html" style="margin-left: 15px;">View Sources & Documentation</a>
         <a href="#" onclick="window.scrollTo(0,0); return false;" style="margin-left: 15px; background-color: #6c757d;">Back to Top</a>
-    </div>
-
-    <div class="timeline-summary">
-        <h3>Timeline Analysis Summary</h3>
-        <p>This timeline illustrates the intersection of multiple institutional decision points and their outcomes. Key observations include the contrast between pre-incident procedural delays and post-incident institutional efficiency, raising questions about resource allocation and process prioritization within the criminal justice and mental health systems.</p>
     </div>
 
     <div class="footer-note">
