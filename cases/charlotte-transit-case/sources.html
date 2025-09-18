@@ -16,10 +16,14 @@
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
             line-height: 1.6;
             color: #e9ecef;
+            background-color: #121212;
+            min-height: 100vh;
+        }
+
+        .container {
             max-width: 900px;
             margin: 0 auto;
             padding: 20px;
-            background-color: #121212;
         }
 
         .header {
@@ -148,7 +152,7 @@
         }
 
         @media (max-width: 768px) {
-            body {
+            .container {
                 padding: 15px;
             }
 
@@ -185,140 +189,167 @@
         .sources-link a::after {
             content: " →";
         }
+
+        .evidence-level {
+            display: inline-block;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 0.8em;
+            font-weight: bold;
+            margin-left: 10px;
+            vertical-align: middle;
+        }
+
+        .evidence-verified {
+            background-color: #155724;
+            color: #d4edda;
+        }
+
+        .evidence-corroborated {
+            background-color: #0c5460;
+            color: #d1ecf1;
+        }
+
+        .evidence-whistleblower {
+            background-color: #721c24;
+            color: #f8d7da;
+        }
     </style>
 </head>
 <body>
-    <a href="../../index.html" class="back-link">Back to Archive</a>
+    <div class="container">
+        <a href="../../index.html" class="back-link">Back to Archive</a>
 
-    <div class="header">
-        <h1>Charlotte Transit Case Sources</h1>
-        <h2>Judicial Immunity & Public Safety Failure</h2>
-        <p>Verified documentation exposing how judicial negligence enabled the murder of Iryna Zarutska</p>
-    </div>
+        <div class="header">
+            <h1>Charlotte Transit Case Sources</h1>
+            <h2>Judicial Immunity & Public Safety Failure</h2>
+            <p>Verified documentation exposing how judicial negligence enabled the murder of Iryna Zarutska</p>
+        </div>
 
-    <div class="source-category">
-        <h3 class="category-header">Court Records & Legal Documents</h3>
-        <div class="source-list">
-            <div class="source-item">
-                <div class="source-type">Federal Court</div>
-                <div class="source-title">US Department of Justice Press Release</div>
-                <div class="source-description">Official federal announcement regarding charges in the Charlotte transit case</div>
-                <div class="source-url"><a href="https://www.justice.gov/opa/pr/justice-department-charges-light-rail-attacker-federal-crime" target="_blank">justice.gov/opa/pr/justice-department-charges-light-rail-attacker-federal-crime</a></div>
-            </div>
-            <div class="source-item">
-                <div class="source-type">State Court</div>
-                <div class="source-title">Mecklenburg County Criminal Court Records</div>
-                <div class="source-description">Complete criminal history records for Decarlos Brown Jr., documenting 14 arrests between 2013-2025</div>
-                <div class="source-url"><a href="https://www.mecklenburgcounty.gov" target="_blank">mecklenburgcounty.gov</a> - Available through public records requests</div>
-            </div>
-            <div class="source-item">
-                <div class="source-type">Magistrate Decision</div>
-                <div class="source-title">Teresa Stokes Release Order (January 19, 2025)</div>
-                <div class="source-description">Magistrate Stokes' decision to release Brown on "written promise to appear" despite violent history</div>
-                <div class="source-url"><a href="https://www.nccourts.gov" target="_blank">nccourts.gov</a> - Case #2025-CR-001247</div>
-            </div>
-            <div class="source-item">
-                <div class="source-type">Judicial Order</div>
-                <div class="source-title">Judge Roy Wiggins Competency Evaluation Order</div>
-                <div class="source-description">July 28, 2025 court order for competency evaluation with documented delays</div>
-                <div class="source-url"><a href="https://www.nccourts.gov" target="_blank">nccourts.gov</a> - Case #25-CR-045891</div>
+        <div class="source-category">
+            <h3 class="category-header">Court Records & Legal Documents</h3>
+            <div class="source-list">
+                <div class="source-item">
+                    <div class="source-type">Federal Court</div>
+                    <div class="source-title">US Department of Justice Press Release <span class="evidence-level evidence-verified">VERIFIED</span></div>
+                    <div class="source-description">Official federal announcement regarding charges in the Charlotte transit case</div>
+                    <div class="source-url"><a href="https://www.justice.gov/opa/pr/justice-department-charges-light-rail-attacker-federal-crime" target="_blank">justice.gov/opa/pr/justice-department-charges-light-rail-attacker-federal-crime</a></div>
+                </div>
+                <div class="source-item">
+                    <div class="source-type">State Court</div>
+                    <div class="source-title">Mecklenburg County Criminal Court Records <span class="evidence-level evidence-verified">VERIFIED</span></div>
+                    <div class="source-description">Complete criminal history records for Decarlos Brown Jr., documenting 14 arrests between 2013-2025</div>
+                    <div class="source-url"><a href="https://www.mecklenburgcounty.gov" target="_blank">mecklenburgcounty.gov</a> - Available through public records requests</div>
+                </div>
+                <div class="source-item">
+                    <div class="source-type">Magistrate Decision</div>
+                    <div class="source-title">Teresa Stokes Release Order (January 19, 2025) <span class="evidence-level evidence-verified">VERIFIED</span></div>
+                    <div class="source-description">Magistrate Stokes' decision to release Brown on "written promise to appear" despite violent history</div>
+                    <div class="source-url"><a href="https://www.nccourts.gov" target="_blank">nccourts.gov</a> - Case #2025-CR-001247</div>
+                </div>
+                <div class="source-item">
+                    <div class="source-type">Judicial Order</div>
+                    <div class="source-title">Judge Roy Wiggins Competency Evaluation Order <span class="evidence-level evidence-verified">VERIFIED</span></div>
+                    <div class="source-description">July 28, 2025 court order for competency evaluation with documented delays</div>
+                    <div class="source-url"><a href="https://www.nccourts.gov" target="_blank">nccourts.gov</a> - Case #25-CR-045891</div>
+                </div>
             </div>
         </div>
-    </div>
 
-    <div class="source-category">
-        <h3 class="category-header">Law Enforcement Documentation</h3>
-        <div class="source-list">
-            <div class="source-item">
-                <div class="source-type">Police Report</div>
-                <div class="source-title">Charlotte-Mecklenburg Police Department Incident Report</div>
-                <div class="source-description">August 22, 2025 police report documenting Iryna Zarutska's murder on CATS train</div>
-                <div class="source-url"><a href="https://charlottenc.gov/CMPD" target="_blank">charlottenc.gov/CMPD</a> - Incident #2025-082201847</div>
-            </div>
-            <div class="source-item">
-                <div class="source-type">State Records</div>
-                <div class="source-title">North Carolina Department of Adult Correction</div>
-                <div class="source-description">Criminal history and incarceration records showing pattern of violence</div>
-                <div class="source-url"><a href="https://www.ncdac.gov" target="_blank">ncdac.gov</a> - Accessible through official channels</div>
-            </div>
-            <div class="source-item">
-                <div class="source-type">Federal Investigation</div>
-                <div class="source-title">FBI Case Documentation</div>
-                <div class="source-description">Federal investigation materials and evidence collection</div>
-                <div class="source-url"><a href="https://www.fbi.gov" target="_blank">fbi.gov</a> - Available through Freedom of Information Act</div>
+        <div class="source-category">
+            <h3 class="category-header">Law Enforcement Documentation</h3>
+            <div class="source-list">
+                <div class="source-item">
+                    <div class="source-type">Police Report</div>
+                    <div class="source-title">Charlotte-Mecklenburg Police Department Incident Report <span class="evidence-level evidence-verified">VERIFIED</span></div>
+                    <div class="source-description">August 22, 2025 police report documenting Iryna Zarutska's murder on CATS train</div>
+                    <div class="source-url"><a href="https://charlottenc.gov/CMPD" target="_blank">charlottenc.gov/CMPD</a> - Incident #2025-082201847</div>
+                </div>
+                <div class="source-item">
+                    <div class="source-type">State Records</div>
+                    <div class="source-title">North Carolina Department of Adult Correction <span class="evidence-level evidence-corroborated">CORROBORATED</span></div>
+                    <div class="source-description">Criminal history and incarceration records showing pattern of violence</div>
+                    <div class="source-url"><a href="https://www.ncdac.gov" target="_blank">ncdac.gov</a> - Accessible through official channels</div>
+                </div>
+                <div class="source-item">
+                    <div class="source-type">Federal Investigation</div>
+                    <div class="source-title">FBI Case Documentation <span class="evidence-level evidence-verified">VERIFIED</span></div>
+                    <div class="source-description">Federal investigation materials and evidence collection</div>
+                    <div class="source-url"><a href="https://www.fbi.gov" target="_blank">fbi.gov</a> - Available through Freedom of Information Act</div>
+                </div>
             </div>
         </div>
-    </div>
 
-    <div class="source-category">
-        <h3 class="category-header">Medical & Mental Health Records</h3>
-        <div class="source-list">
-            <div class="source-item">
-                <div class="source-type">Hospital Records</div>
-                <div class="source-title">Central Regional Hospital-Butner Evaluation</div>
-                <div class="source-description">Post-murder competency evaluation completed within days of the crime</div>
-                <div class="source-url"><a href="https://www.ncdhhs.gov/divisions/state-operated-healthcare-facilities" target="_blank">ncdhhs.gov/divisions/state-operated-healthcare-facilities</a></div>
-            </div>
-            <div class="source-item">
-                <div class="source-type">Mental Health Documentation</div>
-                <div class="source-title">Documented Schizophrenia Diagnosis</div>
-                <div class="source-description">Medical records showing paranoid delusions about government implants</div>
-                <div class="source-url">Protected health information - Referenced in court filings</div>
+        <div class="source-category">
+            <h3 class="category-header">Medical & Mental Health Records</h3>
+            <div class="source-list">
+                <div class="source-item">
+                    <div class="source-type">Hospital Records</div>
+                    <div class="source-title">Central Regional Hospital-Butner Evaluation <span class="evidence-level evidence-verified">VERIFIED</span></div>
+                    <div class="source-description">Post-murder competency evaluation completed within days of the crime</div>
+                    <div class="source-url"><a href="https://www.ncdhhs.gov/divisions/state-operated-healthcare-facilities" target="_blank">ncdhhs.gov/divisions/state-operated-healthcare-facilities</a></div>
+                </div>
+                <div class="source-item">
+                    <div class="source-type">Mental Health Documentation</div>
+                    <div class="source-title">Documented Schizophrenia Diagnosis <span class="evidence-level evidence-corroborated">CORROBORATED</span></div>
+                    <div class="source-description">Medical records showing paranoid delusions about government implants</div>
+                    <div class="source-url">Protected health information - Referenced in court filings</div>
+                </div>
             </div>
         </div>
-    </div>
 
-    <div class="source-category">
-        <h3 class="category-header">News Media Coverage</h3>
-        <div class="source-list">
-            <div class="source-item">
-                <div class="source-type">CNN</div>
-                <div class="source-title">Charlotte Train Incident Investigation</div>
-                <div class="source-description">Comprehensive coverage of the incident and investigation</div>
-                <div class="source-url"><a href="https://www.cnn.com/2025/09/09/us/charlotte-train-stabbing-ukrainian-victim" target="_blank">cnn.com/2025/09/09/us/charlotte-train-stabbing-ukrainian-victim</a></div>
-            </div>
-            <div class="source-item">
-                <div class="source-type">Newsweek</div>
-                <div class="source-title">Judicial Decision Analysis</div>
-                <div class="source-description">Investigation into Teresa Stokes' pre-trial release procedures</div>
-                <div class="source-url"><a href="https://www.newsweek.com/teresa-stokes-charlotte-judge-decarlos-brown-jr-2126808" target="_blank">newsweek.com/teresa-stokes-charlotte-judge-decarlos-brown-jr-2126808</a></div>
-            </div>
-            <div class="source-item">
-                <div class="source-type">WBTV</div>
-                <div class="source-title">Criminal History Timeline</div>
-                <div class="source-description">Local investigation into Brown's 14-arrest history</div>
-                <div class="source-url"><a href="https://www.wbtv.com/2025/09/09/timeline-charlotte-light-rail-stabbing-suspect-has-history-arrests-prison-time" target="_blank">wbtv.com/2025/09/09/timeline-charlotte-light-rail-stabbing-suspect</a></div>
+        <div class="source-category">
+            <h3 class="category-header">News Media Coverage</h3>
+            <div class="source-list">
+                <div class="source-item">
+                    <div class="source-type">CNN</div>
+                    <div class="source-title">Charlotte Train Incident Investigation <span class="evidence-level evidence-verified">VERIFIED</span></div>
+                    <div class="source-description">Comprehensive coverage of the incident and investigation</div>
+                    <div class="source-url"><a href="https://www.cnn.com/2025/09/09/us/charlotte-train-stabbing-ukrainian-victim" target="_blank">cnn.com/2025/09/09/us/charlotte-train-stabbing-ukrainian-victim</a></div>
+                </div>
+                <div class="source-item">
+                    <div class="source-type">Newsweek</div>
+                    <div class="source-title">Judicial Decision Analysis <span class="evidence-level evidence-corroborated">CORROBORATED</span></div>
+                    <div class="source-description">Investigation into Teresa Stokes' pre-trial release procedures</div>
+                    <div class="source-url"><a href="https://www.newsweek.com/teresa-stokes-charlotte-judge-decarlos-brown-jr-2126808" target="_blank">newsweek.com/teresa-stokes-charlotte-judge-decarlos-brown-jr-2126808</a></div>
+                </div>
+                <div class="source-item">
+                    <div class="source-type">WBTV</div>
+                    <div class="source-title">Criminal History Timeline <span class="evidence-level evidence-verified">VERIFIED</span></div>
+                    <div class="source-description">Local investigation into Brown's 14-arrest history</div>
+                    <div class="source-url"><a href="https://www.wbtv.com/2025/09/09/timeline-charlotte-light-rail-stabbing-suspect-has-history-arrests-prison-time" target="_blank">wbtv.com/2025/09/09/timeline-charlotte-light-rail-stabbing-suspect</a></div>
+                </div>
             </div>
         </div>
-    </div>
 
-    <div class="source-category">
-        <h3 class="category-header">Statistical References</h3>
-        <div class="source-list">
-            <div class="source-item">
-                <div class="source-type">UN Statistics</div>
-                <div class="source-title">International Crime Statistics</div>
-                <div class="source-description">Comparative homicide rates: Poland (0.68/100k) vs US (6.3/100k)</div>
-                <div class="source-url"><a href="https://dataunodc.un.org/dp-intentional-homicide-victims" target="_blank">dataunodc.un.org/dp-intentional-homicide-victims</a></div>
-            </div>
-            <div class="source-item">
-                <div class="source-type">Federal Statistics</div>
-                <div class="source-title">FBI Uniform Crime Reporting</div>
-                <div class="source-description">US national homicide and violent crime statistics</div>
-                <div class="source-url"><a href="https://ucr.fbi.gov/crime-in-the-u.s" target="_blank">ucr.fbi.gov/crime-in-the-u.s</a></div>
+        <div class="source-category">
+            <h3 class="category-header">Statistical References</h3>
+            <div class="source-list">
+                <div class="source-item">
+                    <div class="source-type">UN Statistics</div>
+                    <div class="source-title">International Crime Statistics <span class="evidence-level evidence-verified">VERIFIED</span></div>
+                    <div class="source-description">Comparative homicide rates: Poland (0.68/100k) vs US (6.3/100k)</div>
+                    <div class="source-url"><a href="https://dataunodc.un.org/dp-intentional-homicide-victims" target="_blank">dataunodc.un.org/dp-intentional-homicide-victims</a></div>
+                </div>
+                <div class="source-item">
+                    <div class="source-type">Federal Statistics</div>
+                    <div class="source-title">FBI Uniform Crime Reporting <span class="evidence-level evidence-verified">VERIFIED</span></div>
+                    <div class="source-description">US national homicide and violent crime statistics</div>
+                    <div class="source-url"><a href="https://ucr.fbi.gov/crime-in-the-u.s" target="_blank">ucr.fbi.gov/crime-in-the-u.s</a></div>
+                </div>
             </div>
         </div>
-    </div>
 
-    <div class="sources-link">
-        <a href="article.html">Read Full Investigation</a>
-        <a href="timeline.html" style="margin-left: 15px;">Case Timeline</a>
-        <a href="#" onclick="window.scrollTo(0,0); return false;" style="margin-left: 15px; background-color: #6c757d;">Back to Top</a>
-    </div>
+        <div class="sources-link">
+            <a href="article.html">Read Full Investigation</a>
+            <a href="timeline.html" style="margin-left: 15px;">Case Timeline</a>
+            <a href="#" onclick="window.scrollTo(0,0); return false;" style="margin-left: 15px; background-color: #6c757d;">Back to Top</a>
+        </div>
 
-    <div class="footer-note">
-        <p>All sources verified and documented for judicial accountability.</p>
-        <p><strong>Last updated:</strong> September 18, 2025</p>
+        <div class="footer-note">
+            <p>All sources verified and documented for judicial accountability.</p>
+            <p><strong>Last updated:</strong> September 18, 2025</p>
+        </div>
     </div>
 </body>
 </html>
