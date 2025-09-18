@@ -151,43 +151,31 @@
             font-size: 0.9em;
         }
 
-        @media (max-width: 768px) {
-            .container {
-                padding: 15px;
-            }
-
-            .header {
-                padding: 20px;
-            }
-
-            .source-list {
-                padding: 15px;
-            }
-        }
-
         .sources-link {
             text-align: center;
-            margin: 40px 0;
-            padding-top: 20px;
-            border-top: 1px solid #333;
+            margin: 30px 0;
         }
 
         .sources-link a {
             background-color: #dc3545;
             color: white;
             text-decoration: none;
-            padding: 12px 24px;
+            padding: 12px 20px;
             border-radius: 4px;
-            font-weight: bold;
-            transition: background-color 0.2s ease;
+            display: inline-block;
+            margin: 0 5px;
         }
 
         .sources-link a:hover {
             background-color: #c82333;
         }
 
-        .sources-link a::after {
-            content: " →";
+        .sources-link .secondary {
+            background-color: #6c757d;
+        }
+
+        .sources-link .secondary:hover {
+            background-color: #5a6268;
         }
 
         .evidence-level {
@@ -213,6 +201,20 @@
         .evidence-whistleblower {
             background-color: #721c24;
             color: #f8d7da;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 15px;
+            }
+
+            .header {
+                padding: 20px;
+            }
+
+            .source-list {
+                padding: 15px;
+            }
         }
     </style>
 </head>
@@ -342,8 +344,8 @@
 
         <div class="sources-link">
             <a href="article.html">Read Full Investigation</a>
-            <a href="timeline.html" style="margin-left: 15px;">Case Timeline</a>
-            <a href="#" onclick="window.scrollTo(0,0); return false;" style="margin-left: 15px; background-color: #6c757d;">Back to Top</a>
+            <a href="timeline.html" class="secondary">Case Timeline</a>
+            <a href="#" onclick="window.scrollTo(0,0); return false;" class="secondary">Back to Top</a>
         </div>
 
         <div class="footer-note">
