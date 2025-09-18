@@ -26,3 +26,10 @@ DEPLOYMENT_INSTRUCTIONS.md
 DEVELOPMENT_WORKFLOW.md
 PROJECT_STATUS.md
 GOOGLE_ANALYTICS_SETUP.md
+
+# Template files for development only
+templates/
+cases/*/sources_old.html
+cases/*/timeline_old.html
+cases/*/article_backup.html
+cases/*/sources_charlie_style.html
