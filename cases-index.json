@@ -1,6 +1,6 @@
 [
   {
-    "id": "charlotte-transit-case",
+    "id": "charlotte-transit",
     "title": "Charlotte Transit Case: \"What Enabled Him?\"",
     "subtitle": "Judicial Accountability Investigation",
     "summary": "Investigation into institutional failures that enabled the Charlotte transit tragedy. Examining 14 arrests, judicial decisions, and systemic breakdowns that led to preventable violence against Ukrainian refugee Iryna Zarutska.",
@@ -13,10 +13,10 @@
     "tags": ["judicial immunity", "pre-trial release", "mental health", "public safety", "institutional failure"],
     "location": "Charlotte, NC",
     "paths": {
-      "article": "cases/charlotte-transit-case/article.html",
-      "sources": "cases/charlotte-transit-case/sources.html",
-      "timeline": "cases/charlotte-transit-case/timeline.html",
-      "image": "cases/charlotte-transit-case/assets/case-image.jpg"
+      "article": "cases/charlotte-transit/article.html",
+      "sources": "cases/charlotte-transit/sources.html",
+      "timeline": "cases/charlotte-transit/timeline.html",
+      "image": "cases/charlotte-transit/assets/case-image.jpg"
     }
   }
 ]
