@@ -6,6 +6,8 @@ Official archive for @brokeninstitutions investigations into institutional failu
 
 **Production**: [https://brokeninstitutions.github.io/sources](https://brokeninstitutions.github.io/sources)
 
+**Development**: [https://brokeninstitutions.github.io/sources/?branch=dev](https://brokeninstitutions.github.io/sources/?branch=dev)
+
 ## 📋 About
 
 Independent investigative journalism exposing broken systems and demanding real consequences - from courts to governments, from social media to influencers.
@@ -14,17 +16,43 @@ Independent investigative journalism exposing broken systems and demanding real 
 
 - **Case Archive**: Comprehensive documentation of institutional failures
 - **Advanced Search**: Filter by category, tags, and keywords
-- **Real Visitor Tracking**: Transparent visitor count with Google Analytics G-MSVCCCB27J
-- **Responsive Design**: Optimized for desktop and mobile
-- **Dark/Light Mode**: Theme toggle for better readability
+- **Real Visitor Tracking**: Transparent visitor count with Google Analytics G-MSVCCCB27J + global counter
+- **Mobile-First Design**: Optimized layout with dynamic content positioning
+- **Dark/Light Mode**: Professional theme toggle (header-positioned on mobile)
 
-## 📱 Mobile Optimized
+## 📱 Mobile Optimized Features
 
-Fully responsive design with optimized navigation and article access on all devices.
+- ✅ **Dynamic Article Layout**: Buttons always visible below content (no overlap)
+- ✅ **Smart Spacing**: Minimal gaps with proper content flow
+- ✅ **Header Theme Toggle**: Industry-standard top-right positioning
+- ✅ **Touch-Optimized**: Proper button sizes and accessible navigation
+- ✅ **Responsive Cards**: Auto-adjusting height based on content length
 
-## 📊 Analytics
+## 📊 Analytics & Transparency
 
-Real visitor tracking with no fake numbers - counter starts from actual visits and grows with genuine traffic for complete transparency in investigative journalism.
+- **Google Analytics**: G-MSVCCCB27J (public by design for transparency)
+- **Global Visitor Counter**: Real-time tracking via CountAPI.xyz
+- **No Fake Metrics**: 100% authentic visitor counts starting from zero
+- **Privacy-Friendly**: Daily unique visitor tracking without personal data storage
+
+## 🔧 Technical Stack
+
+- **Frontend**: Vanilla HTML5, CSS3, JavaScript (no frameworks)
+- **Hosting**: GitHub Pages
+- **Analytics**: Google Analytics 4 + CountAPI.xyz
+- **Design**: Mobile-first responsive design
+- **Performance**: Optimized for fast loading and accessibility
+
+## 🚀 Development
+
+### Branch Strategy
+- `main`: Production environment (requires authorization for deployments)
+- `dev`: Development and testing environment
+
+### Key Requirements
+- **Mobile testing mandatory** before any deployment
+- **Cross-browser compatibility** verification required
+- **User authorization required** for ALL production deployments
 
 ## 📞 Contact
 
@@ -33,3 +61,5 @@ For tips or questions: [@brokeninstitutions on Instagram](https://www.instagram.
 ---
 
 © 2025 Broken Institutions. Institutional failures worldwide. We name names.
+
+**Status**: ✅ Production Ready - All critical mobile layout issues resolved

@@ -18,5 +18,24 @@
       "timeline": "cases/charlotte-transit-case/timeline.html",
       "image": "cases/charlotte-transit-case/assets/case-image.jpg"
     }
+  },
+  {
+    "id": "charlie-kirk-tpusa",
+    "title": "The Influence Machine: How Charlie Kirk Built a Campus Propaganda Empire",
+    "subtitle": "Higher Education Institutional Capture",
+    "summary": "Investigation into Charlie Kirk's Turning Point USA campus influence operation. Exposing systematic institutional capture, fake student groups, and the $40 million dark money network corrupting American universities.",
+    "description": "Comprehensive investigation into Charlie Kirk's Turning Point USA revealing systematic institutional capture of American universities. Documents how paid operatives pose as student leaders while university administrators ignore clear policy violations, enabling a $40 million political influence machine.",
+    "date": "2024-12-15",
+    "investigation_date": "December 2024",
+    "status": "Published Investigation",
+    "sources_count": "15+ verified",
+    "category": "Higher Education",
+    "tags": ["institutional capture", "dark money", "campus politics", "political manipulation", "academic freedom"],
+    "location": "National (2,500+ campuses)",
+    "paths": {
+      "article": "cases/charlie-kirk-tpusa/article.html",
+      "sources": "cases/charlie-kirk-tpusa/sources.html",
+      "timeline": "cases/charlie-kirk-tpusa/timeline.html"
+    }
   }
 ]
