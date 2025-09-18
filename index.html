@@ -483,6 +483,11 @@
             color: #6c757d;
         }
 
+        /* Hide mobile header toggle on desktop */
+        .mobile-header-toggle {
+            display: none;
+        }
+
         /* Mobile Styles */
         @media (max-width: 768px) {
             body {
@@ -541,14 +546,15 @@
                 box-sizing: border-box;
             }
 
-            .theme-toggle {
+            /* Show header toggle on mobile, hide nav toggle */
+            .mobile-header-toggle {
                 position: absolute;
                 top: 20px;
                 right: 20px;
                 margin: 0;
+                display: block;
             }
 
-            /* Hide theme toggle from navigation on mobile */
             .top-bar .theme-toggle {
                 display: none;
             }
@@ -646,6 +652,10 @@
 </head>
 <body>
     <div class="header">
+        <div class="theme-toggle mobile-header-toggle" onclick="toggleTheme()">
+            <span class="toggle-icon moon">🌙</span>
+            <span class="toggle-icon sun">☀️</span>
+        </div>
         <div class="logo">BI</div>
         <h1>Broken Institutions</h1>
         <div class="tagline">Institutional failures worldwide. We name names.</div>
