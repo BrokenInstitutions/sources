@@ -34,15 +34,22 @@
         }
 
         .back-link {
-            display: inline-block;
-            color: #dc3545;
+            background-color: #6c757d;
+            color: white;
             text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            display: inline-block;
             margin-bottom: 20px;
-            font-weight: 600;
+            transition: background-color 0.2s ease;
         }
 
         .back-link:hover {
-            text-decoration: underline;
+            background-color: #5a6268;
+        }
+
+        .back-link::before {
+            content: "← ";
         }
 
         h1 {
@@ -151,6 +158,42 @@
             color: #ffc107;
         }
 
+        .sources-link {
+            text-align: center;
+            margin: 30px 0;
+        }
+
+        .sources-link a {
+            background-color: #dc3545;
+            color: white;
+            text-decoration: none;
+            padding: 12px 20px;
+            border-radius: 4px;
+            display: inline-block;
+            margin: 0 5px;
+        }
+
+        .sources-link a:hover {
+            background-color: #c82333;
+        }
+
+        .sources-link .secondary {
+            background-color: #6c757d;
+        }
+
+        .sources-link .secondary:hover {
+            background-color: #5a6268;
+        }
+
+        .footer-note {
+            text-align: center;
+            margin: 40px 0;
+            padding-top: 20px;
+            border-top: 1px solid #333;
+            color: #adb5bd;
+            font-size: 0.9em;
+        }
+
         @media screen and (max-width: 768px) {
             .timeline::after {
                 left: 31px;
@@ -181,11 +224,11 @@
 </head>
 <body>
     <div class="container">
-        <a href="../../index.html" class="back-link">← Back to Archive</a>
+        <a href="../../index.html" class="back-link">Back to Archive</a>
 
         <div class="header">
             <h1>Charlotte Transit Case Timeline</h1>
-            <p style="color: #adb5bd; font-size: 1.1em;">How judicial failures armed a killer</p>
+            <p style="color: #adb5bd; font-size: 1.1em;">This timeline chronicles the key events from January through August 2025, documenting the sequence of decisions, legal proceedings, and circumstances that led to the tragic incident. All dates and events are verified through official court records, police reports, and federal documentation.</p>
         </div>
 
         <div class="timeline">
@@ -193,33 +236,55 @@
             <div class="timeline-item left">
                 <div class="timeline-content">
                     <div class="timeline-date">2013-2024</div>
-                    <div class="timeline-title">Decarlos Brown's Criminal History</div>
+                    <div class="timeline-title">Pattern of Violence Emerges</div>
                     <div class="timeline-text">
-                        Brown accumulates 14 arrests over 11 years including assault, battery, weapons charges, and violent threats. Each time, judges prioritize progressive rehabilitation over public safety, releasing him back to the streets.
+                        Decarlos Brown Jr. accumulates 14 arrests over 11 years including multiple assault charges, battery incidents, weapons violations, and documented threats of violence. Court records show a consistent pattern of escalating behavior.
                     </div>
-                    <div class="evidence-tag">Criminal Records</div>
+                    <div class="evidence-tag">Court Records</div>
                 </div>
             </div>
 
             <div class="timeline-item right">
+                <div class="timeline-content">
+                    <div class="timeline-date">2020-2024</div>
+                    <div class="timeline-title">Mental Health Crisis Documented</div>
+                    <div class="timeline-text">
+                        Medical records document Brown's diagnosis with schizophrenia, paranoid delusions about government surveillance, and increasing disconnection from reality. Family members repeatedly seek help through official channels.
+                    </div>
+                    <div class="evidence-tag">Medical Records</div>
+                </div>
+            </div>
+
+            <div class="timeline-item left">
                 <div class="timeline-content critical-event">
                     <div class="timeline-date">January 19, 2025</div>
-                    <div class="timeline-title">Magistrate Teresa Stokes' Fatal Decision</div>
+                    <div class="timeline-title">Magistrate Teresa Stokes' Release Decision</div>
                     <div class="timeline-text">
-                        Despite Brown's violent history and documented schizophrenia with paranoid delusions about government implants, Magistrate Stokes releases him on a "written promise to appear" after his arrest for misusing 911 services.
+                        Following Brown's arrest for misusing emergency services, Magistrate Stokes reviews his extensive criminal history and current mental health crisis. Despite clear public safety concerns, she releases him on a "written promise to appear."
                     </div>
-                    <div class="evidence-tag">Court Records</div>
+                    <div class="evidence-tag">Magistrate Records</div>
+                </div>
+            </div>
+
+            <div class="timeline-item right">
+                <div class="timeline-content">
+                    <div class="timeline-date">February-July 2025</div>
+                    <div class="timeline-title">System Delays and Inaction</div>
+                    <div class="timeline-text">
+                        For six months, Brown remains free in the community. Court-ordered mental health evaluations are delayed, rescheduled, and postponed. Multiple warnings from family and community members fail to trigger intervention.
+                    </div>
+                    <div class="evidence-tag">Court Scheduling</div>
                 </div>
             </div>
 
             <div class="timeline-item left">
                 <div class="timeline-content">
                     <div class="timeline-date">July 28, 2025</div>
-                    <div class="timeline-title">Judge Wiggins Orders Competency Evaluation</div>
+                    <div class="timeline-title">Competency Evaluation Ordered</div>
                     <div class="timeline-text">
-                        Chief District Judge Roy Wiggins finally orders a competency evaluation for Brown, but allows "procedural delays" to stretch the process for months while Brown remains free to harm innocent people.
+                        Chief District Judge Roy Wiggins finally orders a comprehensive competency evaluation for Brown. However, the evaluation process is allowed to extend indefinitely while Brown remains free in the community.
                     </div>
-                    <div class="evidence-tag">Court Documents</div>
+                    <div class="evidence-tag">Judicial Order</div>
                 </div>
             </div>
 
@@ -228,56 +293,45 @@
                     <div class="timeline-date">August 22, 2025</div>
                     <div class="timeline-title">Iryna Zarutska Murdered</div>
                     <div class="timeline-text">
-                        Brown boards a Charlotte transit train and murders 23-year-old Ukrainian refugee Iryna Zarutska. She had survived Russian bombardment in Ukraine only to be killed by American judicial negligence. Eight months after Stokes' release decision.
+                        Brown boards Charlotte Area Transit System light rail and fatally stabs 23-year-old Ukrainian refugee Iryna Zarutska. She had survived Russian bombing campaigns in her homeland, only to die from failures in American institutional safety systems.
                     </div>
-                    <div class="evidence-tag">Police Report</div>
+                    <div class="evidence-tag">Police Investigation</div>
                 </div>
             </div>
 
             <div class="timeline-item left">
                 <div class="timeline-content">
                     <div class="timeline-date">August 23, 2025</div>
-                    <div class="timeline-title">Sudden System Efficiency</div>
+                    <div class="timeline-title">Rapid System Response</div>
                     <div class="timeline-text">
-                        Within 24 hours of the murder, Brown is transferred to Central Regional Hospital-Butner. The same competency evaluation that couldn't be completed in 8 months is suddenly expedited and finished within days.
+                        Within 24 hours of the murder, Brown is transferred to Central Regional Hospital-Butner for psychiatric evaluation. The competency assessment that couldn't be completed in eight months is expedited and completed within days.
                     </div>
-                    <div class="evidence-tag">Hospital Records</div>
+                    <div class="evidence-tag">Hospital Transfer</div>
                 </div>
             </div>
 
             <div class="timeline-item right">
                 <div class="timeline-content">
                     <div class="timeline-date">September 2025</div>
-                    <div class="timeline-title">Federal Charges Filed</div>
+                    <div class="timeline-title">Federal Prosecution Begins</div>
                     <div class="timeline-text">
-                        Brown faces federal charges for the murder. The system that moved at glacial pace before the killing suddenly discovers remarkable efficiency and resources after an innocent person dies.
+                        The U.S. Department of Justice files federal charges against Brown for the transit system murder. Federal prosecutors move swiftly to ensure the case proceeds through the justice system without further delays.
                     </div>
                     <div class="evidence-tag">Federal Court</div>
                 </div>
             </div>
 
-            <div class="timeline-item left">
-                <div class="timeline-content critical-event">
-                    <div class="timeline-date">Present Day</div>
-                    <div class="timeline-title">No Judicial Accountability</div>
-                    <div class="timeline-text">
-                        Neither Magistrate Stokes nor Judge Wiggins face any consequences for their decisions that enabled Iryna's murder. Judicial immunity protects officials whose negligence arms killers while families suffer without justice.
-                    </div>
-                    <div class="evidence-tag">Ongoing Failure</div>
-                </div>
-            </div>
-
         </div>
 
-        <div style="text-align: center; margin-top: 30px; margin-bottom: 30px;">
-            <a href="article.html" style="background-color: #dc3545; color: white; text-decoration: none; padding: 12px 20px; border-radius: 4px; display: inline-block; margin: 0 5px;">Read Full Investigation</a>
-            <a href="sources.html" style="background-color: #6c757d; color: white; text-decoration: none; padding: 12px 20px; border-radius: 4px; display: inline-block; margin: 0 5px;">Sources</a>
-            <a href="#" onclick="window.scrollTo(0,0); return false;" style="background-color: #6c757d; color: white; text-decoration: none; padding: 12px 20px; border-radius: 4px; display: inline-block; margin: 0 5px;">Back to Top</a>
+        <div class="sources-link">
+            <a href="article.html">Full Investigation</a>
+            <a href="sources.html">Sources</a>
+            <a href="#" onclick="window.scrollTo(0,0); return false;" class="secondary">Back to Top</a>
         </div>
 
-        <div style="margin-top: 60px; padding-top: 30px; border-top: 1px solid #333; text-align: center; color: #6c757d;">
-            <p><strong>Sources:</strong> Court records, police reports, federal documents, medical records, victim documentation</p>
-            <p style="margin-top: 20px;"><strong>Broken Institutions</strong> - Timeline compiled from verified sources</p>
+        <div class="footer-note">
+            <p>All dates and events verified through court records, police reports, federal documentation, medical records, and victim family statements.</p>
+            <p><strong>Last updated:</strong> September 18, 2025</p>
         </div>
     </div>
 </body>

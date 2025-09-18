@@ -1,6 +1,6 @@
 [
   {
-    "id": "charlotte-transit-case",
+    "id": "charlotte-transit",
     "title": "Charlotte Transit Case: \"What Enabled Him?\"",
     "subtitle": "Judicial Accountability Investigation",
     "summary": "Investigation into institutional failures that enabled the Charlotte transit tragedy. Examining 14 arrests, judicial decisions, and systemic breakdowns that led to preventable violence against Ukrainian refugee Iryna Zarutska.",
@@ -13,29 +13,10 @@
     "tags": ["judicial immunity", "pre-trial release", "mental health", "public safety", "institutional failure"],
     "location": "Charlotte, NC",
     "paths": {
-      "article": "cases/charlotte-transit-case/article.html",
-      "sources": "cases/charlotte-transit-case/sources.html",
-      "timeline": "cases/charlotte-transit-case/timeline.html",
-      "image": "cases/charlotte-transit-case/assets/case-image.jpg"
-    }
-  },
-  {
-    "id": "charlie-kirk-tpusa",
-    "title": "The Influence Machine: How Charlie Kirk Built a Campus Propaganda Empire",
-    "subtitle": "Higher Education Institutional Capture",
-    "summary": "Investigation into Charlie Kirk's Turning Point USA campus influence operation. Exposing systematic institutional capture, fake student groups, and the $40 million dark money network corrupting American universities.",
-    "description": "Comprehensive investigation into Charlie Kirk's Turning Point USA revealing systematic institutional capture of American universities. Documents how paid operatives pose as student leaders while university administrators ignore clear policy violations, enabling a $40 million political influence machine.",
-    "date": "2024-12-15",
-    "investigation_date": "December 2024",
-    "status": "Published Investigation",
-    "sources_count": "15+ verified",
-    "category": "Higher Education",
-    "tags": ["institutional capture", "dark money", "campus politics", "political manipulation", "academic freedom"],
-    "location": "National (2,500+ campuses)",
-    "paths": {
-      "article": "cases/charlie-kirk-tpusa/article.html",
-      "sources": "cases/charlie-kirk-tpusa/sources.html",
-      "timeline": "cases/charlie-kirk-tpusa/timeline.html"
+      "article": "cases/charlotte-transit/article.html",
+      "sources": "cases/charlotte-transit/sources.html",
+      "timeline": "cases/charlotte-transit/timeline.html",
+      "image": "cases/charlotte-transit/assets/case-image.jpg"
     }
   }
 ]
