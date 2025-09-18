@@ -30,7 +30,7 @@
             text-align: center;
             margin-bottom: 40px;
             padding-bottom: 20px;
-            border-bottom: 3px solid #dc3545;
+            border-bottom: 3px solid #1e40af;
         }
 
         .back-link {
@@ -68,7 +68,7 @@
             content: '';
             position: absolute;
             width: 4px;
-            background-color: #dc3545;
+            background-color: #1e40af;
             top: 0;
             bottom: 0;
             left: 50%;
@@ -88,7 +88,7 @@
             width: 25px;
             height: 25px;
             right: -12px;
-            background-color: #dc3545;
+            background-color: #1e40af;
             border: 4px solid #121212;
             top: 15px;
             border-radius: 50%;
@@ -112,17 +112,17 @@
             background-color: #1e1e1e;
             position: relative;
             border-radius: 8px;
-            border-left: 4px solid #dc3545;
+            border-left: 4px solid #166534;
             transition: transform 0.2s ease, box-shadow 0.2s ease;
         }
 
         .timeline-content:hover {
             transform: translateY(-2px);
-            box-shadow: 0 4px 8px rgba(220, 53, 69, 0.2);
+            box-shadow: 0 4px 8px rgba(22, 101, 52, 0.2);
         }
 
         .timeline-date {
-            color: #dc3545;
+            color: #e1e5e9;
             font-weight: bold;
             font-size: 1.1em;
             margin-bottom: 10px;
@@ -140,8 +140,8 @@
         }
 
         .evidence-tag {
-            background: #2d1b1e;
-            color: #dc3545;
+            background: #2d3436;
+            color: #adb5bd;
             padding: 4px 8px;
             border-radius: 4px;
             font-size: 0.9em;
@@ -149,13 +149,20 @@
             display: inline-block;
         }
 
-        .critical-event {
-            border-left-color: #ffc107;
+        .critical-decision {
+            border-left-color: #fbbf24 !important;
         }
 
-        .critical-event .evidence-tag {
-            background: #2d2416;
-            color: #ffc107;
+        .critical-decision:hover {
+            box-shadow: 0 4px 8px rgba(251, 191, 36, 0.2);
+        }
+
+        .tragedy {
+            border-left-color: #991b1b !important;
+        }
+
+        .tragedy:hover {
+            box-shadow: 0 4px 8px rgba(153, 27, 27, 0.2);
         }
 
         .sources-link {
@@ -164,7 +171,7 @@
         }
 
         .sources-link a {
-            background-color: #dc3545;
+            background-color: #1e40af;
             color: white;
             text-decoration: none;
             padding: 12px 20px;
@@ -174,7 +181,7 @@
         }
 
         .sources-link a:hover {
-            background-color: #c82333;
+            background-color: #1d4ed8;
         }
 
         .sources-link .secondary {
@@ -207,9 +214,9 @@
 
             .timeline-item::before {
                 left: 60px;
-                border: medium solid #dc3545;
+                border: medium solid #1e40af;
                 border-width: 10px 10px 10px 0;
-                border-color: transparent #dc3545 transparent transparent;
+                border-color: transparent #1e40af transparent transparent;
             }
 
             .left::after, .right::after {
@@ -256,7 +263,7 @@
             </div>
 
             <div class="timeline-item left">
-                <div class="timeline-content critical-event">
+                <div class="timeline-content critical-decision">
                     <div class="timeline-date">January 19, 2025</div>
                     <div class="timeline-title">Magistrate Teresa Stokes' Release Decision</div>
                     <div class="timeline-text">
@@ -289,7 +296,7 @@
             </div>
 
             <div class="timeline-item right">
-                <div class="timeline-content critical-event">
+                <div class="timeline-content tragedy">
                     <div class="timeline-date">August 22, 2025</div>
                     <div class="timeline-title">Iryna Zarutska Murdered</div>
                     <div class="timeline-text">
