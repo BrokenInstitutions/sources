@@ -589,6 +589,7 @@
                 bottom: 0;
                 display: flex;
                 flex-direction: column;
+                justify-content: flex-start;
             }
 
             .case-card.featured .case-title {
@@ -604,7 +605,7 @@
             .case-card.featured .case-summary {
                 font-size: 0.9em;
                 line-height: 1.4;
-                flex-grow: 1;
+                flex-grow: 0;
                 margin-bottom: 0px;
             }
 
@@ -729,14 +730,12 @@
             container.innerHTML = filteredCases.map(caseItem => `
                 <div class="case-card featured" style="background-image: url('${caseItem.paths.image}')">
                     <div class="case-overlay">
-                        <div>
-                            <h2 class="case-title">${caseItem.title}</h2>
-                            <div class="case-meta">
-                                <span>${caseItem.category}</span>
-                                ${caseItem.tags.map(tag => `<span>${tag}</span>`).join('')}
-                            </div>
-                            <div class="case-summary">${caseItem.summary || caseItem.description || 'No summary available'}</div>
+                        <h2 class="case-title">${caseItem.title}</h2>
+                        <div class="case-meta">
+                            <span>${caseItem.category}</span>
+                            ${caseItem.tags.map(tag => `<span>${tag}</span>`).join('')}
                         </div>
+                        <div class="case-summary">${caseItem.summary || caseItem.description || 'No summary available'}</div>
                         <div class="case-links">
                             <a href="${caseItem.paths.article}" class="case-link">Read Full Investigation</a>
                             <a href="${caseItem.paths.timeline}" class="case-link secondary">Timeline</a>
