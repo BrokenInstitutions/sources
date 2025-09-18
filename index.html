@@ -30,6 +30,7 @@
             border-bottom: 3px solid #dc3545;
             margin-bottom: 40px;
             padding-bottom: 30px;
+            position: relative;
         }
 
         .logo {
@@ -541,8 +542,15 @@
             }
 
             .theme-toggle {
-                margin-top: 5px;
-                align-self: center;
+                position: absolute;
+                top: 20px;
+                right: 20px;
+                margin: 0;
+            }
+
+            /* Hide theme toggle from navigation on mobile */
+            .top-bar .theme-toggle {
+                display: none;
             }
 
             /* Optimize search filters for mobile */
