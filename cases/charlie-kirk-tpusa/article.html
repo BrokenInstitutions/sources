@@ -21,24 +21,32 @@
         }
 
         .container {
-            max-width: 800px;
+            background-color: #121212;
             margin: 0 auto;
             padding: 20px;
+            background-color: #121212;
         }
 
         .back-link {
-            display: inline-block;
-            color: #dc3545;
+            background-color: #6c757d;
+            color: white;
             text-decoration: none;
-            margin-bottom: 20px;
-            font-weight: 600;
+            padding: 10px 20px;
+            border-radius: 4px;
+            display: inline-block;
+            margin-bottom: 30px;
+            transition: background-color 0.2s ease;
         }
 
         .back-link:hover {
-            text-decoration: underline;
+            background-color: #5a6268;
         }
 
-        .header {
+        .back-link::before {
+            content: "← ";
+        }
+
+        .article-header {
             text-align: center;
             margin-bottom: 40px;
             padding-bottom: 20px;
@@ -224,7 +232,7 @@
 
         .call-to-action {
             background: linear-gradient(135deg, #dc3545 0%, #c82333 100%);
-            color: #dc3545;
+            color: white;
             padding: 25px;
             border-radius: 8px;
             margin: 30px 0;
@@ -250,10 +258,10 @@
 
         .sources-link a {
             background-color: #dc3545;
-            color: #dc3545;
+            color: white;
             text-decoration: none;
             padding: 12px 24px;
-            font-weight: 600;
+            border-radius: 4px;
             font-weight: bold;
             transition: background-color 0.2s ease;
         }
@@ -269,31 +277,6 @@
         .emphasis {
             color: #ff6b6b;
             font-weight: bold;
-        }
-
-        .evidence-tag {
-            display: inline-block;
-            padding: 4px 8px;
-            border-radius: 4px;
-            font-size: 0.8em;
-            font-weight: bold;
-            margin-left: 10px;
-            vertical-align: middle;
-        }
-
-        .evidence-tag.verified {
-            background-color: #155724;
-            color: #d4edda;
-        }
-
-        .evidence-tag.corroborated {
-            background-color: #0c5460;
-            color: #d1ecf1;
-        }
-
-        .evidence-tag.whistleblower {
-            background-color: #721c24;
-            color: #f8d7da;
         }
 
         .quote-box {
@@ -347,6 +330,31 @@
             margin-bottom: 15px;
         }
 
+        .evidence-tag {
+            display: inline-block;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 0.8em;
+            font-weight: bold;
+            margin-left: 10px;
+            vertical-align: middle;
+        }
+
+        .evidence-tag.verified {
+            background-color: #155724;
+            color: #d4edda;
+        }
+
+        .evidence-tag.corroborated {
+            background-color: #0c5460;
+            color: #d1ecf1;
+        }
+
+        .evidence-tag.whistleblower {
+            background-color: #721c24;
+            color: #f8d7da;
+        }
+
         @media (max-width: 768px) {
             body {
                 padding: 15px;
@@ -367,178 +375,136 @@
     </style>
 </head>
 <body>
-    <div class="container">
-        <a href="../../index.html" class="back-link">← Back to Archive</a>
+    <a href="../../index.html" class="back-link">Back to Archive</a>
 
-        <div class="header">
-            <h1 class="article-title">The Influence Machine: How Charlie Kirk Built a Campus Propaganda Empire</h1>
-            <p class="article-subtitle">Inside Turning Point USA's institutional capture of American universities</p>
+    <div class="article-header">
+        <h1 class="article-title">The Influence Machine: How Charlie Kirk Built a Campus Propaganda Empire</h1>
+        <p class="article-subtitle">Inside Turning Point USA's institutional capture of American universities</p>
+    </div>
+
+    <div class="victim-tribute">
+        <h3>In Memory of Academic Freedom</h3>
+        <p>Higher education institutions compromised by political operatives<br>
+        Faculty harassed • Students manipulated • Truth sacrificed for ideology</p>
+    </div>
+
+    <div class="article-content">
+        <p><strong>Charlie Kirk has built an empire.</strong> Not of businesses or buildings, but of influence—a sprawling network designed to shape the political consciousness of America's next generation. Through his organization Turning Point USA (TPUSA), Kirk has systematically infiltrated college campuses across the nation, exploiting institutional vulnerabilities and administrative failures to create what amounts to a propaganda operation masquerading as student engagement.</p>
+
+        <div class="highlight-box">
+            <p><strong>Key Finding:</strong> Internal documents reveal TPUSA operates with over $40 million in annual funding from undisclosed donors, employing professional operatives to pose as "student leaders" while university administrators turn a blind eye to clear violations of campus policies.</p>
         </div>
 
-        <div class="article-content">
-            <p><strong>Charlie Kirk has built an empire.</strong> Not of businesses or buildings, but of influence—a sprawling network designed to shape the political consciousness of America's next generation. Through his organization Turning Point USA (TPUSA), Kirk has systematically infiltrated college campuses across the nation, exploiting institutional vulnerabilities and administrative failures to create what amounts to a propaganda operation masquerading as student engagement.</p>
+        <h2>The Machine Revealed</h2>
 
-            <div class="highlight-box">
-                <p><strong>Key Finding:</strong> Internal documents reveal TPUSA operates with over $40 million in annual funding from undisclosed donors, employing professional operatives to pose as "student leaders" while university administrators turn a blind eye to clear violations of campus policies.</p>
-            </div>
+        <p>Kirk's operation isn't grassroots—it's astroturf. TPUSA's campus chapters aren't organic student movements but carefully orchestrated campaigns funded by dark money networks and executed by paid professionals. The evidence is damning:</p>
 
-            <h2>The Machine Revealed</h2>
-
-            <p>Kirk's operation isn't grassroots—it's astroturf. TPUSA's campus chapters aren't organic student movements but carefully orchestrated campaigns funded by dark money networks and executed by paid professionals. The evidence is damning:</p>
-
-            <div class="evidence-list">
-                <h3>Document Trail:</h3>
-                <ul>
-                    <li><strong>Leaked payroll records</strong> showing "student leaders" receiving monthly payments of $3,000-$5,000 <span class="evidence-tag whistleblower">WHISTLEBLOWER</span></li>
-                    <li><strong>Training manuals</strong> instructing operatives how to "blend in" as authentic students <span class="evidence-tag verified">VERIFIED</span></li>
-                    <li><strong>University correspondence</strong> revealing administrators knew about paid operatives but chose not to act <span class="evidence-tag verified">VERIFIED</span></li>
-                    <li><strong>Financial filings</strong> showing massive donations from corporate interests with undisclosed political agendas <span class="evidence-tag corroborated">CORROBORATED</span></li>
-                </ul>
-            </div>
-
-            <h2>The Institutional Failure</h2>
-
-            <div class="institution-failure">
-                <h3>Universities: The Captured Institutions</h3>
-                <p>American universities have failed in their fundamental duty to maintain intellectual integrity. Instead of investigating obvious violations of student organization policies, administrators have:</p>
-                <ul>
-                    <li>Ignored evidence of paid operatives posing as students</li>
-                    <li>Allowed TPUSA to violate financial disclosure requirements</li>
-                    <li>Failed to investigate complaints about harassment and intimidation</li>
-                    <li>Permitted the creation of hostile environments for faculty and dissenting students</li>
-                </ul>
-            </div>
-
-            <h3>The Arizona State University Case Study</h3>
-
-            <p>At Arizona State University, TPUSA's activities reached a breaking point. Internal emails obtained through public records requests reveal a pattern of institutional paralysis:</p>
-
-            <div class="quote">
-                "We know these aren't real students, but legal says we can't act without 'definitive proof.' Meanwhile, they're disrupting classes and targeting faculty members with coordinated harassment campaigns."
-                <br><strong>— ASU Administrator, internal email, March 2023</strong>
-            </div>
-
-            <p>The "definitive proof" existed in university files all along. TPUSA "students" were:</p>
+        <div class="evidence-list">
+            <h3>Document Trail:</h3>
             <ul>
-                <li>Not enrolled in sufficient credit hours to qualify as active students</li>
-                <li>Receiving payments that violated student employment policies</li>
-                <li>Using university resources for overtly political activities</li>
-                <li>Coordinating with off-campus political operatives in violation of campus policies</li>
+                <li><strong>Leaked payroll records</strong> showing "student leaders" receiving monthly payments of $3,000-$5,000 <span class="evidence-tag whistleblower">WHISTLEBLOWER</span></li>
+                <li><strong>Training manuals</strong> instructing operatives how to "blend in" as authentic students <span class="evidence-tag verified">VERIFIED</span></li>
+                <li><strong>University correspondence</strong> revealing administrators knew about paid operatives but chose not to act <span class="evidence-tag verified">VERIFIED</span></li>
+                <li><strong>Financial filings</strong> showing massive donations from corporate interests with undisclosed political agendas <span class="evidence-tag corroborated">CORROBORATED</span></li>
             </ul>
+        </div>
 
-            <h2>The Money Trail</h2>
+        <h2>The Institutional Failure</h2>
 
-            <p>Follow the money, and Kirk's empire reveals itself as a sophisticated influence operation. TPUSA's funding comes from:</p>
-
-            <div class="evidence-list">
-                <h3>Major Funding Sources:</h3>
-                <ul>
-                    <li><strong>Fossil fuel companies</strong> seeking to influence climate policy discussions on campus <span class="evidence-tag verified">VERIFIED</span></li>
-                    <li><strong>Defense contractors</strong> promoting military recruitment and pro-war sentiment <span class="evidence-tag corroborated">CORROBORATED</span></li>
-                    <li><strong>Pharmaceutical companies</strong> targeting health policy academic programs <span class="evidence-tag corroborated">CORROBORATED</span></li>
-                    <li><strong>Tech billionaires</strong> with undisclosed political agendas <span class="evidence-tag verified">VERIFIED</span></li>
-                    <li><strong>Dark money PACs</strong> with ties to foreign influence operations <span class="evidence-tag whistleblower">WHISTLEBLOWER</span></li>
-                </ul>
-            </div>
-
-            <p>These aren't donations to support student activities—they're investments in political outcomes. Internal strategy documents make this explicit, referring to campuses as "target markets" and students as "conversion opportunities."</p>
-
-            <h2>The Kirk Playbook</h2>
-
-            <p>Charlie Kirk didn't invent campus political manipulation, but he perfected it. The TPUSA playbook, leaked by former employees, reveals a systematic approach:</p>
-
-            <h3>Phase 1: Infiltration</h3>
-            <p>Deploy paid operatives to establish "chapters" at target universities. These operatives receive extensive training on how to present themselves as authentic student leaders while concealing their financial relationships with TPUSA.</p>
-
-            <h3>Phase 2: Legitimization</h3>
-            <p>Exploit university bureaucracy and administrative desire to appear "balanced" by positioning TPUSA as a legitimate student voice. University administrators, often overwhelmed and legally risk-averse, grant official recognition without proper vetting.</p>
-
-            <h3>Phase 3: Amplification</h3>
-            <p>Use official university recognition and resources to amplify messaging that serves donor interests. Campus events, social media campaigns, and "student newspaper" articles all serve pre-determined political objectives.</p>
-
-            <h3>Phase 4: Institutional Capture</h3>
-            <p>Leverage established presence to influence university policy, faculty hiring decisions, and curriculum choices. The goal isn't just political messaging—it's institutional control.</p>
-
-            <div class="highlight-box">
-                <p><strong>The Evidence:</strong> Former TPUSA operative Sarah Martinez* provided Broken Institutions with over 200 pages of internal documents, including training materials, payment records, and strategic communications that expose the full scope of Kirk's operation.</p>
-                <p><em>*Name changed for source protection</em></p>
-            </div>
-
-            <h2>The Human Cost</h2>
-
-            <p>Kirk's influence machine doesn't just corrupt institutions—it destroys lives. Faculty members have been driven from their positions through coordinated harassment campaigns. Students have been doxxed and threatened for opposing TPUSA activities. Academic freedom has been systematically undermined.</p>
-
-            <div class="quote">
-                "They made my life hell. I was teaching environmental science, and suddenly I had these 'students' in my class recording everything, submitting false complaints, and posting my personal information online. The university did nothing."
-                <br><strong>— Dr. Jennifer Walsh, former ASU professor</strong>
-            </div>
-
-            <p>Dr. Walsh's experience isn't isolated. Broken Institutions has documented similar cases at over 50 universities where TPUSA operations have targeted faculty, intimidated students, and created hostile academic environments.</p>
-
-            <h2>The Regulatory Void</h2>
-
-            <p>Perhaps most damning is the complete absence of oversight. No federal agency monitors political operations on college campuses. University accreditation bodies ignore political interference. State education departments defer to university administration.</p>
-
-            <p>This regulatory void has allowed Kirk's operation to flourish unchecked, growing from a small conservative student group to a $40 million political machine with chapters at over 2,500 campuses.</p>
-
-            <div class="institution-failure">
-                <h3>The Department of Education: Missing in Action</h3>
-                <p>The federal Department of Education has statutory authority to investigate institutions receiving federal funding for violations of student protection policies. Despite numerous complaints and documented evidence of TPUSA's operations, the department has:</p>
-                <ul>
-                    <li>Refused to investigate obvious violations of federal student aid regulations</li>
-                    <li>Ignored evidence of foreign influence in campus political operations</li>
-                    <li>Failed to enforce existing campus activity disclosure requirements</li>
-                    <li>Permitted the systematic erosion of academic freedom at federally funded institutions</li>
-                </ul>
-            </div>
-
-            <h2>Charlie Kirk: The Man Behind the Machine</h2>
-
-            <p>Who is Charlie Kirk? The carefully crafted public image shows a young conservative activist passionate about free speech and limited government. The reality is more troubling:</p>
-
+        <div class="institution-failure">
+            <h3>Universities: The Captured Institutions</h3>
+            <p>American universities have failed in their fundamental duty to maintain intellectual integrity. Instead of investigating obvious violations of student organization policies, administrators have:</p>
             <ul>
-                <li><strong>No college degree</strong> despite positioning himself as a campus intellectual leader</li>
-                <li><strong>No academic credentials</strong> in any field he routinely pontificates about</li>
-                <li><strong>No transparency</strong> about personal financial relationships with TPUSA donors</li>
-                <li><strong>No accountability</strong> for the harassment and intimidation campaigns conducted under his organization's banner</li>
+                <li>Ignored evidence of paid operatives posing as students</li>
+                <li>Allowed TPUSA to violate financial disclosure requirements</li>
+                <li>Failed to investigate complaints about harassment and intimidation</li>
+                <li>Permitted the creation of hostile environments for faculty and dissenting students</li>
             </ul>
-
-            <p>Kirk has built his empire on the fundamental institutional failure of American higher education: the inability to distinguish between legitimate academic discourse and coordinated political manipulation.</p>
-
-            <h2>The Path Forward</h2>
-
-            <p>Exposing Charlie Kirk's influence machine is just the beginning. Real reform requires:</p>
-
-            <div class="evidence-list">
-                <h3>Immediate Actions:</h3>
-                <ul>
-                    <li><strong>Federal investigation</strong> of TPUSA's campus operations and funding sources <span class="evidence-tag verified">VERIFIED</span></li>
-                    <li><strong>University policy reform</strong> requiring disclosure of all funding for student organizations <span class="evidence-tag corroborated">CORROBORATED</span></li>
-                    <li><strong>Academic freedom protections</strong> preventing political harassment of faculty and students <span class="evidence-tag verified">VERIFIED</span></li>
-                    <li><strong>Transparency requirements</strong> for all campus political activities <span class="evidence-tag corroborated">CORROBORATED</span></li>
-                    <li><strong>Accountability measures</strong> for administrators who fail to protect academic integrity <span class="evidence-tag corroborated">CORROBORATED</span></li>
-                </ul>
-            </div>
-
-            <p>The stakes couldn't be higher. American higher education—once the envy of the world—is being systematically compromised by political operatives who see universities not as institutions of learning but as targets for capture.</p>
-
-            <p>Charlie Kirk's influence machine represents a fundamental threat to academic freedom, intellectual integrity, and the basic premise that universities should serve the pursuit of knowledge rather than the political ambitions of their highest bidders.</p>
-
-            <div class="highlight-box">
-                <p><strong>Call to Action:</strong> Universities receiving federal funding must be held accountable for protecting academic freedom and maintaining institutional integrity. Students, faculty, and citizens must demand transparency about political operations on their campuses.</p>
-            </div>
-
-            <p><strong>The choice is clear:</strong> We can continue allowing political operatives like Charlie Kirk to capture and corrupt our educational institutions, or we can demand the transparency, accountability, and reform necessary to restore integrity to American higher education.</p>
-
-            <p>Institutions are failing. We name names. We demand accountability.</p>
-
-            <p><em>This investigation continues. If you have information about TPUSA operations at your university or other political influence campaigns targeting higher education, contact Broken Institutions through our secure channels.</em></p>
         </div>
 
-        <div class="footer">
-            <p><strong>Broken Institutions</strong> - Exposing institutional failures and demanding accountability</p>
-            <p>Contact: <a href="https://www.instagram.com/brokeninstitutions" target="_blank" style="color: #dc3545;">@brokeninstitutions</a></p>
+        <h3>The Arizona State University Case Study</h3>
+
+        <p>At Arizona State University, TPUSA's activities reached a breaking point. Internal emails obtained through public records requests reveal a pattern of institutional paralysis:</p>
+
+        <div class="quote-box">
+            <p>"We know these aren't real students, but legal says we can't act without 'definitive proof.' Meanwhile, they're disrupting classes and targeting faculty members with coordinated harassment campaigns."<br><strong>— ASU Administrator, internal email, March 2023</strong></p>
         </div>
+
+        <p>The "definitive proof" existed in university files all along. TPUSA "students" were:</p>
+        <ul>
+            <li>Not enrolled in sufficient credit hours to qualify as active students</li>
+            <li>Receiving payments that violated student employment policies</li>
+            <li>Using university resources for overtly political activities</li>
+            <li>Coordinating with off-campus political operatives in violation of campus policies</li>
+        </ul>
+
+        <h2>The Money Trail</h2>
+
+        <p>Follow the money, and Kirk's empire reveals itself as a sophisticated influence operation. TPUSA's funding comes from:</p>
+
+        <div class="evidence-list">
+            <h3>Major Funding Sources:</h3>
+            <ul>
+                <li><strong>Fossil fuel companies</strong> seeking to influence climate policy discussions on campus <span class="evidence-tag verified">VERIFIED</span></li>
+                <li><strong>Defense contractors</strong> promoting military recruitment and pro-war sentiment <span class="evidence-tag corroborated">CORROBORATED</span></li>
+                <li><strong>Pharmaceutical companies</strong> targeting health policy academic programs <span class="evidence-tag corroborated">CORROBORATED</span></li>
+                <li><strong>Tech billionaires</strong> with undisclosed political agendas <span class="evidence-tag verified">VERIFIED</span></li>
+                <li><strong>Dark money PACs</strong> with ties to foreign influence operations <span class="evidence-tag whistleblower">WHISTLEBLOWER</span></li>
+            </ul>
+        </div>
+
+        <p>These aren't donations to support student activities—they're investments in political outcomes. Internal strategy documents make this explicit, referring to campuses as "target markets" and students as "conversion opportunities."</p>
+
+        <h2>The Regulatory Void</h2>
+
+        <p>Perhaps most damning is the complete absence of oversight. No federal agency monitors political operations on college campuses. University accreditation bodies ignore political interference. State education departments defer to university administration.</p>
+
+        <p>This regulatory void has allowed Kirk's operation to flourish unchecked, growing from a small conservative student group to a $40 million political machine with chapters at over 2,500 campuses.</p>
+
+        <div class="institution-failure">
+            <h3>The Department of Education: Missing in Action</h3>
+            <p>The federal Department of Education has statutory authority to investigate institutions receiving federal funding for violations of student protection policies. Despite numerous complaints and documented evidence of TPUSA's operations, the department has:</p>
+            <ul>
+                <li>Refused to investigate obvious violations of federal student aid regulations</li>
+                <li>Ignored evidence of foreign influence in campus political operations</li>
+                <li>Failed to enforce existing campus activity disclosure requirements</li>
+                <li>Permitted the systematic erosion of academic freedom at federally funded institutions</li>
+            </ul>
+        </div>
+
+        <h2>The Path Forward</h2>
+
+        <p>Exposing Charlie Kirk's influence machine is just the beginning. Real reform requires:</p>
+
+        <div class="evidence-list">
+            <h3>Immediate Actions:</h3>
+            <ul>
+                <li><strong>Federal investigation</strong> of TPUSA's campus operations and funding sources <span class="evidence-tag verified">VERIFIED</span></li>
+                <li><strong>University policy reform</strong> requiring disclosure of all funding for student organizations <span class="evidence-tag corroborated">CORROBORATED</span></li>
+                <li><strong>Academic freedom protections</strong> preventing political harassment of faculty and students <span class="evidence-tag verified">VERIFIED</span></li>
+                <li><strong>Transparency requirements</strong> for all campus political activities <span class="evidence-tag corroborated">CORROBORATED</span></li>
+                <li><strong>Accountability measures</strong> for administrators who fail to protect academic integrity <span class="evidence-tag corroborated">CORROBORATED</span></li>
+            </ul>
+        </div>
+
+        <p>The stakes couldn't be higher. American higher education—once the envy of the world—is being systematically compromised by political operatives who see universities not as institutions of learning but as targets for capture.</p>
+
+        <p>Charlie Kirk's influence machine represents a fundamental threat to academic freedom, intellectual integrity, and the basic premise that universities should serve the pursuit of knowledge rather than the political ambitions of their highest bidders.</p>
+
+        <div class="call-to-action">
+            <h3>The Choice Is Clear</h3>
+            <p>We can continue allowing political operatives like Charlie Kirk to capture and corrupt our educational institutions, or we can demand the transparency, accountability, and reform necessary to restore integrity to American higher education.</p>
+        </div>
+
+        <p><strong>The choice is clear:</strong> Institutions are failing. We name names. We demand accountability.</p>
+
+        <p><em>This investigation continues. If you have information about TPUSA operations at your university or other political influence campaigns targeting higher education, contact Broken Institutions through our secure channels.</em></p>
+    </div>
+
+    <div class="sources-link">
+        <a href="sources.html">View Complete Sources & Documentation</a>
+        <a href="timeline.html" style="margin-left: 15px;">Timeline</a>
+        <a href="#" onclick="window.scrollTo(0,0); return false;" style="margin-left: 15px; background-color: #6c757d;">Back to Top</a>
     </div>
 </body>
 </html>
