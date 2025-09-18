@@ -17,30 +17,31 @@
             line-height: 1.6;
             color: #e9ecef;
             background-color: #121212;
+            
             min-height: 100vh;
         }
 
         .container {
-            background-color: #121212;
+            
+            max-width: 800px;
             margin: 0 auto;
             padding: 20px;
-            background-color: #121212;
-        }
+            
         }
         
         .back-link {
-            background-color: #6c757d;
-            color: white;
+            display: inline-block;
+            color: #dc3545;
             text-decoration: none;
-            padding: 10px 20px;
-            border-radius: 4px;
+            margin-bottom: 20px;
+            font-weight: 600;
             display: inline-block;
             margin-bottom: 30px;
             transition: background-color 0.2s ease;
         }
         
         .back-link:hover {
-            background-color: #5a6268;
+            text-decoration: underline;
         }
         
         .back-link::before {
@@ -233,7 +234,7 @@
         
         .call-to-action {
             background: linear-gradient(135deg, #dc3545 0%, #c82333 100%);
-            color: white;
+            color: #dc3545;
             padding: 25px;
             border-radius: 8px;
             margin: 30px 0;
@@ -259,10 +260,10 @@
         
         .sources-link a {
             background-color: #dc3545;
-            color: white;
+            color: #dc3545;
             text-decoration: none;
             padding: 12px 24px;
-            border-radius: 4px;
+            font-weight: 600;
             font-weight: bold;
             transition: background-color 0.2s ease;
         }
@@ -314,7 +315,8 @@
     </style>
 </head>
 <body>
-    <a href="../../index.html" class="back-link">Back to Archive</a>
+    <div class="container">
+    <a href="../../index.html" class="back-link">← Back to Archive</a>
     
     <div class="article-header">
         <h1 class="article-title">Fourteen Arrests: How Judicial Negligence Armed Iryna's Killer</h1>
@@ -507,7 +509,8 @@
     <div class="sources-link">
             <a href="sources.html">View Complete Sources & Documentation</a>
             <a href="timeline.html" style="margin-left: 15px;">Case Timeline</a>
-            <a href="#" onclick="window.scrollTo(0,0); return false;" style="margin-left: 15px; background-color: #6c757d;">Back to Top</a>
+            <a href="#" onclick="window.scrollTo(0,0); return false;" style="margin-left: 15px; display: inline-block;">Back to Top</a>
         </div>
+    </div>
 </body>
 </html>
