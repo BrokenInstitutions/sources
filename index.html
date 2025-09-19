@@ -842,7 +842,29 @@
                 font-size: 0.9em;
             }
 
+            .case-card.featured .case-meta {
+                display: none;
+            }
+
+            .case-card.featured {
+                min-height: 350px;
+            }
+
+            .case-card.featured .case-summary {
+                order: -1;
+                margin-bottom: 15px;
+                margin-top: 15px;
+                flex-grow: 1;
+            }
+
+            .case-card.featured .case-overlay {
+                display: flex;
+                flex-direction: column;
+                height: 100%;
+            }
+
             .case-card.featured .case-links {
+                margin-top: auto;
                 flex-direction: column;
                 gap: 8px;
             }
