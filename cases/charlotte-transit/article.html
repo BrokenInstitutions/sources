@@ -364,29 +364,28 @@
                 border-bottom: none;
             }
 
+            /* Mobile timeline - line moved to left with all content in remaining space */
             .timeline::after {
-                left: 31px;
+                left: 25px;
             }
 
             .timeline-item {
                 width: 100%;
-                padding-left: 70px;
-                padding-right: 25px;
+                padding-left: 60px;
+                padding-right: 20px;
+                left: 0 !important;
             }
 
-            .timeline-item::before {
-                left: 60px;
-                border: medium solid #1e40af;
-                border-width: 10px 10px 10px 0;
-                border-color: transparent #1e40af transparent transparent;
+            .timeline-item::after {
+                left: 12.5px !important;
             }
 
-            .left::after, .right::after {
-                left: 18px;
+            .timeline-content {
+                margin-left: 0;
             }
 
             .right {
-                left: 0%;
+                left: 0;
             }
 
             .article-content {
@@ -1706,6 +1705,24 @@
             document.body.className = 'light-theme';
         }
 
+        // Restore active tab from URL hash or localStorage
+        window.addEventListener('DOMContentLoaded', function() {
+            const hash = window.location.hash.substring(1);
+            const savedTab = localStorage.getItem('activeTab');
+            let activeTab = 'investigation'; // default
+
+            if (hash && (hash === 'investigation' || hash === 'timeline' || hash === 'sources')) {
+                activeTab = hash;
+            } else if (savedTab && (savedTab === 'investigation' || savedTab === 'timeline' || savedTab === 'sources')) {
+                activeTab = savedTab;
+            }
+
+            if (activeTab !== 'investigation') {
+                // Activate the correct tab without scrolling
+                openTab(null, activeTab);
+            }
+        });
+
         // Tab functionality - syncs both top and bottom tabs
         function openTab(evt, tabName) {
             var i, tabcontent, tablinks, bottomtabs;
@@ -1734,8 +1751,11 @@
                 buttons[i].classList.add("active");
             }
 
-            // Scroll to top of page when switching tabs
-            window.scrollTo(0, 0);
+            // Save active tab to localStorage and update URL hash
+            localStorage.setItem('activeTab', tabName);
+            window.history.replaceState(null, null, '#' + tabName);
+
+            // Don't scroll when switching tabs - maintain position
         }
     </script>
     <script src="../../shared-theme-toggle.js"></script>
