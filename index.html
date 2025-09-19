@@ -891,6 +891,24 @@
         if (document.documentElement.getAttribute('data-theme') === 'light') {
             document.body.className = 'light-theme';
         }
+
+        // Restore active section from URL hash or localStorage on page load
+        window.addEventListener('DOMContentLoaded', function() {
+            const hash = window.location.hash.substring(1);
+            const savedSection = localStorage.getItem('activeSection');
+            let activeSection = 'investigation'; // default
+
+            if (hash && (hash === 'investigation' || hash === 'about' || hash === 'methodology')) {
+                activeSection = hash;
+            } else if (savedSection && (savedSection === 'investigation' || savedSection === 'about' || savedSection === 'methodology')) {
+                activeSection = savedSection;
+            }
+
+            if (activeSection !== 'investigation') {
+                // Activate the correct section without scrolling
+                showSection(activeSection);
+            }
+        });
     </script>
     <!-- ======= HEADER SECTION ======= -->
     <div class="header">
