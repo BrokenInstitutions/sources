@@ -855,18 +855,25 @@
                 margin-bottom: 15px;
                 margin-top: 15px;
                 flex-grow: 1;
+                overflow: hidden;
+                display: -webkit-box;
+                -webkit-line-clamp: 4;
+                -webkit-box-orient: vertical;
             }
 
             .case-card.featured .case-overlay {
                 display: flex;
                 flex-direction: column;
                 height: 100%;
+                padding-bottom: 20px;
+                box-sizing: border-box;
             }
 
             .case-card.featured .case-links {
                 margin-top: auto;
                 flex-direction: column;
                 gap: 8px;
+                flex-shrink: 0;
             }
 
             .case-link {
