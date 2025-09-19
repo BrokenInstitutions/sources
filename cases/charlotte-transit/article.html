@@ -723,6 +723,42 @@
             background: #ffffff;
         }
 
+        /* Investigation content formatting */
+        .investigation-content p {
+            margin-bottom: 20px;
+            color: #ced4da;
+            font-size: 1.05em;
+        }
+
+        .investigation-content h2 {
+            color: #f8f9fa;
+            border-bottom: 2px solid #333;
+            padding-bottom: 10px;
+            margin: 40px 0;
+            margin-bottom: 20px;
+            font-size: 1.8em;
+        }
+
+        .investigation-content h3 {
+            color: #f8f9fa;
+            margin: 40px 0;
+            margin-bottom: 15px;
+            font-size: 1.3em;
+        }
+
+        .light-theme .investigation-content p {
+            color: #34495e;
+        }
+
+        .light-theme .investigation-content h2 {
+            color: #2c3e50;
+            border-bottom: 2px solid #e1e5e9;
+        }
+
+        .light-theme .investigation-content h3 {
+            color: #2c3e50;
+        }
+
         /* ======= TIMELINE STYLES ======= */
         .timeline {
             position: relative;
@@ -1022,6 +1058,66 @@
             border-left: 4px solid #ffc107;
             color: #856404;
         }
+
+        /* ======= BOTTOM TAB NAVIGATION ======= */
+        .bottom-tab-navigation {
+            display: flex;
+            background: #1e1e1e;
+            border-radius: 0 0 12px 12px;
+            margin-top: -12px;
+            margin-bottom: 20px;
+            overflow: hidden;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .bottom-tab-button {
+            flex: 1;
+            background: #2d3436;
+            color: #adb5bd;
+            padding: 15px 20px;
+            border: none;
+            cursor: pointer;
+            font-size: 1em;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            border-right: 1px solid #333;
+        }
+
+        .bottom-tab-button:last-child {
+            border-right: none;
+        }
+
+        .bottom-tab-button:hover {
+            background: #636e72;
+            color: #e9ecef;
+        }
+
+        .bottom-tab-button.active {
+            background: #1e40af;
+            color: white;
+        }
+
+        /* Light theme for bottom tabs */
+        .light-theme .bottom-tab-navigation {
+            background: #ffffff;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .light-theme .bottom-tab-button {
+            background: #ffffff;
+            color: #2c3e50;
+            border-right: 1px solid #e1e5e9;
+        }
+
+        .light-theme .bottom-tab-button:hover {
+            background: #e8f0fe;
+            color: #2c3e50;
+        }
+
+        .light-theme .bottom-tab-button.active {
+            background: #1e40af;
+            color: white;
+        }
     </style>
 </head>
 <body>
@@ -1043,13 +1139,12 @@
 
             <div class="tab-content">
                 <!-- INVESTIGATION TAB -->
-                <div id="investigation" class="tab-panel active">
+                <div id="investigation" class="tab-panel active investigation-content">
                     <div class="victim-tribute">
                         <h3>In Memory of Iryna Zarutska</h3>
                         <p>23 years old • Ukrainian refugee • War survivor • Dreamed of becoming a veterinary assistant<br>
                         Killed August 22, 2025 • Charlotte, NC</p>
                     </div>
-                    <div class="article-content">
             <p>On August 22, 2025, Iryna Zarutska—23 years old, Ukrainian refugee, survivor of war—was murdered on a Charlotte transit train. She had fled Russian bombardment only to be killed by a system where judicial officials repeatedly chose progressive ideology over public safety.</p>
 
             <p>Her killer, Decarlos Brown Jr., had <span class="emphasis">fourteen prior arrests</span> spanning over a decade of violent crimes. Fourteen red flags ignored. Fourteen opportunities for judges to protect the public. This wasn't random violence—this was the <span class="emphasis">predictable result of judicial negligence</span> enabled by a criminal justice philosophy that treats public safety as secondary to criminal rehabilitation.</p>
@@ -1265,7 +1360,6 @@
             <p>Until American courts face consequences for enabling foreseeable violence, more families will endure what Iryna's family suffered. Until judges answer for deadly decisions, institutional failures will continue claiming innocent lives.</p>
 
             <p><em>This investigation continues. Justice for Iryna demands nothing less than complete institutional accountability.</em></p>
-                    </div>
                 </div>
 
                 <!-- TIMELINE TAB -->
@@ -1491,12 +1585,10 @@
         </div>
 
         <!-- BOTTOM TAB NAVIGATION -->
-        <div class="tab-container">
-            <div class="tab-navigation">
-                <button class="tab-button" onclick="openTab(event, 'investigation')">Investigation</button>
-                <button class="tab-button" onclick="openTab(event, 'timeline')">Timeline</button>
-                <button class="tab-button" onclick="openTab(event, 'sources')">Sources</button>
-            </div>
+        <div class="bottom-tab-navigation">
+            <button class="bottom-tab-button" onclick="openTab(event, 'investigation')">Investigation</button>
+            <button class="bottom-tab-button" onclick="openTab(event, 'timeline')">Timeline</button>
+            <button class="bottom-tab-button" onclick="openTab(event, 'sources')">Sources</button>
         </div>
 
         <div class="sources-link">
@@ -1519,7 +1611,7 @@
 
         // Tab functionality - syncs both top and bottom tabs
         function openTab(evt, tabName) {
-            var i, tabcontent, tablinks;
+            var i, tabcontent, tablinks, bottomtabs;
 
             tabcontent = document.getElementsByClassName("tab-panel");
             for (i = 0; i < tabcontent.length; i++) {
@@ -1529,6 +1621,11 @@
             tablinks = document.getElementsByClassName("tab-button");
             for (i = 0; i < tablinks.length; i++) {
                 tablinks[i].classList.remove("active");
+            }
+
+            bottomtabs = document.getElementsByClassName("bottom-tab-button");
+            for (i = 0; i < bottomtabs.length; i++) {
+                bottomtabs[i].classList.remove("active");
             }
 
             // Activate the selected tab content
