@@ -113,6 +113,9 @@ function toggleTheme(event) {
     // Toggle body class
     body.classList.toggle('light-theme');
 
+    // Also update document element class for better CSS targeting
+    document.documentElement.classList.toggle('light-theme');
+
     // Update localStorage
     localStorage.setItem('theme', body.classList.contains('light-theme') ? 'light' : 'dark');
 
