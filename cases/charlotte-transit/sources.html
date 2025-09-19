@@ -122,6 +122,23 @@
             content: "← ";
         }
 
+        .theme-link {
+            background-color: #6c757d;
+            color: white;
+            text-decoration: none;
+            padding: 8px 15px;
+            border-radius: 4px;
+            display: inline-block;
+            margin-bottom: 20px;
+            margin-left: 10px;
+            font-size: 0.9em;
+            transition: background-color 0.2s ease;
+        }
+
+        .theme-link:hover {
+            background-color: #5a6268;
+        }
+
         .source-type {
             display: inline-block;
             background: #2d3436;
@@ -162,6 +179,7 @@
 
         .sources-link .secondary {
             background-color: #6c757d;
+            color: white;
         }
 
         .sources-link .secondary:hover {
@@ -206,6 +224,134 @@
                 padding: 15px;
             }
         }
+
+        /* ======= LIGHT THEME ======= */
+        .light-theme {
+            background-color: #f8f9fa;
+            color: #2c3e50;
+        }
+
+        .light-theme h1 {
+            color: #2c3e50;
+        }
+
+        .light-theme .source-category {
+            background: #ffffff;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .light-theme .category-header {
+            background: #1e40af;
+            color: white;
+        }
+
+        .light-theme .source-list li {
+            color: #34495e;
+            border-bottom: 1px solid #e1e5e9;
+        }
+
+        .light-theme .source-list a {
+            color: #1e40af;
+        }
+
+        .light-theme .source-list a:hover {
+            color: #1d4ed8;
+        }
+
+        .light-theme .back-link {
+            background-color: #6c757d;
+            color: white;
+        }
+
+        .light-theme .back-link:hover {
+            background-color: #5a6268;
+        }
+
+        .light-theme .header {
+            border-bottom: 3px solid #1e40af;
+        }
+
+        .light-theme .header-subtitle {
+            color: #495057 !important;
+        }
+
+        .light-theme .footer-note {
+            border-top: 1px solid #e1e5e9;
+            color: #5a6c7d;
+        }
+
+        .light-theme .sources-link a {
+            background-color: transparent;
+            color: #1e40af;
+            border: 2px solid #1e40af;
+        }
+
+        .light-theme .sources-link a:hover {
+            background-color: rgba(30, 64, 175, 0.1);
+            color: #1d4ed8;
+            border-color: #1d4ed8;
+        }
+
+        .light-theme .sources-link .secondary {
+            background-color: transparent;
+            color: #6c757d;
+            border: 2px solid #6c757d;
+        }
+
+        .light-theme .sources-link .secondary:hover {
+            background-color: rgba(108, 117, 125, 0.1);
+            color: #5a6268;
+            border-color: #5a6268;
+        }
+
+        .light-theme .source-item {
+            color: #34495e;
+            border-bottom: 1px solid #e1e5e9;
+        }
+
+        .light-theme .source-title {
+            color: #2c3e50;
+        }
+
+        .light-theme .source-description {
+            color: #495057;
+        }
+
+        .light-theme .source-url a {
+            color: #1e40af;
+        }
+
+        .light-theme .source-url a:hover {
+            color: #1d4ed8;
+        }
+
+        .light-theme .source-type {
+            background: #e9ecef;
+            color: #495057;
+        }
+
+        .light-theme .evidence-level {
+            background: #f8f9fa;
+            border: 1px solid #e1e5e9;
+        }
+
+        .light-theme .evidence-verified {
+            background: #d4edda;
+            border-left: 4px solid #28a745;
+            color: #155724;
+        }
+
+        .light-theme .evidence-corroborated {
+            background: #d1ecf1;
+            border-left: 4px solid #17a2b8;
+            color: #0c5460;
+        }
+
+        .light-theme .evidence-whistleblower {
+            background: #fff3cd;
+            border-left: 4px solid #ffc107;
+            color: #856404;
+        }
     </style>
 </head>
 <body>
@@ -214,7 +360,7 @@
 
         <div class="header">
             <h1>Charlotte Transit Case Sources</h1>
-            <p style="color: #adb5bd; font-size: 1.1em;">Our investigation draws from <span id="source-count">14</span> verified sources including federal documentation, law enforcement reports, major television networks (CNN, ABC, NBC), public broadcasting analysis (PBS NewsHour), regional coverage, and international crime statistics. Each source has been verified for accuracy and accessibility.</p>
+            <p style="color: #adb5bd; font-size: 1.1em;" class="header-subtitle">Our investigation draws from <span id="source-count">14</span> verified sources including federal documentation, law enforcement reports, major television networks (CNN, ABC, NBC), public broadcasting analysis (PBS NewsHour), regional coverage, and international crime statistics. Each source has been verified for accuracy and accessibility.</p>
         </div>
 
         <div class="source-category">
@@ -340,7 +486,7 @@
         <div class="sources-link">
             <a href="article.html">Full Investigation</a>
             <a href="timeline.html">Timeline</a>
-            <a href="#" onclick="window.scrollTo(0,0); return false;" class="secondary">Back to Top</a>
+            <a href="#" onclick="window.scrollTo(0,0); return false;" class="secondary">↑ Back to Top</a>
         </div>
 
         <div class="footer-note">
@@ -349,8 +495,18 @@
         </div>
     </div>
     <script>
-        // Dynamically count and update source count
+        // Apply theme immediately before page renders - no animation
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme === 'light') {
+            document.documentElement.className = 'light-theme';
+            document.body.className = 'light-theme';
+        }
+    </script>
+    <script src="../../shared-theme-toggle.js"></script>
+    <script>
+        // Source counting functionality
         document.addEventListener('DOMContentLoaded', function() {
+            // Count sources
             const sourceItems = document.querySelectorAll('.source-item');
             const sourceCountElement = document.getElementById('source-count');
             if (sourceCountElement && sourceItems.length > 0) {

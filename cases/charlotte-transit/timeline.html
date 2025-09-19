@@ -52,6 +52,23 @@
             content: "← ";
         }
 
+        .theme-link {
+            background-color: #6c757d;
+            color: white;
+            text-decoration: none;
+            padding: 8px 15px;
+            border-radius: 4px;
+            display: inline-block;
+            margin-bottom: 20px;
+            margin-left: 10px;
+            font-size: 0.9em;
+            transition: background-color 0.2s ease;
+        }
+
+        .theme-link:hover {
+            background-color: #5a6268;
+        }
+
         h1 {
             color: #e1e5e9;
             font-size: 2.5em;
@@ -186,6 +203,7 @@
 
         .sources-link .secondary {
             background-color: #6c757d;
+            color: white;
         }
 
         .sources-link .secondary:hover {
@@ -227,6 +245,120 @@
                 left: 0%;
             }
         }
+
+        /* ======= LIGHT THEME ======= */
+        .light-theme {
+            background-color: #f8f9fa;
+            color: #2c3e50;
+        }
+
+        .light-theme h1 {
+            color: #2c3e50;
+        }
+
+        .light-theme .timeline-content {
+            background-color: #ffffff;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        .light-theme .timeline-date {
+            color: #2c3e50;
+        }
+
+        .light-theme .timeline-title {
+            color: #2c3e50;
+        }
+
+        .light-theme .timeline-text {
+            color: #2c3e50;
+        }
+
+        .light-theme .evidence-tag {
+            background: #e9ecef;
+            color: #495057;
+        }
+
+        .light-theme .back-link {
+            background-color: #6c757d;
+            color: white;
+        }
+
+        .light-theme .back-link:hover {
+            background-color: #5a6268;
+        }
+
+        .light-theme .header {
+            border-bottom: 3px solid #1e40af;
+        }
+
+        .light-theme .header-subtitle {
+            color: #495057 !important;
+        }
+
+        .light-theme .footer-note {
+            border-top: 1px solid #e1e5e9;
+            color: #5a6c7d;
+        }
+
+
+        .light-theme .timeline::after {
+            background-color: #1e40af;
+        }
+
+        .light-theme .timeline-item::after {
+            background-color: #1e40af;
+            border: 4px solid #f8f9fa;
+        }
+
+        .light-theme .timeline-content {
+            background-color: #ffffff;
+            border-left: 4px solid #28a745;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        .light-theme .timeline-content:hover {
+            box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+        }
+
+        .light-theme .timeline-content.critical-decision {
+            border-left-color: #ffc107;
+        }
+
+        .light-theme .timeline-content.critical-decision:hover {
+            box-shadow: 0 6px 12px rgba(255,193,7,0.3);
+        }
+
+        .light-theme .timeline-content.tragedy {
+            border-left-color: #dc3545;
+        }
+
+        .light-theme .timeline-content.tragedy:hover {
+            box-shadow: 0 6px 12px rgba(220,53,69,0.3);
+        }
+
+        .light-theme .sources-link a {
+            background-color: transparent;
+            color: #1e40af;
+            border: 2px solid #1e40af;
+        }
+
+        .light-theme .sources-link a:hover {
+            background-color: rgba(30, 64, 175, 0.1);
+            color: #1d4ed8;
+            border-color: #1d4ed8;
+        }
+
+        .light-theme .sources-link .secondary {
+            background-color: transparent;
+            color: #6c757d;
+            border: 2px solid #6c757d;
+        }
+
+        .light-theme .sources-link .secondary:hover {
+            background-color: rgba(108, 117, 125, 0.1);
+            color: #5a6268;
+            border-color: #5a6268;
+        }
     </style>
 </head>
 <body>
@@ -235,7 +367,7 @@
 
         <div class="header">
             <h1>Charlotte Transit Case Timeline</h1>
-            <p style="color: #adb5bd; font-size: 1.1em;">This timeline chronicles the key events from January through August 2025, documenting the sequence of decisions, legal proceedings, and circumstances that led to the tragic incident. All dates and events are verified through official court records, police reports, and federal documentation.</p>
+            <p style="color: #adb5bd; font-size: 1.1em;" class="header-subtitle">This timeline chronicles the key events from January through August 2025, documenting the sequence of decisions, legal proceedings, and circumstances that led to the tragic incident. All dates and events are verified through official court records, police reports, and federal documentation.</p>
         </div>
 
         <div class="timeline">
@@ -333,7 +465,7 @@
         <div class="sources-link">
             <a href="article.html">Full Investigation</a>
             <a href="sources.html">Sources</a>
-            <a href="#" onclick="window.scrollTo(0,0); return false;" class="secondary">Back to Top</a>
+            <a href="#" onclick="window.scrollTo(0,0); return false;" class="secondary">↑ Back to Top</a>
         </div>
 
         <div class="footer-note">
@@ -341,5 +473,15 @@
             <p><strong>Last updated:</strong> September 18, 2025</p>
         </div>
     </div>
+
+    <script>
+        // Apply theme immediately before page renders - no animation
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme === 'light') {
+            document.documentElement.className = 'light-theme';
+            document.body.className = 'light-theme';
+        }
+    </script>
+    <script src="../../shared-theme-toggle.js"></script>
 </body>
 </html>
