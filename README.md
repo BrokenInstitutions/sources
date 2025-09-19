@@ -8,20 +8,6 @@ A comprehensive digital archive documenting institutional failures through rigor
 
 Exposing institutional failures that endanger public safety through transparent, evidence-based investigative reporting. Every investigation is meticulously documented with verified sources, official records, and comprehensive timelines.
 
-## 📚 Current Investigations
-
-### Charlotte Transit Case: "What Enabled Him?"
-**Status**: Complete Investigation
-**Subject**: Judicial failures leading to the murder of Ukrainian refugee Iryna Zarutska
-**Focus**: Magistrate decisions, competency evaluation delays, and systemic accountability gaps
-**Documentation**: Court records, police reports, federal documentation, medical records
-
-**Key Findings**:
-- 14 arrests over 11 years with repeated judicial releases
-- 8-month competency evaluation delay while perpetrator remained free
-- Post-murder evaluation completed within days, exposing systemic capacity
-- Multiple judicial officials involved with zero accountability measures
-
 ## 🔧 Technical Features
 
 ### Responsive Design
@@ -61,20 +47,6 @@ Investigations driven by evidence and public interest, not political or financia
 - **Performance**: Optimized transitions, lazy loading, minimal dependencies
 - **Accessibility**: Semantic HTML, proper ARIA labels, keyboard navigation
 
-## 📁 Project Structure
-
-```
-/
-├── index.html                          # Homepage with case archive
-├── shared-theme-toggle.js              # Universal theme switching system
-├── cases/
-│   └── charlotte-transit/
-│       ├── article.html                # Main investigation with tab system
-│       ├── timeline.html               # Standalone timeline view
-│       └── sources.html                # Comprehensive source documentation
-└── README.md                           # Project documentation
-```
-
 ## 🎨 Design Philosophy
 
 ### User Experience
@@ -91,10 +63,10 @@ Investigations driven by evidence and public interest, not political or financia
 
 ## 📊 Key Metrics
 
-- **Mobile timeline optimization**: ~90% screen width utilization (vs ~50% previously)
-- **Theme toggle performance**: 10x faster switching on homepage
+- **Mobile timeline optimization**: ~90% screen width utilization
+- **Theme toggle performance**: Optimized CSS transitions for responsive switching
 - **Navigation persistence**: 100% state retention across refreshes
-- **Source verification**: 14 independently verified sources per investigation
+- **Source verification**: Multiple independently verified sources per investigation
 
 ## 🔍 Investigation Methodology
 
@@ -110,20 +82,6 @@ Investigations driven by evidence and public interest, not political or financia
 - **Corroboration**: Minimum two independent sources for controversial claims
 - **Attribution**: Full source documentation with accessibility verification
 - **Transparency**: Methodology and limitations clearly disclosed
-
-## 📈 Future Development
-
-### Planned Features
-- **Search functionality**: Full-text search across all investigations
-- **Interactive timelines**: Enhanced visualization with filtering capabilities
-- **Source categorization**: Advanced filtering by document type and verification level
-- **Case comparison**: Side-by-side analysis of institutional patterns
-
-### Content Expansion
-- **Additional case studies**: Systematic documentation of institutional failures
-- **Pattern analysis**: Cross-case identification of recurring systemic issues
-- **Policy recommendations**: Evidence-based reform proposals
-- **Accountability tracking**: Follow-up on institutional responses and changes
 
 ## 📝 Contributing
 
@@ -146,6 +104,4 @@ All investigations prioritize factual accuracy over sensationalism. Sources are 
 
 ---
 
-**Last Updated**: December 2024
-**Current Version**: 2.0 - Enhanced mobile experience and theme system
-**Next Update**: Q1 2025 - Search functionality and case expansion
+**Last Updated**: September 2025
