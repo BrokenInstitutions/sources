@@ -60,22 +60,29 @@
         }
 
         .victim-tribute {
-            background: linear-gradient(135deg, #1a4d3a 0%, #2d5a3d 100%);
+            background: #2d3436;
             border-left: 4px solid #28a745;
             padding: 20px;
-            margin: 20px 0;
+            margin: 0;
+            margin-bottom: 20px;
             border-radius: 6px;
-            text-align: center;
         }
 
         .victim-tribute h3 {
-            color: #28a745;
-            margin-bottom: 10px;
+            color: #f8f9fa;
+            margin: 0;
+            margin-bottom: 15px;
+            font-size: 1.2em;
+            border-bottom: 1px solid #28a745;
+            padding-bottom: 8px;
+            text-align: left;
         }
 
         .victim-tribute p {
-            color: #d4edda;
+            color: #ced4da;
             font-style: italic;
+            margin-bottom: 0;
+            text-align: center;
         }
 
         .article-content {
@@ -113,6 +120,22 @@
             padding: 20px;
             margin: 20px 0;
             border-radius: 6px;
+        }
+
+        .judge-profile.victim-memorial {
+            border-left: 4px solid #28a745;
+        }
+
+        .judge-profile.victim-memorial h4 {
+            border-bottom: 1px solid #28a745;
+        }
+
+        .judge-profile.path-forward {
+            border-left: 4px solid #1e40af;
+        }
+
+        .judge-profile.path-forward h4 {
+            border-bottom: 1px solid #1e40af;
         }
 
         .judge-profile h4 {
@@ -231,20 +254,21 @@
 
         .call-to-action {
             background: #2d3436;
-            border: 2px solid #991b1b;
-            color: #f8f9fa;
-            padding: 25px;
-            border-radius: 8px;
+            border-left: 4px solid #1e40af;
+            padding: 20px;
+            border-radius: 6px;
             margin: 20px 0;
             text-align: left;
         }
 
         .call-to-action h3 {
-            text-align: center;
             color: #f8f9fa;
-            margin-top: 0;
+            margin: 0;
             margin-bottom: 15px;
-            font-size: 1.5em;
+            font-size: 1.2em;
+            border-bottom: 1px solid #1e40af;
+            padding-bottom: 8px;
+            text-align: left;
         }
 
         .call-to-action p {
@@ -498,6 +522,22 @@
             border-left: 4px solid #dc3545;
         }
 
+        .light-theme .judge-profile.victim-memorial {
+            border-left: 4px solid #27ae60;
+        }
+
+        .light-theme .judge-profile.victim-memorial h4 {
+            border-bottom: 1px solid #27ae60;
+        }
+
+        .light-theme .judge-profile.path-forward {
+            border-left: 4px solid #1e40af;
+        }
+
+        .light-theme .judge-profile.path-forward h4 {
+            border-bottom: 1px solid #1e40af;
+        }
+
         .light-theme .judge-profile h4 {
             color: #2c3e50;
         }
@@ -604,7 +644,7 @@
 
         .light-theme .quote-box {
             background: #e9ecef;
-            border-left: 4px solid #6c757d;
+            border-left: 4px solid #1e40af;
         }
 
         .light-theme .quote-box p {
@@ -637,7 +677,8 @@
 
         /* ======= TAB SYSTEM ======= */
         .tab-container {
-            margin-bottom: 40px;
+            margin-bottom: 0;
+            margin-top: 0;
         }
 
         .tab-navigation {
@@ -726,6 +767,7 @@
         /* Investigation content formatting */
         .investigation-content {
             padding: 20px;
+            padding-top: 20px;
         }
 
         .investigation-content p {
@@ -881,11 +923,11 @@
         }
 
         .tragedy {
-            border-left-color: #991b1b !important;
+            border-left-color: #dc3545 !important;
         }
 
         .tragedy:hover {
-            box-shadow: 0 4px 8px rgba(153, 27, 27, 0.2);
+            box-shadow: 0 4px 8px rgba(220, 53, 69, 0.2);
         }
 
         /* Light theme for timeline */
@@ -965,7 +1007,7 @@
 
         .source-item:hover {
             transform: translateY(-2px);
-            box-shadow: 0 4px 8px rgba(22, 101, 52, 0.2);
+            box-shadow: 0 4px 8px rgba(30, 64, 175, 0.2);
         }
 
         .source-type {
@@ -1067,6 +1109,30 @@
             color: #1d4ed8;
         }
 
+        /* Sources intro and footer styling */
+        .sources-intro {
+            color: #adb5bd;
+            font-size: 1.1em;
+            margin-bottom: 30px;
+        }
+
+        .sources-footer {
+            color: #adb5bd;
+            font-size: 0.9em;
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid #333;
+        }
+
+        .light-theme .sources-intro {
+            color: #495057;
+        }
+
+        .light-theme .sources-footer {
+            color: #495057;
+            border-top: 1px solid #e1e5e9;
+        }
+
         .light-theme .source-type {
             background: #1e40af;
             color: white;
@@ -1096,7 +1162,7 @@
             background: #1e1e1e;
             border-radius: 0 0 12px 12px;
             margin-top: 0;
-            margin-bottom: 20px;
+            margin-bottom: 0;
             overflow: hidden;
             box-shadow: 0 2px 4px rgba(0,0,0,0.3);
         }
@@ -1171,9 +1237,9 @@
             <div class="tab-content">
                 <!-- INVESTIGATION TAB -->
                 <div id="investigation" class="tab-panel active investigation-content">
-                    <div class="victim-tribute">
-                        <h3>In Memory of Iryna Zarutska</h3>
-                        <p>23 years old • Ukrainian refugee • War survivor • Dreamed of becoming a veterinary assistant<br>
+                    <div class="judge-profile victim-memorial">
+                        <h4>In Memory of Iryna Zarutska</h4>
+                        <p style="text-align: center; font-style: italic;">23 years old • Ukrainian refugee • War survivor • Dreamed of becoming a veterinary assistant<br>
                         Killed August 22, 2025 • Charlotte, NC</p>
                     </div>
             <p>On August 22, 2025, Iryna Zarutska—23 years old, Ukrainian refugee, survivor of war—was murdered on a Charlotte transit train. She had fled Russian bombardment only to be killed by a system where judicial officials repeatedly chose progressive ideology over public safety.</p>
@@ -1244,7 +1310,7 @@
                     <div class="stat-label">Poland<br>Homicides per 100,000<br>(Traditional Justice)</div>
                 </div>
                 <div class="stat-box bad">
-                    <div class="stat-number">6.3</div>
+                    <div class="stat-number" style="color: #dc3545;">6.3</div>
                     <div class="stat-label">United States<br>Homicides per 100,000<br>(Progressive Justice)</div>
                 </div>
             </div>
@@ -1366,8 +1432,8 @@
 
             <p>These dramatic differences reflect institutional priorities that value innocent lives over judicial convenience.</p>
 
-            <div class="call-to-action">
-                <h3>The Path Forward</h3>
+            <div class="judge-profile path-forward">
+                <h4>The Path Forward</h4>
                 <p>We can continue protecting judges who enable killers, or we can demand accountability for decisions that cost lives. We can maintain systems where ideology trumps safety, or we can prioritize protecting innocent people like Iryna.</p>
             </div>
 
@@ -1488,7 +1554,7 @@
 
                 <!-- SOURCES TAB -->
                 <div id="sources" class="tab-panel">
-                    <p style="color: #adb5bd; font-size: 1.1em; margin-bottom: 30px;">Our investigation draws from <span style="font-weight: bold;">14 verified sources</span> including federal documentation, law enforcement reports, major television networks (CNN, ABC, NBC), public broadcasting analysis (PBS NewsHour), regional coverage, and international crime statistics. Each source has been verified for accuracy and accessibility.</p>
+                    <p class="sources-intro">Our investigation draws from <span style="font-weight: bold;">14 verified sources</span> including federal documentation, law enforcement reports, major television networks (CNN, ABC, NBC), public broadcasting analysis (PBS NewsHour), regional coverage, and international crime statistics. Each source has been verified for accuracy and accessibility.</p>
 
                     <div class="source-category">
                         <h3 class="category-header">Federal Documentation</h3>
@@ -1610,14 +1676,14 @@
                         </div>
                     </div>
 
-                    <p style="color: #adb5bd; font-size: 0.9em; margin-top: 30px; padding-top: 20px; border-top: 1px solid #333;">All sources have been independently verified and link directly to the original material. This documentation reflects our commitment to transparent, accountable journalism.</p>
+                    <p class="sources-footer">All sources have been independently verified and link directly to the original material. This documentation reflects our commitment to transparent, accountable journalism.</p>
                 </div>
             </div>
         </div>
 
         <!-- BOTTOM TAB NAVIGATION -->
         <div class="bottom-tab-navigation">
-            <button class="bottom-tab-button" onclick="openTab(event, 'investigation')">Investigation</button>
+            <button class="bottom-tab-button active" onclick="openTab(event, 'investigation')">Investigation</button>
             <button class="bottom-tab-button" onclick="openTab(event, 'timeline')">Timeline</button>
             <button class="bottom-tab-button" onclick="openTab(event, 'sources')">Sources</button>
         </div>
