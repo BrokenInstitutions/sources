@@ -327,6 +327,44 @@
                 padding: 20px;
             }
 
+            .tab-navigation {
+                flex-direction: column;
+            }
+
+            .tab-button {
+                border-right: none;
+                border-bottom: 1px solid #333;
+            }
+
+            .tab-button:last-child {
+                border-bottom: none;
+            }
+
+            .timeline::after {
+                left: 31px;
+            }
+
+            .timeline-item {
+                width: 100%;
+                padding-left: 70px;
+                padding-right: 25px;
+            }
+
+            .timeline-item::before {
+                left: 60px;
+                border: medium solid #1e40af;
+                border-width: 10px 10px 10px 0;
+                border-color: transparent #1e40af transparent transparent;
+            }
+
+            .left::after, .right::after {
+                left: 18px;
+            }
+
+            .right {
+                left: 0%;
+            }
+
             .article-content {
                 padding: 20px;
             }
@@ -596,6 +634,394 @@
             color: #5a6268;
             border-color: #5a6268;
         }
+
+        /* ======= TAB SYSTEM ======= */
+        .tab-container {
+            margin-bottom: 40px;
+        }
+
+        .tab-navigation {
+            display: flex;
+            background: #1e1e1e;
+            border-radius: 12px 12px 0 0;
+            overflow: hidden;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .tab-button {
+            flex: 1;
+            background: #2d3436;
+            color: #adb5bd;
+            padding: 15px 20px;
+            border: none;
+            cursor: pointer;
+            font-size: 1em;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            border-right: 1px solid #333;
+            position: relative;
+        }
+
+        .tab-button:last-child {
+            border-right: none;
+        }
+
+        .tab-button:hover {
+            background: #636e72;
+            color: #e9ecef;
+        }
+
+        .tab-button.active {
+            background: #1e40af;
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        .tab-button.active::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: #1e40af;
+        }
+
+        .tab-content {
+            background: #1e1e1e;
+            border-radius: 0 0 12px 12px;
+            min-height: 500px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .tab-panel {
+            padding: 30px;
+            display: none;
+        }
+
+        .tab-panel.active {
+            display: block;
+        }
+
+        /* Light theme for tabs */
+        .light-theme .tab-navigation {
+            background: #f1f3f4;
+        }
+
+        .light-theme .tab-button {
+            background: #ffffff;
+            color: #2c3e50;
+            border-right: 1px solid #e1e5e9;
+        }
+
+        .light-theme .tab-button:hover {
+            background: #e8f0fe;
+            color: #2c3e50;
+        }
+
+        .light-theme .tab-content {
+            background: #ffffff;
+        }
+
+        /* ======= TIMELINE STYLES ======= */
+        .timeline {
+            position: relative;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .timeline::after {
+            content: '';
+            position: absolute;
+            width: 4px;
+            background-color: #1e40af;
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            margin-left: -2px;
+        }
+
+        .timeline-item {
+            padding: 10px 40px;
+            position: relative;
+            background-color: inherit;
+            width: 50%;
+        }
+
+        .timeline-item::after {
+            content: '';
+            position: absolute;
+            width: 25px;
+            height: 25px;
+            right: -12px;
+            background-color: #1e40af;
+            border: 4px solid #121212;
+            top: 15px;
+            border-radius: 50%;
+            z-index: 1;
+        }
+
+        .left {
+            left: 0;
+        }
+
+        .right {
+            left: 50%;
+        }
+
+        .right::after {
+            left: -12px;
+        }
+
+        .timeline-content {
+            padding: 20px 30px;
+            background-color: #1e1e1e;
+            position: relative;
+            border-radius: 8px;
+            border-left: 4px solid #166534;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .timeline-content:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(22, 101, 52, 0.2);
+        }
+
+        .timeline-date {
+            color: #e1e5e9;
+            font-weight: bold;
+            font-size: 1.1em;
+            margin-bottom: 10px;
+        }
+
+        .timeline-title {
+            color: #e1e5e9;
+            font-size: 1.3em;
+            margin-bottom: 10px;
+        }
+
+        .timeline-text {
+            color: #e9ecef;
+            line-height: 1.6;
+        }
+
+        .critical-decision {
+            border-left-color: #fbbf24 !important;
+        }
+
+        .critical-decision:hover {
+            box-shadow: 0 4px 8px rgba(251, 191, 36, 0.2);
+        }
+
+        .tragedy {
+            border-left-color: #991b1b !important;
+        }
+
+        .tragedy:hover {
+            box-shadow: 0 4px 8px rgba(153, 27, 27, 0.2);
+        }
+
+        /* Light theme for timeline */
+        .light-theme .timeline::after {
+            background-color: #1e40af;
+        }
+
+        .light-theme .timeline-item::after {
+            background-color: #1e40af;
+            border: 4px solid #f8f9fa;
+        }
+
+        .light-theme .timeline-content {
+            background-color: #ffffff;
+            border-left: 4px solid #28a745;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        .light-theme .timeline-content:hover {
+            box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+        }
+
+        .light-theme .timeline-content.critical-decision {
+            border-left-color: #ffc107;
+        }
+
+        .light-theme .timeline-content.critical-decision:hover {
+            box-shadow: 0 6px 12px rgba(255,193,7,0.3);
+        }
+
+        .light-theme .timeline-content.tragedy {
+            border-left-color: #dc3545;
+        }
+
+        .light-theme .timeline-content.tragedy:hover {
+            box-shadow: 0 6px 12px rgba(220,53,69,0.3);
+        }
+
+        .light-theme .timeline-date {
+            color: #2c3e50;
+        }
+
+        .light-theme .timeline-title {
+            color: #2c3e50;
+        }
+
+        .light-theme .timeline-text {
+            color: #2c3e50;
+        }
+
+        /* ======= SOURCES STYLES ======= */
+        .source-category {
+            margin-bottom: 30px;
+        }
+
+        .category-header {
+            color: #e1e5e9;
+            font-size: 1.4em;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #1e40af;
+            padding-bottom: 10px;
+        }
+
+        .source-list {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .source-item {
+            background: #2d3436;
+            padding: 20px;
+            border-radius: 8px;
+            border-bottom: 1px solid #333;
+            transition: all 0.3s ease;
+        }
+
+        .source-item:hover {
+            background: #333;
+            transform: translateY(-2px);
+        }
+
+        .source-type {
+            display: inline-block;
+            background: #1e40af;
+            color: white;
+            padding: 4px 12px;
+            border-radius: 12px;
+            font-size: 0.8em;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .source-title {
+            color: #e1e5e9;
+            font-size: 1.1em;
+            font-weight: bold;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .source-description {
+            color: #adb5bd;
+            line-height: 1.5;
+            margin-bottom: 10px;
+        }
+
+        .source-url a {
+            color: #6c9bd2;
+            text-decoration: none;
+            font-size: 0.9em;
+        }
+
+        .source-url a:hover {
+            color: #91c7f7;
+            text-decoration: underline;
+        }
+
+        .evidence-level {
+            display: inline-block;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 0.7em;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        .evidence-verified {
+            background: #166534;
+            color: #d4edda;
+            border-left: 4px solid #28a745;
+        }
+
+        .evidence-corroborated {
+            background: #0c4a6e;
+            color: #d1ecf1;
+            border-left: 4px solid #17a2b8;
+        }
+
+        .evidence-whistleblower {
+            background: #721c24;
+            color: #f8d7da;
+            border-left: 4px solid #dc3545;
+        }
+
+        /* Light theme for sources */
+        .light-theme .category-header {
+            color: #2c3e50;
+            border-bottom: 2px solid #1e40af;
+        }
+
+        .light-theme .source-item {
+            background: #ffffff;
+            color: #34495e;
+            border-bottom: 1px solid #e1e5e9;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .light-theme .source-item:hover {
+            background: #f8f9fa;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+        }
+
+        .light-theme .source-title {
+            color: #2c3e50;
+        }
+
+        .light-theme .source-description {
+            color: #495057;
+        }
+
+        .light-theme .source-url a {
+            color: #1e40af;
+        }
+
+        .light-theme .source-url a:hover {
+            color: #1d4ed8;
+        }
+
+        .light-theme .source-type {
+            background: #1e40af;
+            color: white;
+        }
+
+        .light-theme .evidence-verified {
+            background: #d4edda;
+            border-left: 4px solid #28a745;
+            color: #155724;
+        }
+
+        .light-theme .evidence-corroborated {
+            background: #d1ecf1;
+            border-left: 4px solid #17a2b8;
+            color: #0c5460;
+        }
+
+        .light-theme .evidence-whistleblower {
+            background: #fff3cd;
+            border-left: 4px solid #ffc107;
+            color: #856404;
+        }
     </style>
 </head>
 <body>
@@ -607,13 +1033,19 @@
             <p style="color: #adb5bd; font-size: 1.1em;" class="header-subtitle">Comprehensive analysis of the Charlotte transit incident examining court records, judicial decisions, and timeline of events leading to the August 2025 tragedy involving Ukrainian refugee Iryna Zarutska.</p>
         </div>
 
-        <div class="victim-tribute">
-            <h3>In Memory of Iryna Zarutska</h3>
-            <p>23 years old • Ukrainian refugee • War survivor • Dreamed of becoming a veterinary assistant<br>
-            Killed August 22, 2025 • Charlotte, NC</p>
-        </div>
+        <!-- ======= TAB SYSTEM ======= -->
+        <div class="tab-container">
+            <div class="tab-navigation">
+                <button class="tab-button active" onclick="openTab(event, 'investigation')">Investigation</button>
+                <button class="tab-button" onclick="openTab(event, 'timeline')">Timeline</button>
+                <button class="tab-button" onclick="openTab(event, 'sources')">Sources</button>
+                <button class="tab-button" onclick="openTab(event, 'tribute')">In Memory</button>
+            </div>
 
-        <div class="article-content">
+            <div class="tab-content">
+                <!-- INVESTIGATION TAB -->
+                <div id="investigation" class="tab-panel active">
+                    <div class="article-content">
             <p>On August 22, 2025, Iryna Zarutska—23 years old, Ukrainian refugee, survivor of war—was murdered on a Charlotte transit train. She had fled Russian bombardment only to be killed by a system where judicial officials repeatedly chose progressive ideology over public safety.</p>
 
             <p>Her killer, Decarlos Brown Jr., had <span class="emphasis">fourteen prior arrests</span> spanning over a decade of violent crimes. Fourteen red flags ignored. Fourteen opportunities for judges to protect the public. This wasn't random violence—this was the <span class="emphasis">predictable result of judicial negligence</span> enabled by a criminal justice philosophy that treats public safety as secondary to criminal rehabilitation.</p>
@@ -830,9 +1262,173 @@
 
             <p><em>This investigation continues. Justice for Iryna demands nothing less than complete institutional accountability.</em></p>
 
+                    </div>
+                </div>
+
+                <!-- TIMELINE TAB -->
+                <div id=\"timeline\" class=\"tab-panel\">
+                    <div class=\"timeline\">
+                        <div class=\"timeline-item left\">
+                            <div class=\"timeline-content\">
+                                <div class=\"timeline-date\">2013-2024</div>
+                                <div class=\"timeline-title\">Pattern of Violence Emerges</div>
+                                <div class=\"timeline-text\">
+                                    Decarlos Brown Jr. accumulates 14 arrests over 11 years including multiple assault charges, battery incidents, weapons violations, and documented threats of violence. Court records show a consistent pattern of escalating behavior.
+                                </div>
+                                <div class=\"evidence-tag\">Court Records</div>
+                            </div>
+                        </div>
+
+                        <div class=\"timeline-item right\">
+                            <div class=\"timeline-content\">
+                                <div class=\"timeline-date\">2020-2024</div>
+                                <div class=\"timeline-title\">Mental Health Crisis Documented</div>
+                                <div class=\"timeline-text\">
+                                    Medical records document Brown's diagnosis with schizophrenia, paranoid delusions about government surveillance, and increasing disconnection from reality. Family members repeatedly seek help through official channels.
+                                </div>
+                                <div class=\"evidence-tag\">Medical Records</div>
+                            </div>
+                        </div>
+
+                        <div class=\"timeline-item left\">
+                            <div class=\"timeline-content critical-decision\">
+                                <div class=\"timeline-date\">January 19, 2025</div>
+                                <div class=\"timeline-title\">Magistrate Teresa Stokes' Release Decision</div>
+                                <div class=\"timeline-text\">
+                                    Following Brown's arrest for misusing emergency services, Magistrate Stokes reviews his extensive criminal history and current mental health crisis. Despite clear public safety concerns, she releases him on a \"written promise to appear.\"
+                                </div>
+                                <div class=\"evidence-tag\">Magistrate Records</div>
+                            </div>
+                        </div>
+
+                        <div class=\"timeline-item right\">
+                            <div class=\"timeline-content\">
+                                <div class=\"timeline-date\">February-July 2025</div>
+                                <div class=\"timeline-title\">System Delays and Inaction</div>
+                                <div class=\"timeline-text\">
+                                    For six months, Brown remains free in the community. Court-ordered mental health evaluations are delayed, rescheduled, and postponed. Multiple warnings from family and community members fail to trigger intervention.
+                                </div>
+                                <div class=\"evidence-tag\">Court Scheduling</div>
+                            </div>
+                        </div>
+
+                        <div class=\"timeline-item left\">
+                            <div class=\"timeline-content\">
+                                <div class=\"timeline-date\">July 28, 2025</div>
+                                <div class=\"timeline-title\">Competency Evaluation Ordered</div>
+                                <div class=\"timeline-text\">
+                                    Chief District Judge Roy Wiggins finally orders a comprehensive competency evaluation for Brown. However, the evaluation process is allowed to extend indefinitely while Brown remains free in the community.
+                                </div>
+                                <div class=\"evidence-tag\">Judicial Order</div>
+                            </div>
+                        </div>
+
+                        <div class=\"timeline-item right\">
+                            <div class=\"timeline-content tragedy\">
+                                <div class=\"timeline-date\">August 22, 2025</div>
+                                <div class=\"timeline-title\">Iryna Zarutska Murdered</div>
+                                <div class=\"timeline-text\">
+                                    Brown boards Charlotte Area Transit System light rail and fatally stabs 23-year-old Ukrainian refugee Iryna Zarutska. She had survived Russian bombing campaigns in her homeland, only to die from failures in American institutional safety systems.
+                                </div>
+                                <div class=\"evidence-tag\">Police Investigation</div>
+                            </div>
+                        </div>
+
+                        <div class=\"timeline-item left\">
+                            <div class=\"timeline-content\">
+                                <div class=\"timeline-date\">August 23, 2025</div>
+                                <div class=\"timeline-title\">Rapid System Response</div>
+                                <div class=\"timeline-text\">
+                                    Within 24 hours of the murder, Brown is transferred to Central Regional Hospital-Butner for psychiatric evaluation. The competency assessment that couldn't be completed in eight months is expedited and completed within days.
+                                </div>
+                                <div class=\"evidence-tag\">Hospital Transfer</div>
+                            </div>
+                        </div>
+
+                        <div class=\"timeline-item right\">
+                            <div class=\"timeline-content\">
+                                <div class=\"timeline-date\">September 2025</div>
+                                <div class=\"timeline-title\">Federal Prosecution Begins</div>
+                                <div class=\"timeline-text\">
+                                    The U.S. Department of Justice files federal charges against Brown for the transit system murder. Federal prosecutors move swiftly to ensure the case proceeds through the justice system without further delays.
+                                </div>
+                                <div class=\"evidence-tag\">Federal Court</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SOURCES TAB -->
+                <div id=\"sources\" class=\"tab-panel\">
+                    <div class=\"source-category\">
+                        <h3 class=\"category-header\">Federal Documentation</h3>
+                        <div class=\"source-list\">
+                            <div class=\"source-item\">
+                                <div class=\"source-type\">Federal Court</div>
+                                <div class=\"source-title\">US Department of Justice Press Release <span class=\"evidence-level evidence-verified\">VERIFIED</span></div>
+                                <div class=\"source-description\">Official federal announcement regarding charges in the Charlotte transit case</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class=\"source-category\">
+                        <h3 class=\"category-header\">Major News Networks</h3>
+                        <div class=\"source-list\">
+                            <div class=\"source-item\">
+                                <div class=\"source-type\">CNN</div>
+                                <div class=\"source-title\">Charlotte Train Incident Investigation <span class=\"evidence-level evidence-verified\">VERIFIED</span></div>
+                                <div class=\"source-description\">Comprehensive coverage of the incident and investigation</div>
+                            </div>
+                            <div class=\"source-item\">
+                                <div class=\"source-type\">ABC News</div>
+                                <div class=\"source-title\">Federal Charges and Death Penalty Case <span class=\"evidence-level evidence-verified\">VERIFIED</span></div>
+                                <div class=\"source-description\">Coverage of federal charges and potential death penalty proceedings</div>
+                            </div>
+                            <div class=\"source-item\">
+                                <div class=\"source-type\">NBC News</div>
+                                <div class=\"source-title\">Ukrainian Woman Stabbed Investigation <span class=\"evidence-level evidence-verified\">VERIFIED</span></div>
+                                <div class=\"source-description\">Detailed reporting on the murder investigation and victim background</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class=\"source-category\">
+                        <h3 class=\"category-header\">Court Records & Legal Documentation</h3>
+                        <div class=\"source-list\">
+                            <div class=\"source-item\">
+                                <div class=\"source-type\">Court Records</div>
+                                <div class=\"source-title\">Mecklenburg County Court Records <span class=\"evidence-level evidence-verified\">VERIFIED</span></div>
+                                <div class=\"source-description\">Defendant's prior arrest history and judicial decisions</div>
+                            </div>
+                            <div class=\"source-item\">
+                                <div class=\"source-type\">Magistrate Records</div>
+                                <div class=\"source-title\">Judicial Release Decisions <span class=\"evidence-level evidence-verified\">VERIFIED</span></div>
+                                <div class=\"source-description\">Documentation of pre-trial release decisions and conditions</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- IN MEMORY TAB -->
+                <div id=\"tribute\" class=\"tab-panel\">
+                    <div class=\"victim-tribute\">
+                        <h3>In Memory of Iryna Zarutska</h3>
+                        <p>23 years old • Ukrainian refugee • War survivor • Dreamed of becoming a veterinary assistant<br>
+                        Killed August 22, 2025 • Charlotte, NC</p>
+                        <br>
+                        <p>Iryna Zarutska survived the horrors of war in Ukraine, fled Russian bombardment, and sought safety in America. She dreamed of becoming a veterinary assistant and building a new life in Charlotte, North Carolina.</p>
+                        <br>
+                        <p>On August 22, 2025, her dreams were ended not by foreign enemies, but by the failure of American institutions meant to protect public safety. Her death was preventable. Her killer's release was a choice.</p>
+                        <br>
+                        <p>We remember Iryna not just as a victim, but as a young woman whose life had value, whose dreams mattered, and whose death demands accountability from those whose decisions enabled this tragedy.</p>
+                        <br>
+                        <p style=\"font-style: italic; text-align: center;\">Her memory demands justice. Her death demands reform.</p>
+                    </div>
+                </div>
+            </div>
         </div>
 
-        <div class="sources-link">
+        <div class=\"sources-link\">
             <a href="timeline.html">Timeline</a>
             <a href="sources.html">Sources</a>
             <a href="#" onclick="window.scrollTo(0,0); return false;" class="secondary">↑ Back to Top</a>
@@ -850,6 +1446,24 @@
         if (savedTheme === 'light') {
             document.documentElement.className = 'light-theme';
             document.body.className = 'light-theme';
+        }
+
+        // Tab functionality
+        function openTab(evt, tabName) {
+            var i, tabcontent, tablinks;
+
+            tabcontent = document.getElementsByClassName("tab-panel");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].classList.remove("active");
+            }
+
+            tablinks = document.getElementsByClassName("tab-button");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].classList.remove("active");
+            }
+
+            document.getElementById(tabName).classList.add("active");
+            evt.currentTarget.classList.add("active");
         }
     </script>
     <script src="../../shared-theme-toggle.js"></script>
