@@ -896,17 +896,19 @@
         window.addEventListener('DOMContentLoaded', function() {
             const hash = window.location.hash.substring(1);
             const savedSection = localStorage.getItem('activeSection');
-            let activeSection = 'investigation'; // default
+            let activeSection = 'investigations'; // default
 
-            if (hash && (hash === 'investigation' || hash === 'about' || hash === 'methodology')) {
+            if (hash && (hash === 'investigations' || hash === 'about' || hash === 'methodology')) {
                 activeSection = hash;
-            } else if (savedSection && (savedSection === 'investigation' || savedSection === 'about' || savedSection === 'methodology')) {
+            } else if (savedSection && (savedSection === 'investigations' || savedSection === 'about' || savedSection === 'methodology')) {
                 activeSection = savedSection;
             }
 
-            if (activeSection !== 'investigation') {
+            if (activeSection !== 'investigations') {
                 // Activate the correct section without scrolling
-                showSection(activeSection);
+                window.skipScroll = true;
+                openTab(null, activeSection);
+                window.skipScroll = false;
             }
         });
     </script>
