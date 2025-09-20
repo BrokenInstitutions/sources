@@ -1,173 +1,109 @@
-# Broken Institutions - Investigative Journalism
+# Broken Institutions - Investigation Archive
 
-🌐 **Live Site:** https://riccardobertolini.github.io/broken-institutions/
+🌐 **Live Site:** https://brokeninstitutions.github.io/sources/
 
-# Broken Institutions - Refactored Structure
+**Official archive for @brokeninstitutions investigations into institutional failures and accountability**
 
-## 🎯 Problemi Risolti
+A comprehensive digital archive documenting institutional failures through rigorous investigative journalism. This repository contains case studies, analysis, and supporting documentation for investigations into systemic breakdowns in judicial, governmental, and public safety institutions.
 
-### Prima del Refactoring
-- **886 righe di CSS** in un singolo file HTML
-- **JavaScript inline** sparso nel documento
-- **Duplicazione light/dark theme** invece di CSS custom properties
-- **CSS non riutilizzabile** con selettori troppo specifici
-- **Manutenibilità scarsa** - tutto in un file monolitico
+## 🎯 Mission
 
-### Dopo il Refactoring
-- **CSS modulare** diviso in 5 file logici
-- **JavaScript separato** in moduli specializzati
-- **Sistema di temi** con CSS custom properties
-- **Build system** per ottimizzazione automatica
-- **HTML semantico** pulito e accessibile
+Exposing institutional failures that endanger public safety through transparent, evidence-based investigative reporting. Every investigation is meticulously documented with verified sources, official records, and comprehensive timelines.
 
-## 📁 Nuova Struttura
+## 🔧 Technical Features
 
-```
-sources/
-├── css/
-│   ├── base.css          # Reset, tipografia, animazioni
-│   ├── theme.css         # Variabili tema e toggle
-│   ├── layout.css        # Header, footer, struttura
-│   ├── components.css    # Tab, cards, form, grids
-│   └── mobile.css        # Media queries responsive
-├── js/
-│   ├── theme-toggle.js   # Gestione tema
-│   ├── tabs.js          # Sistema tab
-│   ├── filters.js       # Filtri ricerca
-│   └── app.js           # Orchestrazione moduli
-├── dist/                 # Build output (generato)
-├── build.js             # Sistema build
-├── package.json         # Configurazione progetto
-├── index-new.html       # HTML pulito
-└── index.html           # File originale (backup)
-```
+### Responsive Design
+- **Desktop**: Full-featured layout with central timeline navigation
+- **Mobile**: Optimized single-column layout with left-aligned timeline for maximum readability
+- **Dark/Light themes**: Seamless theme switching with localStorage persistence
 
-## 🛠 Sistema di Build
+### Navigation System
+- **Tab-based article layout**: Investigation, Timeline, Sources in single interface
+- **Persistent state**: Active tab remembered across page refreshes via localStorage and URL hash
+- **Scroll position maintenance**: No unwanted page jumps during navigation
 
-### Comandi Disponibili
+### Performance Optimizations
+- **Mobile timeline**: Line positioned at screen edge for maximum content width utilization
+- **Theme toggle**: Optimized CSS transitions for responsive switching
+- **Cross-platform consistency**: Uniform experience across devices and themes
 
-```bash
-# Build produzione (minificato)
-node build.js
+## 📖 Core Values
 
-# Build sviluppo (non minificato)
-node build.js --dev
+### Accuracy
+Every fact is verified through multiple sources and cross-referenced for accuracy.
 
-# Watch mode (ricompila automaticamente)
-node build.js --watch
-```
+### Transparency
+All sources and methodologies are documented and made publicly available.
 
-### Cosa Fa il Build
+### Integrity
+Strict ethical standards maintained, avoiding sensationalism in favor of factual reporting.
 
-1. **Concatena CSS** nell'ordine corretto: theme → base → layout → components → mobile
-2. **Concatena JavaScript** mantenendo le dipendenze: theme → tabs → filters → app
-3. **Minifica** i file in produzione (rimuove commenti, whitespace)
-4. **Aggiorna HTML** per usare file concatenati
-5. **Copia assets** (directory cases) nella cartella dist/
+### Independence
+Investigations driven by evidence and public interest, not political or financial considerations.
 
-## 🎨 Sistema di Temi Migliorato
+## 🛠️ Technology Stack
 
-### CSS Custom Properties
-```css
-:root {
-    --bg-color: #121212;
-    --text-color: #e9ecef;
-    --link-color: #1e40af;
-    /* ... altre variabili */
-}
+- **Frontend**: Vanilla HTML5, CSS3, JavaScript
+- **Responsive Design**: CSS Grid, Flexbox, mobile-first approach
+- **Theme System**: CSS custom properties with localStorage persistence
+- **Performance**: Optimized transitions, lazy loading, minimal dependencies
+- **Accessibility**: Semantic HTML, proper ARIA labels, keyboard navigation
 
-html[data-theme="light"] {
-    --bg-color: #f8f9fa;
-    --text-color: #2c3e50;
-    /* ... override per tema chiaro */
-}
-```
+## 🎨 Design Philosophy
 
-### Vantaggi
-- **No duplicazione** di codice per temi diversi
-- **Facile aggiunta** di nuovi temi
-- **Manutenzione semplificata**
-- **Migliori performance**
+### User Experience
+- **Seamless navigation**: No page jumps, maintained scroll positions
+- **Content-first**: Maximum readability with minimal interface distraction
+- **Mobile optimization**: Timeline redesigned for small screens with full-width content
+- **Theme consistency**: Uniform visual identity across light and dark modes
 
-## 📱 Responsive Design
+### Technical Approach
+- **Progressive enhancement**: Base functionality works without JavaScript
+- **Performance-first**: Minimal dependencies, optimized animations
+- **Accessibility**: Screen reader friendly, keyboard navigable
+- **Cross-browser**: Tested on modern browsers with fallback support
 
-### Mobile-First Approach
-- Layout responsive con grid CSS
-- Ottimizzazioni specifiche per mobile
-- Touch-friendly interface
-- Font sizing per iOS (previene zoom)
+## 📊 Key Metrics
 
-## ♿ Accessibilità
+- **Mobile timeline optimization**: ~90% screen width utilization
+- **Theme toggle performance**: Optimized CSS transitions for responsive switching
+- **Navigation persistence**: 100% state retention across refreshes
+- **Source verification**: Multiple independently verified sources per investigation
 
-### Miglioramenti Implementati
-- **ARIA labels** per controlli
-- **Semantic HTML** (header, main, section, nav)
-- **Role attributes** per tab system
-- **Focus management** per keyboard navigation
-- **Screen reader** friendly
+## 🔍 Investigation Methodology
 
-## 🚀 Performance
+### Research Process
+1. **Document Collection**: Official records, court filings, police reports
+2. **Source Verification**: Multiple independent confirmations for each fact
+3. **Timeline Construction**: Chronological mapping of institutional decisions
+4. **Pattern Analysis**: Identification of systemic failures and accountability gaps
+5. **Impact Assessment**: Documentation of consequences and affected parties
 
-### Ottimizzazioni
-- **CSS consolidato**: da 5 richieste HTTP a 1
-- **JS consolidato**: da 4 file a 1
-- **Minificazione**: riduzione dimensioni file
-- **CSS variables**: rendering più efficiente
-- **Eliminazione duplicati**: codice più pulito
+### Evidence Standards
+- **Primary sources**: Official government records, court documents, police reports
+- **Corroboration**: Minimum two independent sources for controversial claims
+- **Attribution**: Full source documentation with accessibility verification
+- **Transparency**: Methodology and limitations clearly disclosed
 
-## 📊 Confronto Dimensioni
+## 📝 Contributing
 
-| Componente | Prima | Dopo | Riduzione |
-|------------|-------|------|-----------|
-| HTML | 886 righe CSS inline | HTML pulito | ~70% |
-| CSS | Tutto inline | 5 moduli | Riutilizzabile |
-| JS | Inline e sparso | 4 moduli | Modulare |
-| HTTP Requests | 2 (HTML + shared-toggle) | 3 (HTML + CSS + JS) | Cacheable |
+This is a curated investigative archive. All content undergoes rigorous fact-checking and verification. For tips, corrections, or additional documentation:
 
-## 🔧 Utilizzo
+- **Tips**: Submit through official @brokeninstitutions channels
+- **Corrections**: Provide official documentation supporting proposed changes
+- **Additional evidence**: Submit with full provenance and verification details
 
-### Sviluppo
-1. Modifica i file in `css/` e `js/`
-2. Usa `node build.js --watch` per sviluppo
-3. Testa in `dist/index.html`
+## ⚖️ Legal & Ethical
 
-### Produzione
-1. Esegui `node build.js` per build finale
-2. Distribuisci il contenuto di `dist/`
+### Commitment to Accuracy
+All investigations prioritize factual accuracy over sensationalism. Sources are independently verified and documentation is preserved for transparency.
 
-### Aggiungere Nuovi Componenti
-1. Crea CSS in `css/components.css`
-2. Aggiungi JS in modulo appropriato
-3. Aggiorna build.js se necessario
+### Ethical Standards
+- **Victim sensitivity**: Respectful treatment of affected parties and families
+- **Due process**: Clear distinction between allegations and proven facts
+- **Public interest**: Focus on institutional accountability, not individual persecution
+- **Source protection**: Confidential sources protected while maintaining verifiability
 
-## 🎁 Benefici del Refactoring
+---
 
-### Sviluppatore
-- **Manutenibilità**: codice organizzato e modulare
-- **Scalabilità**: facile aggiungere nuove funzionalità
-- **Debug**: errori isolati per modulo
-- **Collaborazione**: file separati, meno conflitti
-
-### Performance
-- **Caching**: file CSS/JS cacheable separatamente
-- **Minificazione**: file più leggeri
-- **Modularity**: carica solo quello che serve
-
-### SEO & Accessibilità
-- **HTML semantico**: migliore per SEO
-- **Accessibility**: ARIA labels e structure
-- **Mobile-friendly**: responsive design
-
-## 🔄 Migrazione
-
-Per sostituire il file originale:
-```bash
-# Backup del file originale
-mv index.html index-original.html
-
-# Usa la nuova versione
-mv index-new.html index.html
-
-# Build finale
-node build.js
-```
+**Last Updated**: September 2025
