@@ -1,0 +1,104 @@
+/* Mobile and Responsive Styles */
+
+@media (max-width: 768px) {
+    /* Tab system mobile adjustments */
+    .tab-navigation {
+        flex-direction: column;
+    }
+
+    .tab-button {
+        border-right: none;
+        border-bottom: 1px solid var(--border-color);
+    }
+
+    .tab-button:last-child {
+        border-bottom: none;
+    }
+
+    /* Tab content mobile padding */
+    #investigations {
+        padding: 15px 20px 20px;
+    }
+
+    #about {
+        padding: 8px 20px 20px;
+    }
+
+    #methodology {
+        padding: 10px 20px 20px;
+    }
+
+    /* Search and filters mobile layout */
+    .search-bar {
+        flex-direction: column;
+        margin-bottom: 15px;
+    }
+
+    .search-input {
+        min-width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .filter-controls {
+        flex-direction: column;
+        gap: 8px;
+        align-items: stretch;
+    }
+
+    .filter-select {
+        width: 100%;
+        padding: 12px 28px 12px 12px;
+        font-size: 16px; /* Prevents zoom on iOS */
+    }
+
+    /* Case cards mobile optimizations */
+    .case-card.featured {
+        min-height: 450px;
+        margin-bottom: 20px;
+    }
+
+    .case-overlay {
+        padding: 15px;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        padding-bottom: 20px;
+        box-sizing: border-box;
+    }
+
+    .case-card.featured .case-title {
+        font-size: 1.3em;
+    }
+
+    .case-card.featured .case-summary {
+        font-size: 0.9em;
+        margin-bottom: 15px;
+        margin-top: 15px;
+        flex-grow: 1;
+    }
+
+    .case-card.featured .case-meta {
+        display: none; /* Hide meta tags on mobile to save space */
+    }
+
+    .case-card.featured .case-links {
+        margin-top: auto;
+        flex-direction: column;
+        gap: 8px;
+        flex-shrink: 0;
+    }
+
+    .case-link {
+        text-align: center;
+        width: 100%;
+    }
+
+    /* Grid layouts mobile adjustments */
+    .values-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .process-grid {
+        grid-template-columns: 1fr;
+    }
+}

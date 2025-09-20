@@ -1,0 +1,182 @@
+/* Theme variables and toggle system */
+
+/* Dark theme (default) */
+:root {
+    --bg-color: #121212;
+    --text-color: #e9ecef;
+    --text-muted: #adb5bd;
+    --text-secondary: #6c757d;
+    --heading-color: #e1e5e9;
+    --link-color: #1e40af;
+    --border-color: #333;
+
+    /* Cards and containers */
+    --card-bg: #2d3436;
+    --card-bg-alt: #1e1e1e;
+    --overlay-bg: rgba(0,0,0,0.5);
+
+    /* Form elements */
+    --input-bg: #2d3436;
+    --input-border: #333;
+    --input-focus: rgba(30, 64, 175, 0.2);
+
+    /* Special elements */
+    --accent-primary: #1e40af;
+    --accent-success: #28a745;
+    --shadow: rgba(0,0,0,0.3);
+    --shadow-light: rgba(0,0,0,0.15);
+}
+
+/* Light theme */
+html[data-theme="light"] {
+    --bg-color: #ffffff;
+    --text-color: #2c3e50;
+    --text-muted: #5a6c7d;
+    --text-secondary: #34495e;
+    --heading-color: #2c3e50;
+    --link-color: #1e40af;
+    --border-color: #e1e5e9;
+
+    /* Cards and containers */
+    --card-bg: #f5f6f7;
+    --card-bg-alt: #f1f3f4;
+    --overlay-bg: rgba(0,0,0,0.5);
+
+    /* Form elements */
+    --input-bg: #ffffff;
+    --input-border: #d1d9e0;
+    --input-focus: rgba(30, 64, 175, 0.2);
+
+    /* Special elements */
+    --accent-primary: #1e40af;
+    --accent-success: #28a745;
+    --shadow: rgba(0,0,0,0.08);
+    --shadow-light: rgba(0,0,0,0.1);
+}
+
+
+/* Apply theme variables */
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+/* Initial theme application before CSS loads - prevents flicker */
+html[data-theme="light"] body {
+    background-color: #f8f9fa !important;
+    color: #2c3e50 !important;
+}
+
+/* Theme toggle button */
+.theme-toggle {
+    background: #4a5568;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 4px;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 60px;
+    height: 30px;
+    transition: all 0.4s cubic-bezier(0.23, 1, 0.320, 1);
+    outline: none;
+    overflow: hidden;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+}
+
+.theme-toggle:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+.theme-toggle:focus {
+    box-shadow: 0 0 0 3px rgba(30, 64, 175, 0.3);
+}
+
+.theme-toggle.light {
+    background: #e2e8f0;
+}
+
+.theme-toggle.light:hover {
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.theme-toggle::before {
+    content: '';
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: 26px;
+    height: 26px;
+    background: white;
+    border-radius: 50%;
+    transition: all 0.4s cubic-bezier(0.23, 1, 0.320, 1);
+    box-shadow: 0 4px 12px var(--shadow-light);
+    z-index: 2;
+}
+
+.theme-toggle.light::before {
+    transform: translateX(30px);
+    box-shadow: 0 4px 12px var(--shadow-light);
+}
+
+.toggle-icon {
+    position: absolute;
+    font-size: 12px;
+    transition: all 0.4s ease;
+    z-index: 1;
+    opacity: 1.0;
+    pointer-events: none;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+}
+
+.toggle-icon.moon {
+    left: 6px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.toggle-icon.sun {
+    right: 6px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.theme-toggle:not(.light) .toggle-icon.moon {
+    opacity: 1;
+    color: white;
+}
+
+.theme-toggle.light .toggle-icon.sun {
+    opacity: 1;
+    color: #f56565;
+}
+
+/* Mobile theme toggle */
+.mobile-header-toggle {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .theme-toggle:not(.mobile-header-toggle) {
+        display: none;
+    }
+
+    .mobile-header-toggle {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        margin: 0;
+        display: block;
+    }
+}
