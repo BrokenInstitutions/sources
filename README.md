@@ -44,6 +44,7 @@ Investigations driven by evidence and public interest, not political or financia
 ## 🛠️ Technology Stack
 
 - **Frontend**: Vanilla HTML5, CSS3, JavaScript
+- **Architecture**: Modular component system with template engine for reusable HTML components
 - **Responsive Design**: CSS Grid, Flexbox, mobile-first approach
 - **Theme System**: CSS custom properties with localStorage persistence
 - **Performance**: Optimized transitions, lazy loading, minimal dependencies

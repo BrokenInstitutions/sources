@@ -1,0 +1,43 @@
+{
+  "siteName": "Broken Institutions",
+  "tagline": "Institutional failures worldwide. We name names.",
+  "description": "Independent accountability journalism. Exposing broken systems and demanding real consequences - from courts to governments, from social media to influencers.",
+  "logoText": "BI",
+  "author": "@brokeninstitutions",
+  "twitterHandle": "@brokeninstitutions",
+  "baseUrl": "https://brokeninstitutions.github.io/sources/",
+  "ogImage": "assets/og-image.jpg",
+  "lang": "en",
+
+  "paths": {
+    "css": "",
+    "js": "",
+    "assets": "assets/",
+    "cases": "cases/"
+  },
+
+  "navigation": {
+    "backText": "Back to Archive",
+    "backUrl": "../../index.html"
+  },
+
+  "theme": {
+    "default": "dark",
+    "localStorage": true,
+    "preventFlicker": true
+  },
+
+  "seo": {
+    "keywords": "institutional accountability, documentation, investigative journalism, transparency",
+    "ogType": "website"
+  },
+
+  "features": {
+    "lazyLoading": true,
+    "componentCache": true,
+    "analytics": false
+  },
+
+  "version": "1.0.0",
+  "buildDate": "2025-09-21"
+}

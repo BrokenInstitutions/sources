@@ -1,0 +1,96 @@
+{
+  "metadata": {
+    "id": "charlotte-transit",
+    "title": "Charlotte Transit Case: \"What Enabled Him?\"",
+    "subtitle": "Comprehensive analysis of the Charlotte transit incident examining court records, judicial decisions, and timeline of events leading to the August 2025 tragedy involving Ukrainian refugee Iryna Zarutska.",
+    "description": "How judicial immunity enabled the murder of Ukrainian refugee Iryna Zarutska - A damning investigation into judicial negligence",
+    "investigationDate": "August 2025",
+    "status": "Active Investigation",
+    "statusClass": "active",
+    "location": "Charlotte, NC",
+    "sourcesCount": "10+ verified",
+    "category": "Judicial System",
+    "tags": ["judicial immunity", "pre-trial release", "mental health", "public safety", "institutional failure"],
+    "ogImage": "cases/charlotte-transit/assets/case-image.jpg",
+    "publishDate": "2025-08-22"
+  },
+
+  "victim": {
+    "name": "Iryna Zarutska",
+    "age": "23",
+    "nationality": "Ukrainian refugee",
+    "background": "War survivor",
+    "dreams": "Dreamed of becoming a veterinary assistant",
+    "deathDate": "August 22, 2025",
+    "location": "Charlotte, NC"
+  },
+
+  "perpetrator": {
+    "name": "Decarlos Brown Jr.",
+    "priorArrests": 14,
+    "arrestSpan": "over a decade",
+    "crimeType": "violent crimes",
+    "mentalHealth": "Documented schizophrenia with paranoid delusions about government implants"
+  },
+
+  "investigation": {
+    "summary": "On August 22, 2025, Iryna Zarutska—23 years old, Ukrainian refugee, survivor of war—was murdered on a Charlotte transit train. She had fled Russian bombardment only to be killed by a system where judicial officials repeatedly chose progressive ideology over public safety.",
+
+    "analysis": "Her killer, Decarlos Brown Jr., had fourteen prior arrests spanning over a decade of violent crimes. Fourteen red flags ignored. Fourteen opportunities for judges to protect the public. This wasn't random violence—this was the predictable result of judicial negligence enabled by a criminal justice philosophy that treats public safety as secondary to criminal rehabilitation.",
+
+    "keyFinding": "Let's name names. Because when judges enable murder, they should face the same scrutiny as any other professional whose negligence kills innocent people."
+  },
+
+  "judicialOfficials": [
+    {
+      "name": "Magistrate Teresa Stokes",
+      "role": "Magistrate",
+      "decisions": [
+        {
+          "date": "January 19, 2025",
+          "action": "Released Brown on \"written promise to appear\" after arrest for misusing 911 services",
+          "context": "Complete access to Brown's 14-arrest violent history",
+          "mentalHealthKnown": "Documented schizophrenia with paranoid delusions about government implants",
+          "rationale": "Standard pretrial release protocols applied despite obvious danger",
+          "consequences": "None"
+        }
+      ]
+    },
+    {
+      "name": "Chief District Judge Roy Wiggins",
+      "role": "Chief District Judge",
+      "decisions": [
+        {
+          "date": "July 28, 2025",
+          "action": "Ordered competency evaluation for Brown",
+          "timeline": "Eight months of \"procedural delays\" while Brown remained free",
+          "postMurderResponse": "Same evaluation completed within days after Iryna's death",
+          "enabledOutcome": "Delayed justice that enabled murder"
+        }
+      ]
+    }
+  ],
+
+  "tabs": [
+    {
+      "id": "investigation",
+      "label": "Investigation",
+      "active": true
+    },
+    {
+      "id": "timeline",
+      "label": "Timeline",
+      "active": false
+    },
+    {
+      "id": "sources",
+      "label": "Sources",
+      "active": false
+    }
+  ],
+
+  "navigation": {
+    "backUrl": "../../index.html",
+    "backText": "Back to Archive"
+  }
+}

@@ -1,0 +1,96 @@
+{
+  "metadata": {
+    "id": "[CASE_ID]",
+    "title": "[CASE_TITLE]",
+    "subtitle": "[CASE_SUBTITLE] - Investigation into [BRIEF_DESCRIPTION]",
+    "description": "[SEO_DESCRIPTION]",
+    "investigationDate": "[INVESTIGATION_DATE]",
+    "status": "Active Investigation",
+    "statusClass": "active",
+    "location": "[LOCATION]",
+    "sourcesCount": "[X]+ verified",
+    "category": "[CATEGORY]",
+    "tags": ["[TAG1]", "[TAG2]", "[TAG3]"],
+    "ogImage": "cases/[CASE_ID]/assets/case-image.jpg",
+    "publishDate": "[PUBLISH_DATE]"
+  },
+
+  "victim": {
+    "name": "[VICTIM_NAME]",
+    "age": "[AGE]",
+    "nationality": "[NATIONALITY/BACKGROUND]",
+    "background": "[BACKGROUND_INFO]",
+    "dreams": "[DREAMS/ASPIRATIONS]",
+    "deathDate": "[DEATH_DATE]",
+    "location": "[DEATH_LOCATION]"
+  },
+
+  "perpetrator": {
+    "name": "[PERPETRATOR_NAME]",
+    "priorArrests": "[NUMBER]",
+    "arrestSpan": "[TIME_SPAN]",
+    "crimeType": "[CRIME_TYPE]",
+    "mentalHealth": "[MENTAL_HEALTH_STATUS]"
+  },
+
+  "investigation": {
+    "summary": "[OPENING_PARAGRAPH - Brief summary of the case and what happened]",
+
+    "analysis": "[SECOND_PARAGRAPH - Analysis of institutional failures, prior arrests, red flags ignored]",
+
+    "keyFinding": "[KEY_INSIGHT - Main finding about institutional accountability]"
+  },
+
+  "judicialOfficials": [
+    {
+      "name": "[OFFICIAL_NAME_1]",
+      "role": "[TITLE/ROLE]",
+      "decisions": [
+        {
+          "date": "[DATE]",
+          "action": "[WHAT_THEY_DID]",
+          "context": "[CONTEXT_AVAILABLE]",
+          "mentalHealthKnown": "[MENTAL_HEALTH_INFO_AVAILABLE]",
+          "rationale": "[THEIR_REASONING]",
+          "consequences": "[CONSEQUENCES_FACED]"
+        }
+      ]
+    },
+    {
+      "name": "[OFFICIAL_NAME_2]",
+      "role": "[TITLE/ROLE]",
+      "decisions": [
+        {
+          "date": "[DATE]",
+          "action": "[WHAT_THEY_DID]",
+          "timeline": "[TIMELINE_ISSUES]",
+          "postMurderResponse": "[RESPONSE_AFTER_INCIDENT]",
+          "enabledOutcome": "[HOW_THEY_ENABLED_THE_OUTCOME]"
+        }
+      ]
+    }
+  ],
+
+  "tabs": [
+    {
+      "id": "investigation",
+      "label": "Investigation",
+      "active": true
+    },
+    {
+      "id": "timeline",
+      "label": "Timeline",
+      "active": false
+    },
+    {
+      "id": "sources",
+      "label": "Sources",
+      "active": false
+    }
+  ],
+
+  "navigation": {
+    "backUrl": "../../index.html",
+    "backText": "Back to Archive"
+  }
+}
